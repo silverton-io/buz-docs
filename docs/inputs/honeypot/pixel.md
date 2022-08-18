@@ -13,26 +13,38 @@ sidebar_position: 3
 
 Honeypot supports collecting payloads via url query params.
 
-This method of data collection has drawbacks such as [max uri lengths](https://stackoverflow.com/questions/812925/what-is-the-maximum-possible-length-of-a-query-string), but is extremely simple to get started with.
+This method of data collection has drawbacks such as [max uri lengths](https://stackoverflow.com/questions/812925/what-is-the-maximum-possible-length-of-a-query-string), but is very straight-forward to get started with.
 
 
-**For example** -> if `/pxl` is configured as a pixel input, submitting a `GET` request to `/pxl/?hello=world&userId=10` will send a payload of `{"hello": "world", "userId": "10"}` to the configured sinks. No sdk's necessary.
+:::tip For Example
+If `/pxl` is configured as a pixel input, submitting a `GET` request to `/pxl/?hello=world&userId=10` will send a payload of `{"hello": "world", "userId": "10"}` to the configured sinks.
+
+No sdk's necessary.
+:::
 
 ### Base64 Encoded Parameter Payloads
 
 The Honeypot pixel input supports a "special" query param, `hbp`, by which b64 encoded payloads can be collected.
 
+:::tip For Example
 If Honeypot is configured with a pixel path of `/pxl` (the default), submitting a `GET` request to `/pxl?hbp=eyJoZWxsbyI6IndvcmxkIn0` will send a payload of `{"hello":"world"}` to the configured sinks.
+:::
 
-## Namespacing Method
+## Namespace Method
 
 Honeypot supports two ways of namespacing pixel payloads: `arbitrary` and `named`.
 
 ### Arbitrary Pixels
 
-Any requests sent to the configured root pixel path are considered `arbitrary`.
+Any requests sent to the configured root pixel path are considered `arbitrary` and are assigned a single namespace of `honeypot.pixel.arbitrary`.
+
+**`/pxl` is the default root pixel path.**
+
+:::tip For Example
 
 If Honeypot is configured with a pixel path of `/pxl` (the default), all requests to `/pxl` **will not be validated** and will be namespaced according to `honeypot.pixel.arbitrary`.
+
+:::
 
 :::info Yo
 Since this method is basically a catchall it should be used sparingly.
@@ -40,9 +52,13 @@ Since this method is basically a catchall it should be used sparingly.
 
 ### Named Pixels
 
-Any requests sent to a schema-specific pixel path are **namespaced and validated according to the associated schema**.
+Any requests sent to a schema-specific pixel path are **namespaced according to the associated schema**.
+
+:::tip For Example
 
 If Honeypot is configured with a pixel path of `/pxl` (the default), all requests to `/pxl/io.silverton/someschema/v1.0.json` will be validated and namespaced according to the contents of the `io.silverton/someschema/v1.0.json` schema.
+
+:::
 
 :::info Pro tip
 Named pixels are the better way to go. Especially when payloads are base64 encoded so properties can have non-string types.
