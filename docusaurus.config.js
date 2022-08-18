@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'silverton-io',
-  projectName: 'honeypot',
+  projectName: 'honeypot-documentation',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
   staticDirectories: ['static'],
