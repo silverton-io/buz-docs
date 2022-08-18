@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
+slug: /examples/quickstart
 ---
 
-# Event Streaming Quickstart with 🍯
+# Quickstart
 
 This quickstart will get you started with Honeypot, a multi-node Redpanda cluster, Kowl, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
 
-# Quickstart (with Docker)
 
 :::danger Note
 If you don't have `docker` and `docker-compose` you will need to install those first.
@@ -106,7 +106,7 @@ meta     | {"namespace":"snowplow.pageView","path":"io.silverton/snowplow/page_v
 
 # Next Steps
 
-We have a lot planned for the coming months. Want to be a part of it?
+We have a lot planned. Want to be a part of it?
 
 - Sign up for **[Insiders-Only Updates](/insiders-only)**
 - Check out the **[Honeypot Roadmap](/introduction/roadmap)**
