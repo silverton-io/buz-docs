@@ -10,51 +10,43 @@ sidebar_position: 2
 
 ## Collection Method
 
-Honeypot is capable of collecting both **named** and **unnamed** webhooks. This is designed so webhooks from multiple sources can be fired into a single set of collection infrastructure, and the sources will retain distinct identifiers.
+Honeypot is capable of collecting and routing webhooks from various sources.
+
+## Namespacing Method
+
+Honeypot supports two ways of namespacing webhooks: `arbitrary` and `named`.
+
+### Arbitrary webhooks
+
+Any requests sent to the configured root webhook path are considered `arbitrary`.
+
+If Honeypot is configured with a webhook path of `/hook` (the default), all requests to `/hook` **will not be validated** and will be namespaced according to `honeypot.hook.arbitrary`.
+
+:::info Yo
+Since this method is basically a webhook catchall it should be used sparingly.
+:::
 
 ### Named webhooks
 
-Named webhooks are the recommended approach and are relatively simple - the url path following what is specified in the `webhook` config block becomes the identifier for all webhooks sent there.
+Any webhooks sent to a schema-specific webhook path are **namespaced and validated according to the associated schema**.
 
+If Honeypot is configured with a webhook path of `/hook` (the default), all requests to `/hook/com.iterable/payload/v1.0.json` will be validated and namespaced according to the contents of the `com.iterable/payload/v1.0.json` schema.
 
-**For example:** you have configured the webhook path to be `/pooh-bear` via:
-
-```
-webhook:
-  path: /pooh-bear
-```
-
-
-Any webhook payloads fired to `/pooh-bear/revenue/stripe/v1` will be identified as `revenue/stripe/v1`, payloads fired to `/pooh-bear/gitlab` will be identified as `gitlab`, payloads fired to `/pooh-bear/d016bb00-02db-4cc6-9852-e29c7cf3aa57` will be identified as `d016bb00-02db-4cc6-9852-e29c7cf3aa57`, etc....
-
-
-
-### Unnamed webhooks
-
-Unnamed webhooks are the fallback, but this functionality comes with the inevitability of creating a pile of random json with limited context.
-
-**Which you probably don't want! *So use at your own risk.***
-
-Unnamed webhooks are also relatively straight-forward - the configured url path in the `webhook` config block acts as an unnamed catch-all.
-
-**For example:** you have configured the webhook path to be `/christopher-robbin` via:
-
-```
-webhook:
-  path: /christopher-robbin
-```
-
-Any webhook payloads fired to `/christopher-robbin` will be collected and passed along as "unnamed webhooks".
+:::info Pro tip
+This is the way.
+:::
 
 ## Validation Method
 
-Honeypot does **not** validate incoming webhooks - they are assumed "ok".
+**Arbitrary webhooks:** Not validated.
+
+**Named webhooks:** Validated according to the associated schema.
 
 
 ## Sample Webhook Configuration
 
 ```
 webhook:
-  enabled: true     # Whether or not to enable webhook
-  path: /wb/hk      # Path for incoming webhooks
+  enabled: true     # Whether or not to enable webhooks
+  path: /hook       # Root path for incoming webhooks
 ```

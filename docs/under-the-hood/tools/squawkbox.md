@@ -5,10 +5,13 @@ sidebar_position: 3
 # Squawkbox
 
 
-The `squawbox` is a simple mechanism for quick feedback - incoming events are validated and enveloped, and the envelope is returned as response body.
+Honeypot ships with a simple feedback mechanism called `squawkbox`. It is most helpful when building out a tracking implementation, doing local development, etc.
 
+**Each request to the protocol-specific squawkbox results in the following:**
 
-It is most helpful when building out a tracking implementation, doing local development, etc.
+1. Incoming events are validated.
+2. Events are enveloped and all metadata is associated.
+2. The envelope is returned as the response body.
 
 
 `Squawkbox` is configurable - it can be disabled altogether or shifted to a set of alternative paths:

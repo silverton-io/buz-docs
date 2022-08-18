@@ -4,15 +4,11 @@ sidebar_position: 4
 
 # Healthcheck
 
-Honeypot ships with a `/healthcheck` endpoint by default.
+Honeypot ships with a `/health` endpoint.
 
-This endpoint can be both`disabled` altogether or pointed at a different path.
-
-Configuration is as follows:
-
+:::tip Heads up
+The healthcheck endpoint returns a `200` if everything is ok. The response looks like the following:
 ```
-app:
-  health:
-    enabled: true
-    path: /health
+{"message":"ok"}
 ```
+:::

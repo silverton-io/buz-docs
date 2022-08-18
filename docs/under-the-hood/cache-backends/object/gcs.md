@@ -2,7 +2,7 @@
 
 **🟢 Supported**
 
-The `gcs` cache backend uses jsonschemas stored in gcs to back the in-memory schema cache.
+The `gcs` cache backend uses schemas stored in gcs to back the in-memory cache.
 
 ## Sample GCS Cache Backend Configuration
 
