@@ -51,7 +51,7 @@ Named pixels are the better way to go. Especially when payloads are base64 encod
 
 ## Validation Method
 
-**Arbitrary pixels:**  Not validated and share the same namespace.
+**Arbitrary pixels:**  Not validated.
 
 **Named pixels with string query params:** Validated according to the associated schema. *But all schema properties must be of type `string`* 👎.
 
@@ -62,6 +62,6 @@ Named pixels are the better way to go. Especially when payloads are base64 encod
 ```
 inputs:
   pixel:
-    enabled: true
-    path: /pxl
+    enabled: true     # Whether or not to enable pixels
+    path: /pxl        # Root path for incoming pixels
 ```
