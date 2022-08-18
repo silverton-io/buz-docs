@@ -43,7 +43,7 @@ Honeypot supports configurable collection endpoints so tracking does not get blo
 inputs:
   snowplow:
     enabled: true               # Whether or not to enable Snowplow event collection
-    standardRoutesEnabled: true # Whether or not to enable Snowplow's standard routes
+    standardRoutesEnabled: true # Whether or not to enable the standard Snowplow routes
     openRedirectsEnabled: true  # Whether or not to enable open redirects
     getPath: /plw/g             # The custom path for get-based tracking
     postPath: /plw/p            # The custom path for post-based tracking
