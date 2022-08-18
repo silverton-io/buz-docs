@@ -5,11 +5,11 @@ slug: honeypot-core
 
 # Honeypot Core
 
-The following is a guide to quickly getting up and running for local development.
+The following is a guide to quickly getting up and running with Honeypot for local development.
 
 ## Prerequisites
 
-:::danger Prerequisites
+:::danger Will need
 You will need these:
 
 1. [go 1.19](https://go.dev/blog/go1.19)
@@ -18,7 +18,7 @@ You will need these:
 :::
 
 
-:::info Nice-to-haves
+:::info Nice-to-have
 
 And these (at minimum) will make your life better:
 
@@ -43,7 +43,7 @@ And these (at minimum) will make your life better:
 
     make bootstrap
 
-**You should now have a local `config.yml` file and will see console output like the following:**
+**You should now have a local `config.yml` file and see console output like the following:**
 
 ```
 ...
@@ -80,7 +80,7 @@ There's a slim chance you will need all of these. It is simply a matter of conve
 
     make help
 
-You should see something like the following:
+**You should see something like the following:**
 
 ```
 $ make help
@@ -96,7 +96,7 @@ Usage:
   help             Display makefile help
 ```
 
-## Where to go next?
+## Where to go next
 
 - Pick up an issue from [github](https://github.com/silverton-io/honeypot/issues) and cut your first PR.
 - [Deploy Honeypot](/production-deployment/gcp) to a production environment.
