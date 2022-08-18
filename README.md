@@ -1,6 +1,6 @@
-# Website
+# Honeypot Documentation
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+![honey](static/img/buzz.png)
 
 ### Installation
 
@@ -26,16 +26,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The docs site is auto-deployed using [Github actions](https://github.com/silverton-io/honeypot-documentation/blob/main/.github/workflows/deploy-docs.yml).

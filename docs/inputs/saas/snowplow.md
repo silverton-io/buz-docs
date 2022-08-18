@@ -48,6 +48,3 @@ inputs:
     getPath: /plw/g             # The custom path for get-based tracking
     postPath: /plw/p            # The custom path for post-based tracking
     redirectPath: /plw/r        # The custom path for open redirect tracking
-    anonymize:
-      ip: false                 # Whether or not to anonymize ip's
-      userId: false             # Whether or not to anonymize userid's
