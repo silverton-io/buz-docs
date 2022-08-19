@@ -33,7 +33,7 @@ And these (at minimum) will make your life better:
 
 ## Clone the repo
 
-    git@github.com:silverton-io/honeypot.git
+    git clone git@github.com:silverton-io/honeypot.git
 
 
 ## Bootstrap

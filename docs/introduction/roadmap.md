@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Roadmap 2022 🎯
 
 **We have three goals for 2022.**
