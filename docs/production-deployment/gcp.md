@@ -50,7 +50,7 @@ It is entirely possible to only use one output topic but if you want the upside 
 For the sake of keeping your secrets a.. secret.. uploading the entire Honeypot config yml to Secret Manager is the easiest way forward.
 
 :::info YO
-We've provided a working config sample that you can copy/paste to Secret Manager here: **FIXME**
+We've provided a working config sample that you can [copy/paste to Secret Manager here](https://github.com/silverton-io/honeypot-documentation/blob/main/examples/deploy/gcp/config.yml).
 :::
 
 **Create Honeypot config as a Secret Manager secret:**
