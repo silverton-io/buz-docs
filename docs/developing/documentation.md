@@ -12,14 +12,18 @@ The following is a guide to quickly getting up and running with this [Docusaurus
 :::danger Prerequisites
 You will need these:
 
-1. [yarn](https://yarnpkg.com/)
-2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [yarn](https://yarnpkg.com/)
 :::
+
+
+## Clone the repo
+
+    git clone git@github.com:silverton-io/honeypot-documentation.git
 
 
 ## Installation
 
-**To install all dependencies:**
+**After `cd`ing into the `honeypot-documentation` directory you just cloned, run:**
 
     yarn
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 30
+slug: /insiders-only
 hide_table_of_contents: true
 ---
 
