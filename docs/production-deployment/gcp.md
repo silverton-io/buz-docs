@@ -224,10 +224,10 @@ schemaCache:
 ***
 
 
-### Push events to [Bigquery](https://cloud.google.com/bigquery) using a Pub/Sub Subscription
+### Push events to [BigQuery](https://cloud.google.com/bigquery) using a Pub/Sub Subscription
 
 
-With the announcment of **[Bigquery Subscriptions](https://cloud.google.com/pubsub/docs/bigquery)** pushing events straight to BigQuery is easier than ever.
+With the announcment of **[BigQuery Subscriptions](https://cloud.google.com/pubsub/docs/bigquery)** pushing events straight to BigQuery is easier than ever.
 
 **FIXME - document this**
 
@@ -238,3 +238,7 @@ With the announcment of **[Bigquery Subscriptions](https://cloud.google.com/pubs
 Because it's fun.
 
 **FIXME - document this too**
+
+### Use Terraform to set things up instead of the ui
+
+**FIXME - meeee tooo**
