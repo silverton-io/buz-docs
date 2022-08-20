@@ -13,11 +13,11 @@ Incoming events (across the various event protocols) are validated using a jsons
 
 ### Supported Drafts
 
-Honeypot event validation supports **Draft 7** and **Draft 2019-09**.
+Buz event validation supports **Draft 7** and **Draft 2019-09**.
 
 ### Sample Jsonschemas
 
-For samples, visit the [schemas directory](https://github.com/silverton-io/honeypot/tree/main/schemas/) in the Honeypot repo.
+For samples, visit the [schemas directory](https://github.com/silverton-io/buz/tree/main/schemas/) in the Buz repo.
 
 ### Learning
 

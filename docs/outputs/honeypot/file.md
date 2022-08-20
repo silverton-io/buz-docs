@@ -17,6 +17,6 @@ sinks:
   - name: notgoingfar
     type: file
     deliveryRequired: true
-    validFile: honeypot-valid.json
-    invalidFile: honeypot-invalid.json
+    validFile: buz-valid.json
+    invalidFile: buz-invalid.json
 ```

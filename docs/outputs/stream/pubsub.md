@@ -18,6 +18,6 @@ sinks:
     type: pubsub
     deliveryRequired: true
     project: silverton
-    validTopic: honeypot-valid
-    invalidTopic: honeypot-invalid
+    validTopic: buz-valid
+    invalidTopic: buz-invalid
 ```

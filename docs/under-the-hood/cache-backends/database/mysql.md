@@ -18,7 +18,7 @@ schemaCache:
     registryTable: registry
     mysqlHost: localhost
     mysqlPort: 3306
-    mysqlDbName: honeypot
-    mysqlUser: honeypot
-    mysqlPass: honeypot
+    mysqlDbName: buz
+    mysqlUser: buz
+    mysqlPass: buz
 ```

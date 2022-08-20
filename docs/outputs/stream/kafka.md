@@ -18,6 +18,6 @@ sinks:
     deliveryRequired: true
     kafkaBrokers:
       - 127.0.0.1:9092
-    validTopic: honeypot-valid
-    invalidTopic: honeypot-invalid
+    validTopic: buz-valid
+    invalidTopic: buz-invalid
 ```

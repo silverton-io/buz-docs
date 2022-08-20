@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Deploying to Cloud Run (in 4 steps)
 
-The easiest way to deploy Honeypot on GCP is via **[Google Cloud Run](https://cloud.google.com/run)**.
+The easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)**.
 
 The base deployment consists of **four GCP resources:**
 * **Two Pub/Sub topics**
@@ -29,7 +29,7 @@ You'll want two Pub/Sub topics - one for `valid` events and the other for `inval
 It is entirely possible to only use one output topic but if you want the upside of redirecting events that fail validation out of the "happy path", two topics are necessary.
 :::
 
-**Create the `honeypot-valid` and `honeypot-invalid` Pub/Sub topics:**
+**Create the `buz-valid` and `buz-invalid` Pub/Sub topics:**
 
 ![create topic](img/gcp/create-topic.png)
 
@@ -47,13 +47,13 @@ It is entirely possible to only use one output topic but if you want the upside 
 
 ### 2. Upload config to [Secret Manager](https://console.cloud.google.com/security/secret-manager).
 
-For the sake of keeping your secrets a.. secret.. uploading the entire Honeypot config yml to Secret Manager is the easiest way forward.
+For the sake of keeping your secrets a.. secret.. uploading the entire Buz config yml to Secret Manager is the easiest way forward.
 
 :::info YO
-We've provided a working config sample that you can [copy/paste to Secret Manager here](https://github.com/silverton-io/honeypot-documentation/blob/main/examples/deploy/gcp/config.yml).
+We've provided a working config sample that you can [copy/paste to Secret Manager here](https://github.com/silverton-io/buz-documentation/blob/main/examples/deploy/gcp/config.yml).
 :::
 
-**Create Honeypot config as a Secret Manager secret:**
+**Create Buz config as a Secret Manager secret:**
 
 ![create secret](img/gcp/create-secret.png)
 
@@ -93,40 +93,40 @@ Adding credentials for: us-east1-docker.pkg.dev
 Docker configuration file updated.
 ```
 
-**Pull the latest Honeypot image from the [Github container registry](https://github.com/silverton-io/honeypot/pkgs/container/honeypot)**:
+**Pull the latest Buz image from the [Github container registry](https://github.com/silverton-io/buz/pkgs/container/buz)**:
 
 :::warning AMD64
 - At the time of writing Google Cloud Run doesn't support ARM64-based images so you'll need to grab the AMD64 image.
 :::
 
 ```
-docker pull ghcr.io/silverton-io/honeypot:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 # amd64
+docker pull ghcr.io/silverton-io/buz:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 # amd64
 
-ghcr.io/silverton-io/honeypot@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205: Pulling from silverton-io/honeypot
+ghcr.io/silverton-io/buz@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205: Pulling from silverton-io/buz
 Digest: sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205
-Status: Image is up to date for ghcr.io/silverton-io/honeypot@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205
-ghcr.io/silverton-io/honeypot:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 # Note! Use applicable version here
+Status: Image is up to date for ghcr.io/silverton-io/buz@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205
+ghcr.io/silverton-io/buz:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 # Note! Use applicable version here
 
-v0.11.10: Pulling from silverton-io/honeypot
+v0.11.10: Pulling from silverton-io/buz
 Digest: sha256:e70de1a6163e7756474c75fc96b6ebb07270bb6940372d348c1ba255f07a67a1
-Status: Image is up to date for ghcr.io/silverton-io/honeypot:v0.11.10
-ghcr.io/silverton-io/honeypot:v0.11.10
+Status: Image is up to date for ghcr.io/silverton-io/buz:v0.11.10
+ghcr.io/silverton-io/buz:v0.11.10
 ```
 
-**Tag and push the latest Honeypot image to Artifact Registry:**
+**Tag and push the latest Buz image to Artifact Registry:**
 
 :::warning Use your own Artifact Registry URL
 
 This example uses the Silverton registry url - you'll need to use your own.
 
-It's structured as: `$ARTIFACT_REGISTRY_URL/$GCP_PROJECT/$REGISTRY_NAME/honeypot:$VERSION`
+It's structured as: `$ARTIFACT_REGISTRY_URL/$GCP_PROJECT/$REGISTRY_NAME/buz:$VERSION`
 :::
 
 ```
-docker tag ghcr.io/silverton-io/honeypot:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 us-east1-docker.pkg.dev/silverton-docs/registry/honeypot:v0.11.10
+docker tag ghcr.io/silverton-io/buz:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.10
 
-docker push us-east1-docker.pkg.dev/silverton-docs/registry/honeypot:v0.11.10
-The push refers to repository [us-east1-docker.pkg.dev/silverton-docs/registry/honeypot]
+docker push us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.10
+The push refers to repository [us-east1-docker.pkg.dev/silverton-docs/registry/buz]
 3782d1c64659: Pushed
 df4afbed8e0e: Pushed
 2ddb525329ee: Pushed
@@ -139,9 +139,9 @@ v0.11.10: digest: sha256:28d8fda0fb75956a13b33c3cd03e00ab728d65690adfd803d73cc41
 
 ***
 
-### 4. Run Honeypot as a [Cloud Run](https://console.cloud.google.com/run) service.
+### 4. Run Buz as a [Cloud Run](https://console.cloud.google.com/run) service.
 
-**Create a new `Honeypot` service:**
+**Create a new `Buz` service:**
 
 ![create service](img/gcp/create-service.png)
 
@@ -167,10 +167,10 @@ v0.11.10: digest: sha256:28d8fda0fb75956a13b33c3cd03e00ab728d65690adfd803d73cc41
 
 ## Bonus Points
 
-### Map a [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains) to Honeypot
+### Map a [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains) to Buz
 
 :::warning Yo
-While this step is **technically optional**, some Honeypot functionality like server-side identity cookies ***will not work without it.***
+While this step is **technically optional**, some Buz functionality like server-side identity cookies ***will not work without it.***
 :::
 
 It takes a minute to map a domain/subdomain to a GCP Cloud Run service. Here's how to do it.
@@ -192,7 +192,7 @@ It takes a minute to map a domain/subdomain to a GCP Cloud Run service. Here's h
 
 :::info Yo
 - While this step is optional, you'll need to do it when using custom schemas.
-- Honeypot supports a number of [schema cache backends](/category/schema-cache-backends), so you can just as easily use a different backend.
+- Buz supports a number of [schema cache backends](/category/schema-cache-backends), so you can just as easily use a different backend.
 :::
 
 
@@ -206,12 +206,12 @@ It takes a minute to map a domain/subdomain to a GCP Cloud Run service. Here's h
 **Copy schemas to the new schema bucket using [gsutil](https://cloud.google.com/storage/docs/gsutil):**
 
 
-(From [honeypot](https://github.com/silverton-io/honeypot) root)
+(From [buz](https://github.com/silverton-io/buz) root)
 ```
-honeypot ❯❯❯ gsutil cp -r schemas/*  gs://$THE_BUCKET_YOU_JUST_CREATED
+buz ❯❯❯ gsutil cp -r schemas/*  gs://$THE_BUCKET_YOU_JUST_CREATED
 ```
 
-**Reconfigure Honeypot with a new schema registry backend:**
+**Reconfigure Buz with a new schema registry backend:**
 
 ```
 schemaCache:

@@ -10,6 +10,6 @@ The `gcs` cache backend uses schemas stored in gcs to back the in-memory cache.
 schemaCache:
   backend:
     type: gcs                 # The backend type
-    bucket: honeypot-schemas  # The gcs bucket containing schemas
+    bucket: buz-schemas  # The gcs bucket containing schemas
     path: /                   # The path to consider as root
 ```

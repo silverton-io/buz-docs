@@ -6,7 +6,7 @@ sidebar_position: 2
 
 **🟢 Supported**
 
-The rate limiter middleware allows the operator to throttle incoming events from specific sources. It is not intended to be the sole mechanism by which Honeypot is protected from malicious activity, but it does help.
+The rate limiter middleware allows the operator to throttle incoming events from specific sources. It is not intended to be the sole mechanism by which Buz is protected from malicious activity, but it does help.
 
 
 :::danger Status Code

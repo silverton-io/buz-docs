@@ -10,7 +10,7 @@ Do you want to contribute to the project?
 
 Are you interested in being the first to know about new developments?
 
-Want to know when Honeypot is fully production-ready?
+Want to know when Buz is fully production-ready?
 
 Would you like to invest in or advise the project?
 

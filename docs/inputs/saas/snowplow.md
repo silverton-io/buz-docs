@@ -11,7 +11,7 @@ sidebar_position: 2
 
 At the end of the day Snowplow leverages *two* event protocols - the original [Tracker Protocol](https://docs.snowplowanalytics.com/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) and [Custom Self-Describing Events](https://docs.snowplowanalytics.com/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/javascript-tracker-v2/tracking-specific-events/#tracking-custom-self-describing-events).
 
-Honeypot supports both, but does so in a way that seamlessly blends the data model of Self-Describing Events and the traditional Tracker Protocol. It also *validates and redirects tracker-protocol events in the same manner as self-describing events.*
+Buz supports both, but does so in a way that seamlessly blends the data model of Self-Describing Events and the traditional Tracker Protocol. It also *validates and redirects tracker-protocol events in the same manner as self-describing events.*
 
 ## Collection Methods
 
@@ -26,15 +26,15 @@ It leverages three primary event collection endpoints:
   - `r/tp2` (redirect endpoint used for `GET`-based tracking)
   - `com.snowplow.analytics.snowplow/tp2` (endpoint used for `POST`-based tracking)
 
-Honeypot supports all of the above, but allows various functionality to be enabled/disabled as needed.
+Buz supports all of the above, but allows various functionality to be enabled/disabled as needed.
 
 ## Validation Method
 
-Honeypot uses a set of static schemas to validate incoming "tracker protocol" events, and the associated `schema` property to validate incoming "self describing" events.
+Buz uses a set of static schemas to validate incoming "tracker protocol" events, and the associated `schema` property to validate incoming "self describing" events.
 
 ## Navigating Ad Blockers
 
-Honeypot supports configurable collection endpoints so tracking does not get blocked by ever-expanding ad blocker lists.
+Buz supports configurable collection endpoints so tracking does not get blocked by ever-expanding ad blocker lists.
 
 
 ## Sample Snowplow Configuration

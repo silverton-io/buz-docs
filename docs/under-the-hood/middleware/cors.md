@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **🟢 Supported**
 
-The cors middleware ensures Honeypot is able to track events across a set of domains.
+The cors middleware ensures Buz is able to track events across a set of domains.
 
 It allows the following headers to be entirely configurable:
 

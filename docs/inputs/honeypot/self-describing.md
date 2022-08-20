@@ -8,7 +8,7 @@ slug: self-describing
 **🟢 Supported**
 
 ## Collection Method
-Honeypot listens on a configurable endpoint for incoming `POST` requests of `self describing` payloads, structured as:
+Buz listens on a configurable endpoint for incoming `POST` requests of `self describing` payloads, structured as:
 
 ```
 {
@@ -32,7 +32,7 @@ If a `Content-Type` header is not specified, the event will not be accepted.
 
 ## Namespace Method
 
-Honeypot supports only `named` self-describing payloads.
+Buz supports only `named` self-describing payloads.
 
 ### Named self-describing payloads
 
@@ -63,7 +63,7 @@ If you have incoming self-describing payloads structured as:
 
 ## Validation Method
 
-Honeypot uses the schema defined at `$PAYLOAD_KEY.$SCHEMA_KEY` to validate each payload.
+Buz uses the schema defined at `$PAYLOAD_KEY.$SCHEMA_KEY` to validate each payload.
 
 :::tip For Example
 If you have incoming self-describing events structured as:

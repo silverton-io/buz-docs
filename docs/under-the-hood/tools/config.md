@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Config
 
-Honeypot ships with a `/config` endpoint that responds with what you might expect: `a json representation of how the system is currently configured`
+Buz ships with a `/config` endpoint that responds with what you might expect: `a json representation of how the system is currently configured`
 
 :::warning It can (and should) be disabled in production
 **To disable via the config file:**
@@ -26,7 +26,7 @@ Config responses look like the following. **Again, this should be disabled in pr
 {
   "app": {
     "version": "x.x.dev",
-    "name": "honeypot",
+    "name": "buz",
     "env": "development",
     "mode": "debug",
     "port": "8080",
@@ -95,8 +95,8 @@ Config responses look like the following. **Again, this should be disabled in pr
       "name": "file",
       "type": "file",
       "deliveryRequired": true,
-      "validFile": "honeypot-valid.json",
-      "invalidFile": "honeypot-invalid.json"
+      "validFile": "buz-valid.json",
+      "invalidFile": "buz-invalid.json"
     }
   ],
   "squawkBox": {

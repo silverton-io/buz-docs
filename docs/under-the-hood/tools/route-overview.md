@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Route Overview
 
-Honeypot ships with a `/routes` endpoint for a high-level overview of how all routes have been configured.
+Buz ships with a `/routes` endpoint for a high-level overview of how all routes have been configured.
 
 :::tip Heads up
 Route overview responses look like the following:

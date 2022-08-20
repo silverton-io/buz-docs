@@ -3,6 +3,6 @@
     "position": 3,
     "link": {
         "type": "generated-index",
-        "description": "Honeypot supports a number of schema cache backends"
+        "description": "Buz supports a number of schema cache backends"
     }
 }

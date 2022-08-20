@@ -18,7 +18,7 @@ schemaCache:
     registryTable: registry
     pgHost: localhost
     pgPort: 5432
-    pgDbName: honeypot
-    pgUser: honeypot
-    pgPass: honeypot
+    pgDbName: buz
+    pgUser: buz
+    pgPass: buz
 ```

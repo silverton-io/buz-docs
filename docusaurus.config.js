@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Honeypot',
+  title: 'Buz',
   tagline: 'Event streaming for the rest of us.',
-  url: 'https://honeypot.silverton.io',
+  url: 'https://buz.silverton.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'silverton-io',
-  projectName: 'honeypot-documentation',
+  projectName: 'buz-documentation',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
   staticDirectories: ['static'],
@@ -51,21 +51,21 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Honeypot',
+        title: 'Buz',
         logo: {
-          alt: 'Honeypot',
+          alt: 'Buz',
           src: 'img/bee2.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'introduction/what-is-honeypot',
+            docId: 'introduction/what-is-buz',
             position: 'right',
             label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'right'},
           {
-            href: 'https://github.com/silverton-io/honeypot',
+            href: 'https://github.com/silverton-io/buz',
             label: 'GitHub',
             position: 'right',
           },
@@ -92,7 +92,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/silverton-io/honeypot/',
+                href: 'https://github.com/silverton-io/buz/',
               },
             ],
           },
@@ -105,7 +105,7 @@ const config = {
       },
       snowplow: {
         collector: 'tele.silverton.io',
-        appId: 'honeypot-docs',
+        appId: 'buz-docs',
         withCredentials: false
       }
     }),

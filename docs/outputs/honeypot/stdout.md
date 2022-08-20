@@ -8,7 +8,7 @@ sidebar_position: 4
 **🟢 Supported**
 
 
-The stdout sink writes colorized events to.... stdout! It is especially useful when wanting feedback during development or when taking Honeypot for a test drive.
+The stdout sink writes colorized events to.... stdout! It is especially useful when wanting feedback during development or when taking Buz for a test drive.
 
 
 ## Sample Stdout Sink Configuration

@@ -18,12 +18,12 @@ You will need these:
 
 ## Clone the repo
 
-    git clone git@github.com:silverton-io/honeypot-documentation.git
+    git clone git@github.com:silverton-io/buz-documentation.git
 
 
 ## Installation
 
-**After `cd`ing into the `honeypot-documentation` directory you just cloned, run:**
+**After `cd`ing into the `buz-documentation` directory you just cloned, run:**
 
     yarn
 
@@ -37,12 +37,12 @@ You will need these:
 
 ## Deploying documentation
 
-The docs site is auto-deployed using [Github Actions](https://github.com/silverton-io/honeypot-documentation/blob/main/.github/workflows/deploy-docs.yml).
+The docs site is auto-deployed using [Github Actions](https://github.com/silverton-io/buz-documentation/blob/main/.github/workflows/deploy-docs.yml).
 
 
 ## Where to go next
 
-- Pick up an issue from [github](https://github.com/silverton-io/honeypot/issues) and cut your first PR.
-- [Deploy Honeypot](/production-deployment/gcp) to a production environment.
-- Play around with the [Honeypot documentation](/developing/documentation-site).
-- Read about the [general philosophy](/introduction/philosophy) of Honeypot.
+- Pick up an issue from [github](https://github.com/silverton-io/buz/issues) and cut your first PR.
+- [Deploy Buz](/production-deployment/gcp) to a production environment.
+- Play around with the [Buz documentation](/developing/documentation-site).
+- Read about the [general philosophy](/introduction/philosophy) of Buz.

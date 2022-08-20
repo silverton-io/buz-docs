@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Event-Level Metrics
 
-Each Honeypot instance has an onboard metrics endpoint located at `/stats`.
+Each Buz instance has an onboard metrics endpoint located at `/stats`.
 
 
 :::tip Heads up
@@ -32,9 +32,9 @@ Each Honeypot instance has an onboard metrics endpoint located at `/stats`.
     "valid": {
       "cloudevents": {},
       "generic": {
-        "honeypot.internal.tele.beat": 75555,
-        "honeypot.internal.tele.shutdown": 56,
-        "honeypot.internal.tele.startup": 43
+        "buz.internal.tele.beat": 75555,
+        "buz.internal.tele.shutdown": 56,
+        "buz.internal.tele.startup": 43
       },
       "pixel": {},
       "snowplow": {},

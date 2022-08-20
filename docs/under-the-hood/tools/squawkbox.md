@@ -5,7 +5,7 @@ sidebar_position: 3
 # Squawkbox
 
 
-Honeypot ships with a simple feedback mechanism called `squawkbox`. It is most helpful when building out a tracking implementation, doing local development, etc.
+Buz ships with a simple feedback mechanism called `squawkbox`. It is most helpful when building out a tracking implementation, doing local development, etc.
 
 **Each request to the protocol-specific squawkbox results in the following:**
 
