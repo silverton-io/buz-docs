@@ -18,12 +18,12 @@ You will need these:
 
 ## Clone the repo
 
-    git clone git@github.com:silverton-io/buz-documentation.git
+    git clone git@github.com:silverton-io/buz-docs.git
 
 
 ## Installation
 
-**After `cd`ing into the `buz-documentation` directory you just cloned, run:**
+**After `cd`ing into the `buz-docs` directory you just cloned, run:**
 
     yarn
 
@@ -37,7 +37,7 @@ You will need these:
 
 ## Deploying documentation
 
-The docs site is auto-deployed using [Github Actions](https://github.com/silverton-io/buz-documentation/blob/main/.github/workflows/deploy-docs.yml).
+The docs site is auto-deployed using [Github Actions](https://github.com/silverton-io/buz-docs/blob/main/.github/workflows/deploy-docs.yml).
 
 
 ## Where to go next
