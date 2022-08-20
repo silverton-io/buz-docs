@@ -16,6 +16,6 @@ sinks:
   - name: zoom
     type: kinesis
     deliveryRequired: true
-    validStream: honeypot-valid
-    invalidStream: honeypot-invalid
+    validStream: buz-valid
+    invalidStream: buz-invalid
 ```

@@ -10,19 +10,19 @@ sidebar_position: 2
 
 ## Collection Method
 
-Honeypot is capable of collecting and routing webhooks from pretty much anywhere.
+Buz is capable of collecting and routing webhooks from pretty much anywhere.
 
 ## Namespace Method
 
-Honeypot supports two ways of namespacing webhooks: `arbitrary` and `named`.
+Buz supports two ways of namespacing webhooks: `arbitrary` and `named`.
 
 ### Arbitrary webhooks
 
-All requests sent to the configured root webhook path are considered `arbitrary` and are assigned a single namespace of `honeypot.hook.arbitrary`.
+All requests sent to the configured root webhook path are considered `arbitrary` and are assigned a single namespace of `buz.hook.arbitrary`.
 
 :::tip For Example
 
-If Honeypot is configured with a webhook path of `/hook` (the default), all requests to `/hook` **will not be validated** and will be namespaced according to `honeypot.hook.arbitrary`.
+If Buz is configured with a webhook path of `/hook` (the default), all requests to `/hook` **will not be validated** and will be namespaced according to `buz.hook.arbitrary`.
 
 :::
 
@@ -36,7 +36,7 @@ Any webhooks sent to a schema-specific webhook path are **namespaced according t
 
 :::tip For Example
 
-If Honeypot is configured with a webhook path of `/hook` (the default), all requests to `/hook/com.iterable/payload/v1.0.json` will be validated and namespaced according to the contents of the `com.iterable/payload/v1.0.json` schema.
+If Buz is configured with a webhook path of `/hook` (the default), all requests to `/hook/com.iterable/payload/v1.0.json` will be validated and namespaced according to the contents of the `com.iterable/payload/v1.0.json` schema.
 
 :::
 

@@ -1,4 +1,4 @@
-# Honeypot Documentation
+# Buz Documentation
 
 ![honey](static/img/buzz.png)
 
@@ -26,4 +26,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-The docs site is auto-deployed using [Github actions](https://github.com/silverton-io/honeypot-documentation/blob/main/.github/workflows/deploy-docs.yml).
+The docs site is auto-deployed using [Github actions](https://github.com/silverton-io/buz-docs/blob/main/.github/workflows/deploy-docs.yml).

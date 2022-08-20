@@ -5,7 +5,7 @@ slug: /examples/quickstart
 
 # Quickstart
 
-This quickstart will get you started with Honeypot, a multi-node Redpanda cluster, Kowl, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
+This quickstart will get you started with Buz, a multi-node Redpanda cluster, Kowl, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
 
 
 :::danger Note
@@ -13,24 +13,24 @@ If you don't have `docker` and `docker-compose` you will need to install those f
 :::
 
 
-## 1. Clone the Honeypot repo
+## 1. Clone the Buz repo
 
-**`git clone git@github.com:silverton-io/honeypot.git && cd honeypot`**
+**`git clone git@github.com:silverton-io/buz.git && cd buz`**
 
 
 ```
-~/code ❯❯❯ git clone git@github.com:silverton-io/honeypot.git
-Cloning into 'honeypot'...
+~/code ❯❯❯ git clone git@github.com:silverton-io/buz.git
+Cloning into 'buz'...
 remote: Enumerating objects: 1324, done.
 remote: Counting objects: 100% (1324/1324), done.
 remote: Compressing objects: 100% (615/615), done.
 remote: Total 1324 (delta 611), reused 1163 (delta 495), pack-reused 0
 Receiving objects: 100% (1324/1324), 25.89 MiB | 4.35 MiB/s, done.
 Resolving deltas: 100% (611/611), done.
-~/code ❯❯❯ cd honeypot
+~/code ❯❯❯ cd buz
 ```
 
-## 2. Bootstrap Honeypot, Redpanda, Kowl, and Materialize
+## 2. Bootstrap Buz, Redpanda, Kowl, and Materialize
 
 **`docker-compose -f examples/quickstart/docker-compose.yml up -d`**
 
@@ -40,7 +40,7 @@ This step requires [docker-compose](https://docs.docker.com/compose/).
 
 
 ```
-~/c/honeypot ❯❯❯ docker-compose -f examples/quickstart/docker-compose.yml up -d
+~/c/buz ❯❯❯ docker-compose -f examples/quickstart/docker-compose.yml up -d
 ...
 ...
 ...
@@ -51,14 +51,14 @@ This step requires [docker-compose](https://docs.docker.com/compose/).
  ⠿ Container redpanda-2     Started                                                                                                        4.5s
  ⠿ Container redpanda-init  Started                                                                                                        6.3s
  ⠿ Container kowl           Started                                                                                                        6.4s
- ⠿ Container honeypot       Started                                                                                                        7.1s
-~/c/honeypot ❯❯❯
+ ⠿ Container buz       Started                                                                                                        7.1s
+~/c/buz ❯❯❯
 ```
 
 
-## 3. Send Events to Honeypot
+## 3. Send Events to Buz
 
-The Honeypot quickstart serves a page that you can use to quickly start firing Snowplow events using the [Snowplow Browser Tracker](https://docs.snowplowanalytics.com/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/javascript-tracker-v3/) here: [localhost:8081](http://localhost:8081/)
+The Buz quickstart serves a page that you can use to quickly start firing Snowplow events using the [Snowplow Browser Tracker](https://docs.snowplowanalytics.com/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/javascript-tracker-v3/) here: [localhost:8081](http://localhost:8081/)
 
 The following events are tracked on this page:
 
@@ -90,7 +90,7 @@ Connect to Materialize using `psql`:
 And select real-time data from the `valid_events` and `invalid_events` materialized views:
 
 ```
-~/c/honeypot ❯❯❯ psql -h 127.0.0.1 -p 6875 -U materialize
+~/c/buz ❯❯❯ psql -h 127.0.0.1 -p 6875 -U materialize
 
 psql (14.1, server 9.5.0)
 Type "help" for help.
@@ -109,27 +109,27 @@ meta     | {"namespace":"snowplow.pageView","path":"io.silverton/snowplow/page_v
 We have a lot planned. Want to be a part of it?
 
 - Sign up for **[Insiders-Only Updates](/insiders-only)**
-- Check out the **[Honeypot Roadmap](/introduction/roadmap)**
+- Check out the **[Buz Roadmap](/introduction/roadmap)**
 
 <!-- 
 
 # Component Overview
 
-## Honeypot
+## Buz
 
-Honeypot is a multi-protocol event collection, validation, and routing system.
+Buz is a multi-protocol event collection, validation, and routing system.
 
-**Want to track Snowplow events?** Think Honeypot.
+**Want to track Snowplow events?** Think Buz.
 
-**Want to track Cloudevents?** Think Honeypot.
+**Want to track Cloudevents?** Think Buz.
 
-**Have a more custom, self-describing event implementation?** Think Honeypot.
+**Have a more custom, self-describing event implementation?** Think Buz.
 
 ## Redpanda
 
 Redpanda is Kafka-compatible streaming platform, with 100% less Zookeeper and JVM. It is blazing fast, quick to set up, and incredibly operator-oriented.
 
-This example uses a three-node Redpanda cluster as the streaming interface between Honeypot and Materialize.
+This example uses a three-node Redpanda cluster as the streaming interface between Buz and Materialize.
 
 Redpanda docs can be found here: [docs.redpanda.com](https://docs.redpanda.com/).
 
@@ -140,7 +140,7 @@ Redpanda docs can be found here: [docs.redpanda.com](https://docs.redpanda.com/)
 
 Kowl is a very useful UI for Kafka cluster visibility, schema discovery, and other administrative tasks.
 
-Honeypot quickstart uses it to quickly visualize and verify data flowing through Redpanda (on its way to Materialize).
+Buz quickstart uses it to quickly visualize and verify data flowing through Redpanda (on its way to Materialize).
 
 More on Kowl can be found here: [cloudhut.dev](https://cloudhut.dev/)
 
@@ -150,7 +150,7 @@ More on Kowl can be found here: [cloudhut.dev](https://cloudhut.dev/)
 
 [Materialize](https://materialize.com/docs/) is a streaming, SQL-based materialized view engine based on [Differential dataflow](https://github.com/frankmcsherry/differential-dataflow).
 
-This example uses Materialize to create real-time aggregates and activity funnels by streaming data from Honeypot, through Redpanda, into a Materialize Source, before aggregating in a materialized view.
+This example uses Materialize to create real-time aggregates and activity funnels by streaming data from Buz, through Redpanda, into a Materialize Source, before aggregating in a materialized view.
 
 ![materialize](../img/materialize.png)
  -->

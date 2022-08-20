@@ -1,8 +1,8 @@
 {
-    "label": "Honeypot Backends",
+    "label": "Buz Backends",
     "position": 1,
     "link": {
         "type": "generated-index",
-        "description": "Honeypot Cache Backends"
+        "description": "Buz Cache Backends"
     }
 }

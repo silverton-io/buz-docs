@@ -85,8 +85,8 @@ sinks:
   - name: primary
     type: pubsub
     deliveryRequired: true
-    validTopic: honeypot-valid
-    invalidTopic: honeypot-invalid
+    validTopic: buz-valid
+    invalidTopic: buz-invalid
     project: silverton-docs # FIXME
   - name: secondary
     type: stdout

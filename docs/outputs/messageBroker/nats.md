@@ -8,7 +8,7 @@ sidebar_position: 17
 
 The NATS sink writes `valid` and `invalid` events to the configured subjects.
 
-It is especially useful if you already have NATS running and want to quickly get started with Honeypot-based event tracking.
+It is especially useful if you already have NATS running and want to quickly get started with Buz-based event tracking.
 
 
 ## Sample NATS Sink Configuration
@@ -21,6 +21,6 @@ sinks:
     natsHost: nats
     natsUser: someuser
     natsPass: somepass
-    validSubject: honeypot.valid
-    invalidSubject: honeypot.invalid
+    validSubject: buz.valid
+    invalidSubject: buz.invalid
 ```

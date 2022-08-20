@@ -17,7 +17,7 @@ schemaCache:
     registryTable: registry
     clickhouseHost: 127.0.0.1
     clickhousePort: 9000
-    clickhouseDbName: honeypot
-    clickhouseUser: honeypot
-    clickhousePass: honeypot
+    clickhouseDbName: buz
+    clickhouseUser: buz
+    clickhousePass: buz
 ```

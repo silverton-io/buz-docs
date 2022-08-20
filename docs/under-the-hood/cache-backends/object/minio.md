@@ -14,6 +14,6 @@ schemaCache:
     minioEndpoint: localhost:9000
     accessKeyId: SOME-ACCESS-KEY-ID
     secretAccessKey: SOME-SECRET-ACCESS-KEY
-    bucket: honeypot-schemas
+    bucket: buz-schemas
     path: /
 ```

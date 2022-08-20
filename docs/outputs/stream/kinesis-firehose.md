@@ -15,6 +15,6 @@ sinks:
   - name: straightshots3
     type: kinesis-firehose
     deliveryRequired: true
-    validStream: honeypot-valid
-    invalidStream: honeypot-invalid
+    validStream: buz-valid
+    invalidStream: buz-invalid
 ```

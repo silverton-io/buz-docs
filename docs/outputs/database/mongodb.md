@@ -21,9 +21,9 @@ sinks:
       - mongodb1
       - mongodb2
     mongoPort: 27017
-    mongoDbName: honeypot
+    mongoDbName: buz
     mongoUser: hpt
     mongoPass: hpt
-    validCollection: honeypotValid
-    invalidCollection: honeypotInvalid
+    validCollection: buzValid
+    invalidCollection: buzInvalid
 ```

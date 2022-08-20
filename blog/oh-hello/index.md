@@ -10,7 +10,7 @@ Defining, implementing, and evolving events is hard.
 
 Running event collection systems is also hard.
 
-Honeypot aims to make it easy.
+Buz aims to make it easy.
 
 
-**[What is Honeypot?](/)**
+**[What is Buz?](/)**

@@ -19,7 +19,7 @@ schemaCache:
     mongoHosts:
       - 127.0.0.1
     mongoPort: 27017
-    mongoDbName: honeypot
-    mongoUser: honeypot
-    mongoPass: honeypot
+    mongoDbName: buz
+    mongoUser: buz
+    mongoPass: buz
 ```

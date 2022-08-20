@@ -21,6 +21,6 @@ sinks:
       - http://es1:9200
     elasticsearchUsername: elastic
     elasticsearchPassword: elastic
-    validIndex: honeypot-valid
-    invalidIndex: honeypot-invalid
+    validIndex: buz-valid
+    invalidIndex: buz-invalid
 ```
