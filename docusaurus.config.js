@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Buz',
   tagline: 'Event streaming for the rest of us.',
-  url: 'https://buz.silverton.io',
+  url: 'https://buz.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
