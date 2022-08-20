@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Buz Blog</title>
-        <link>https://buz.silverton.io/blog</link>
+        <link>https://buz.dev/blog</link>
         <description>Buz Blog</description>
-        <lastBuildDate>Sat, 20 Aug 2022 17:20:31 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 20 Aug 2022 17:24:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
             <title><![CDATA[Make It Easy]]></title>
-            <link>https://buz.silverton.io/blog/make-it-easy</link>
+            <link>https://buz.dev/blog/make-it-easy</link>
             <guid>make-it-easy</guid>
-            <pubDate>Sat, 20 Aug 2022 17:20:31 GMT</pubDate>
+            <pubDate>Sat, 20 Aug 2022 17:24:58 GMT</pubDate>
             <description><![CDATA[Defining, implementing, and evolving events is hard.]]></description>
             <content:encoded><![CDATA[<p>Defining, implementing, and evolving events is hard.</p><p>Running event collection systems is also hard.</p><p>Buz aims to make it easy.</p><p><strong><a href="/">What is Buz?</a></strong></p>]]></content:encoded>
         </item>
