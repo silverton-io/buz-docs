@@ -107,7 +107,22 @@ const config = {
         collector: 'tele.silverton.io',
         appId: 'buz-docs',
         withCredentials: false
-      }
+      },
+      metadata: [
+        {
+          name: "Buz",
+          description: "Streaming, simplified.",
+          content: "data, processing, streaming, quality, contracts"
+        },
+        {
+          property: "og:image",
+          content: "https://buz.dev/img/buzz.png"
+        },
+        {
+          property: "twitter:image",
+          content: "https://buz.dev/img/buzz.png"
+        }
+      ],
     }),
 };
 
