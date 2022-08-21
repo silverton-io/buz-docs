@@ -107,7 +107,13 @@ const config = {
         collector: 'tele.silverton.io',
         appId: 'buz-docs',
         withCredentials: false
-      }
+      },
+      metadata: [
+        {
+          name: "Buz",
+          content: "data, processing, streaming, quality, contracts"
+        }
+      ],
     }),
 };
 

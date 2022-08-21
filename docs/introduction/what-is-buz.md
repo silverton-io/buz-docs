@@ -2,6 +2,9 @@
 sidebar_position: 1
 slug: /
 title: What is Buz?
+description: Buz - The simplest way to stream.
+image: img/buzz.png
+keywords: [keywords, describing, the main topics]
 ---
 
 ![buzz](../../static/img/buzz.png)
