@@ -33,4 +33,4 @@ keywords: [Snowplow Analytics, Materialize, Buz]
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy](category/deploying-buz) Buz
+- [Deploy](/category/deploying-buz) Buz
