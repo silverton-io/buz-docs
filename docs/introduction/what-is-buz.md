@@ -19,16 +19,16 @@ Buz is designed to be **easily-configured**, **easily-deployed**, and **easily-m
     - Pixels
     - Cloudevents
 
-- **You want to simultaneously shrink the footprint of your systems, move faster, and improve data quality as it comes in the front door.**
+- **You want to simultaneously shrink the footprint of your systems, move faster, and improve data quality.**
     - Less infrastructure = `less`. Less headaches, less outages, less to think about.
     - Less infrastructure = `more`. More time, more progress, more fun.
 
-- **You want cost efficiencies, yet burstable scale.**
-    - Buz fast, efficient, static binary.
+- **You want cost efficiencies and burstable scale.**
+    - Buz is fast, efficient, static binary.
     - Buz is easily deployed using GCP [Cloud Run](https://cloud.google.com/run) or [Knative](https://knative.dev/docs/). Which means it can effectively scale from `0` to `∞`. Perhaps beyond?
     - Want 2M records free every month? Deploy Buz on your own, in minutes, with [Cloud Run](https://cloud.google.com/free/docs/gcp-free-tier/#cloud-run) or AWS.
 
-- **You are sick of paying to re-process the same data using [INSERT MDS ELT TOOL HERE].**
+- **You are sick of paying to re-process the same data using [INSERT MDS ELT TOOL HERE] when webhooks will do.**
     - No MAR or quotas or prepaid compute necessary.
     - No third-party DPA's and weekly outage emails.
 
