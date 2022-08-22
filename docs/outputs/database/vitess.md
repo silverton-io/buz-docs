@@ -1,5 +1,5 @@
 # Vitess
 
-**🟡 Currently Unsupported**
+**🟢 Supported**
 
-Stay tuned.
+See also [mysql](mysql) output.
