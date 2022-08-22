@@ -1,13 +1,15 @@
 ---
-
+title: Snowplow Analytics to Redpanda with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Redpanda.
+keywords: [{{intput}}, Redpanda, Buz]
 ---
 
-# Send Snowplow Analytics data to Planetscale using Buz.
+# Send Snowplow Analytics data to Redpanda using Buz.
 
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Snowplow Analytics data to Planetscale.
+## Buz makes it easy to collect, validate, and load your Snowplow Analytics data to Redpanda.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz

@@ -1,5 +1,7 @@
 ---
-
+title: Webhook to NATS with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to NATS.
+keywords: [{{intput}}, NATS, Buz]
 ---
 
 # Send Webhook data to NATS using Buz.
@@ -7,7 +9,7 @@
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Webhook data to NATS.
+## Buz makes it easy to collect, validate, and load your Webhook data to NATS.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz

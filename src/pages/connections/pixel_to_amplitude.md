@@ -1,5 +1,7 @@
 ---
-
+title: Pixel to Amplitude with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Amplitude.
+keywords: [{{intput}}, Amplitude, Buz]
 ---
 
 # Send Pixel data to Amplitude using Buz.
@@ -7,7 +9,7 @@
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Pixel data to Amplitude.
+## Buz makes it easy to collect, validate, and load your Pixel data to Amplitude.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz
