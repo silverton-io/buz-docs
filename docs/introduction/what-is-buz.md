@@ -24,7 +24,7 @@ Buz is designed to be **easily-configured**, **easily-deployed**, and **easily-m
     - Less infrastructure = `more`. More time, more progress, more fun.
 
 - **You want cost efficiencies and burstable scale.**
-    - Buz is fast, efficient, static binary.
+    - Buz is a fast and efficient static binary.
     - Buz is easily deployed using GCP [Cloud Run](https://cloud.google.com/run) or [Knative](https://knative.dev/docs/). Which means it can effectively scale from `0` to `∞`. Perhaps beyond?
     - Want 2M records free every month? Deploy Buz on your own, in minutes, with [Cloud Run](https://cloud.google.com/free/docs/gcp-free-tier/#cloud-run) or AWS.
 
@@ -38,7 +38,7 @@ Buz is designed to be **easily-configured**, **easily-deployed**, and **easily-m
     - Want development environments that have parity with production, but with reduced infrastructure overhead? Buz.
 
 - **You want to self-manage a data collection system, but with as few moving pieces as possible.**
-    - Buz is a **single binary**, built with Go, that can be easily deployed and maintained.
+    - Buz is a **single binary** written in Go.
     - Buz is deployable in minutes. **No engineers required.**
 
 - **You want to incrementally improve structure and contracts within your data.**
