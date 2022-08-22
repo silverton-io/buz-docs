@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Materialize with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Materialize.
-keywords: [{{intput}}, Materialize, Buz]
+keywords: [Snowplow Analytics, Materialize, Buz]
 ---
 
 # Send Snowplow Analytics data to Materialize using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Planetscale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Planetscale.
-keywords: [{{intput}}, Planetscale, Buz]
+keywords: [Cloudevent, Planetscale, Buz]
 ---
 
 # Send Cloudevent data to Planetscale using Buz.

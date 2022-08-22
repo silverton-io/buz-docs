@@ -1,7 +1,7 @@
 ---
 title: Pixel to NATS with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to NATS.
-keywords: [{{intput}}, NATS, Buz]
+keywords: [Pixel, NATS, Buz]
 ---
 
 # Send Pixel data to NATS using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Pixel to Materialize with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Materialize.
-keywords: [{{intput}}, Materialize, Buz]
+keywords: [Pixel, Materialize, Buz]
 ---
 
 # Send Pixel data to Materialize using Buz.

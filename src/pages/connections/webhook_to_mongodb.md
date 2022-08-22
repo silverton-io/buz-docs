@@ -1,7 +1,7 @@
 ---
 title: Webhook to Mongodb with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Mongodb.
-keywords: [{{intput}}, Mongodb, Buz]
+keywords: [Webhook, Mongodb, Buz]
 ---
 
 # Send Webhook data to Mongodb using Buz.

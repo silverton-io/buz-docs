@@ -1,7 +1,7 @@
 ---
 title: Webhook to Indicative with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Indicative.
-keywords: [{{intput}}, Indicative, Buz]
+keywords: [Webhook, Indicative, Buz]
 ---
 
 # Send Webhook data to Indicative using Buz.

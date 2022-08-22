@@ -1,7 +1,7 @@
 ---
 title: Webhook to Vitess with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Vitess.
-keywords: [{{intput}}, Vitess, Buz]
+keywords: [Webhook, Vitess, Buz]
 ---
 
 # Send Webhook data to Vitess using Buz.

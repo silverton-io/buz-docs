@@ -1,7 +1,7 @@
 ---
 title: Webhook to Kinesis with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Kinesis.
-keywords: [{{intput}}, Kinesis, Buz]
+keywords: [Webhook, Kinesis, Buz]
 ---
 
 # Send Webhook data to Kinesis using Buz.

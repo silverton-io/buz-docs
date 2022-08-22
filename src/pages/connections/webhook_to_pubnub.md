@@ -1,7 +1,7 @@
 ---
 title: Webhook to Pubnub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Pubnub.
-keywords: [{{intput}}, Pubnub, Buz]
+keywords: [Webhook, Pubnub, Buz]
 ---
 
 # Send Webhook data to Pubnub using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Webhook to NATS with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to NATS.
-keywords: [{{intput}}, NATS, Buz]
+keywords: [Webhook, NATS, Buz]
 ---
 
 # Send Webhook data to NATS using Buz.

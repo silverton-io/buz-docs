@@ -1,7 +1,7 @@
 ---
 title: Pixel to Mongodb with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Mongodb.
-keywords: [{{intput}}, Mongodb, Buz]
+keywords: [Pixel, Mongodb, Buz]
 ---
 
 # Send Pixel data to Mongodb using Buz.

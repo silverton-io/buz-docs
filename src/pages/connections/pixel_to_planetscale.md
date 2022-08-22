@@ -1,7 +1,7 @@
 ---
 title: Pixel to Planetscale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Planetscale.
-keywords: [{{intput}}, Planetscale, Buz]
+keywords: [Pixel, Planetscale, Buz]
 ---
 
 # Send Pixel data to Planetscale using Buz.

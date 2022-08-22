@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Amplitude with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Amplitude.
-keywords: [{{intput}}, Amplitude, Buz]
+keywords: [Snowplow Analytics, Amplitude, Buz]
 ---
 
 # Send Snowplow Analytics data to Amplitude using Buz.

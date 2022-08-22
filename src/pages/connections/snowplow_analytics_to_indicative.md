@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Indicative with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Indicative.
-keywords: [{{intput}}, Indicative, Buz]
+keywords: [Snowplow Analytics, Indicative, Buz]
 ---
 
 # Send Snowplow Analytics data to Indicative using Buz.

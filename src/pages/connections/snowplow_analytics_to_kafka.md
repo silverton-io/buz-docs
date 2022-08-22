@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Kafka with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Kafka.
-keywords: [{{intput}}, Kafka, Buz]
+keywords: [Snowplow Analytics, Kafka, Buz]
 ---
 
 # Send Snowplow Analytics data to Kafka using Buz.

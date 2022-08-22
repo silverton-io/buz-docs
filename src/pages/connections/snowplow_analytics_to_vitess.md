@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Vitess with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Vitess.
-keywords: [{{intput}}, Vitess, Buz]
+keywords: [Snowplow Analytics, Vitess, Buz]
 ---
 
 # Send Snowplow Analytics data to Vitess using Buz.

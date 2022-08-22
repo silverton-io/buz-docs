@@ -1,7 +1,7 @@
 ---
 title: Pixel to Redpanda with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Redpanda.
-keywords: [{{intput}}, Redpanda, Buz]
+keywords: [Pixel, Redpanda, Buz]
 ---
 
 # Send Pixel data to Redpanda using Buz.

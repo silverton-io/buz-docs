@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Planetscale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Planetscale.
-keywords: [{{intput}}, Planetscale, Buz]
+keywords: [Snowplow Analytics, Planetscale, Buz]
 ---
 
 # Send Snowplow Analytics data to Planetscale using Buz.

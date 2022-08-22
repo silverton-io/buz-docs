@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Vitess with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Vitess.
-keywords: [{{intput}}, Vitess, Buz]
+keywords: [Cloudevent, Vitess, Buz]
 ---
 
 # Send Cloudevent data to Vitess using Buz.

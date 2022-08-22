@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Elasticsearch with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Elasticsearch.
-keywords: [{{intput}}, Elasticsearch, Buz]
+keywords: [Snowplow Analytics, Elasticsearch, Buz]
 ---
 
 # Send Snowplow Analytics data to Elasticsearch using Buz.

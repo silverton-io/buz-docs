@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to NATS with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to NATS.
-keywords: [{{intput}}, NATS, Buz]
+keywords: [Snowplow Analytics, NATS, Buz]
 ---
 
 # Send Snowplow Analytics data to NATS using Buz.

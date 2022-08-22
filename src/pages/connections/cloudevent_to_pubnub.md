@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Pubnub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Pubnub.
-keywords: [{{intput}}, Pubnub, Buz]
+keywords: [Cloudevent, Pubnub, Buz]
 ---
 
 # Send Cloudevent data to Pubnub using Buz.

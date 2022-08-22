@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to MySQL with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to MySQL.
-keywords: [{{intput}}, MySQL, Buz]
+keywords: [Snowplow Analytics, MySQL, Buz]
 ---
 
 # Send Snowplow Analytics data to MySQL using Buz.

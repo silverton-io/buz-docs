@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Clickhouse with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Clickhouse.
-keywords: [{{intput}}, Clickhouse, Buz]
+keywords: [Cloudevent, Clickhouse, Buz]
 ---
 
 # Send Cloudevent data to Clickhouse using Buz.

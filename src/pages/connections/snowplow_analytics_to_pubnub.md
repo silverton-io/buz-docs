@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Pubnub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Pubnub.
-keywords: [{{intput}}, Pubnub, Buz]
+keywords: [Snowplow Analytics, Pubnub, Buz]
 ---
 
 # Send Snowplow Analytics data to Pubnub using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Pub/Sub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Pub/Sub.
-keywords: [{{intput}}, Pub/Sub, Buz]
+keywords: [Cloudevent, Pub/Sub, Buz]
 ---
 
 # Send Cloudevent data to Pub/Sub using Buz.

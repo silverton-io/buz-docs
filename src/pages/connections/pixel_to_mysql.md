@@ -1,7 +1,7 @@
 ---
 title: Pixel to MySQL with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to MySQL.
-keywords: [{{intput}}, MySQL, Buz]
+keywords: [Pixel, MySQL, Buz]
 ---
 
 # Send Pixel data to MySQL using Buz.

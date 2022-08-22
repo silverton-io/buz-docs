@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Postgres with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Postgres.
-keywords: [{{intput}}, Postgres, Buz]
+keywords: [Cloudevent, Postgres, Buz]
 ---
 
 # Send Cloudevent data to Postgres using Buz.

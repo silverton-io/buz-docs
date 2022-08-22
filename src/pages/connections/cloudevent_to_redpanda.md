@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Redpanda with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Redpanda.
-keywords: [{{intput}}, Redpanda, Buz]
+keywords: [Cloudevent, Redpanda, Buz]
 ---
 
 # Send Cloudevent data to Redpanda using Buz.

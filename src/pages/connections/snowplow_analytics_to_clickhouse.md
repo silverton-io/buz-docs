@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Clickhouse with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Clickhouse.
-keywords: [{{intput}}, Clickhouse, Buz]
+keywords: [Snowplow Analytics, Clickhouse, Buz]
 ---
 
 # Send Snowplow Analytics data to Clickhouse using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Pixel to Kinesis Firehose with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Kinesis Firehose.
-keywords: [{{intput}}, Kinesis Firehose, Buz]
+keywords: [Pixel, Kinesis Firehose, Buz]
 ---
 
 # Send Pixel data to Kinesis Firehose using Buz.

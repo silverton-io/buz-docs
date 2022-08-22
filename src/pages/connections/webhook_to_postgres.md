@@ -1,7 +1,7 @@
 ---
 title: Webhook to Postgres with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Postgres.
-keywords: [{{intput}}, Postgres, Buz]
+keywords: [Webhook, Postgres, Buz]
 ---
 
 # Send Webhook data to Postgres using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Materialize with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Materialize.
-keywords: [{{intput}}, Materialize, Buz]
+keywords: [Cloudevent, Materialize, Buz]
 ---
 
 # Send Cloudevent data to Materialize using Buz.

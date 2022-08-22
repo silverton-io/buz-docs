@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Elasticsearch with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Elasticsearch.
-keywords: [{{intput}}, Elasticsearch, Buz]
+keywords: [Cloudevent, Elasticsearch, Buz]
 ---
 
 # Send Cloudevent data to Elasticsearch using Buz.

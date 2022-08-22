@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Kinesis with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Kinesis.
-keywords: [{{intput}}, Kinesis, Buz]
+keywords: [Cloudevent, Kinesis, Buz]
 ---
 
 # Send Cloudevent data to Kinesis using Buz.

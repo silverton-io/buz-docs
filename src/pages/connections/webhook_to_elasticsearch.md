@@ -1,7 +1,7 @@
 ---
 title: Webhook to Elasticsearch with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Elasticsearch.
-keywords: [{{intput}}, Elasticsearch, Buz]
+keywords: [Webhook, Elasticsearch, Buz]
 ---
 
 # Send Webhook data to Elasticsearch using Buz.

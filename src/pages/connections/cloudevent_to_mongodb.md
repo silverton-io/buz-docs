@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Mongodb with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Mongodb.
-keywords: [{{intput}}, Mongodb, Buz]
+keywords: [Cloudevent, Mongodb, Buz]
 ---
 
 # Send Cloudevent data to Mongodb using Buz.

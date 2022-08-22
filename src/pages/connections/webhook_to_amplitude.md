@@ -1,7 +1,7 @@
 ---
 title: Webhook to Amplitude with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Amplitude.
-keywords: [{{intput}}, Amplitude, Buz]
+keywords: [Webhook, Amplitude, Buz]
 ---
 
 # Send Webhook data to Amplitude using Buz.

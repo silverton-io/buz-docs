@@ -1,7 +1,7 @@
 ---
 title: Webhook to Kafka with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Kafka.
-keywords: [{{intput}}, Kafka, Buz]
+keywords: [Webhook, Kafka, Buz]
 ---
 
 # Send Webhook data to Kafka using Buz.

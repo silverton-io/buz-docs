@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Redpanda with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Redpanda.
-keywords: [{{intput}}, Redpanda, Buz]
+keywords: [Snowplow Analytics, Redpanda, Buz]
 ---
 
 # Send Snowplow Analytics data to Redpanda using Buz.

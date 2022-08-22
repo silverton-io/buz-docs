@@ -1,7 +1,7 @@
 ---
 title: Webhook to Timescale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Timescale.
-keywords: [{{intput}}, Timescale, Buz]
+keywords: [Webhook, Timescale, Buz]
 ---
 
 # Send Webhook data to Timescale using Buz.

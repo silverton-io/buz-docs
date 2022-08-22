@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Mongodb with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Mongodb.
-keywords: [{{intput}}, Mongodb, Buz]
+keywords: [Snowplow Analytics, Mongodb, Buz]
 ---
 
 # Send Snowplow Analytics data to Mongodb using Buz.

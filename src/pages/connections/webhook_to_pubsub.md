@@ -1,7 +1,7 @@
 ---
 title: Webhook to Pub/Sub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Pub/Sub.
-keywords: [{{intput}}, Pub/Sub, Buz]
+keywords: [Webhook, Pub/Sub, Buz]
 ---
 
 # Send Webhook data to Pub/Sub using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to MySQL with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to MySQL.
-keywords: [{{intput}}, MySQL, Buz]
+keywords: [Cloudevent, MySQL, Buz]
 ---
 
 # Send Cloudevent data to MySQL using Buz.

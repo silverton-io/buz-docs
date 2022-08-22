@@ -1,7 +1,7 @@
 ---
 title: Pixel to Timescale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Timescale.
-keywords: [{{intput}}, Timescale, Buz]
+keywords: [Pixel, Timescale, Buz]
 ---
 
 # Send Pixel data to Timescale using Buz.

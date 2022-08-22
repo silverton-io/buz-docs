@@ -1,7 +1,7 @@
 ---
 title: Pixel to Kinesis with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Kinesis.
-keywords: [{{intput}}, Kinesis, Buz]
+keywords: [Pixel, Kinesis, Buz]
 ---
 
 # Send Pixel data to Kinesis using Buz.

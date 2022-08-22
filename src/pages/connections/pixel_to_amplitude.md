@@ -1,7 +1,7 @@
 ---
 title: Pixel to Amplitude with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Amplitude.
-keywords: [{{intput}}, Amplitude, Buz]
+keywords: [Pixel, Amplitude, Buz]
 ---
 
 # Send Pixel data to Amplitude using Buz.

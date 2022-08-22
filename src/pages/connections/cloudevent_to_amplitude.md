@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Amplitude with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Amplitude.
-keywords: [{{intput}}, Amplitude, Buz]
+keywords: [Cloudevent, Amplitude, Buz]
 ---
 
 # Send Cloudevent data to Amplitude using Buz.

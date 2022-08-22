@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Indicative with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Indicative.
-keywords: [{{intput}}, Indicative, Buz]
+keywords: [Cloudevent, Indicative, Buz]
 ---
 
 # Send Cloudevent data to Indicative using Buz.

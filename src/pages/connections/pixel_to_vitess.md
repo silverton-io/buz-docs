@@ -1,7 +1,7 @@
 ---
 title: Pixel to Vitess with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Vitess.
-keywords: [{{intput}}, Vitess, Buz]
+keywords: [Pixel, Vitess, Buz]
 ---
 
 # Send Pixel data to Vitess using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Pixel to Clickhouse with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Clickhouse.
-keywords: [{{intput}}, Clickhouse, Buz]
+keywords: [Pixel, Clickhouse, Buz]
 ---
 
 # Send Pixel data to Clickhouse using Buz.

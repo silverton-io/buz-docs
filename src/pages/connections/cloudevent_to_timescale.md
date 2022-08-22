@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Timescale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Timescale.
-keywords: [{{intput}}, Timescale, Buz]
+keywords: [Cloudevent, Timescale, Buz]
 ---
 
 # Send Cloudevent data to Timescale using Buz.

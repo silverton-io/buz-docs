@@ -1,7 +1,7 @@
 ---
 title: Pixel to Indicative with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Indicative.
-keywords: [{{intput}}, Indicative, Buz]
+keywords: [Pixel, Indicative, Buz]
 ---
 
 # Send Pixel data to Indicative using Buz.

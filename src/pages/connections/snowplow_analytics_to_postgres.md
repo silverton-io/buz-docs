@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Postgres with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Postgres.
-keywords: [{{intput}}, Postgres, Buz]
+keywords: [Snowplow Analytics, Postgres, Buz]
 ---
 
 # Send Snowplow Analytics data to Postgres using Buz.

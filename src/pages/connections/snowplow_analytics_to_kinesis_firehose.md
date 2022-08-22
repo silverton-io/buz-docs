@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Kinesis Firehose with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Kinesis Firehose.
-keywords: [{{intput}}, Kinesis Firehose, Buz]
+keywords: [Snowplow Analytics, Kinesis Firehose, Buz]
 ---
 
 # Send Snowplow Analytics data to Kinesis Firehose using Buz.

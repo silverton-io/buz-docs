@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Pub/Sub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Pub/Sub.
-keywords: [{{intput}}, Pub/Sub, Buz]
+keywords: [Snowplow Analytics, Pub/Sub, Buz]
 ---
 
 # Send Snowplow Analytics data to Pub/Sub using Buz.

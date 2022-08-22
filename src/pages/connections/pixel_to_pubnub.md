@@ -1,7 +1,7 @@
 ---
 title: Pixel to Pubnub with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Pubnub.
-keywords: [{{intput}}, Pubnub, Buz]
+keywords: [Pixel, Pubnub, Buz]
 ---
 
 # Send Pixel data to Pubnub using Buz.

@@ -1,7 +1,7 @@
 ---
 title: Pixel to Postgres with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Postgres.
-keywords: [{{intput}}, Postgres, Buz]
+keywords: [Pixel, Postgres, Buz]
 ---
 
 # Send Pixel data to Postgres using Buz.

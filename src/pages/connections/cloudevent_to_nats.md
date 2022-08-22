@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to NATS with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to NATS.
-keywords: [{{intput}}, NATS, Buz]
+keywords: [Cloudevent, NATS, Buz]
 ---
 
 # Send Cloudevent data to NATS using Buz.

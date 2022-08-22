@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Timescale with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Timescale.
-keywords: [{{intput}}, Timescale, Buz]
+keywords: [Snowplow Analytics, Timescale, Buz]
 ---
 
 # Send Snowplow Analytics data to Timescale using Buz.

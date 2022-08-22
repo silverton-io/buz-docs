@@ -1,7 +1,7 @@
 ---
 title: Webhook to Clickhouse with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to Clickhouse.
-keywords: [{{intput}}, Clickhouse, Buz]
+keywords: [Webhook, Clickhouse, Buz]
 ---
 
 # Send Webhook data to Clickhouse using Buz.

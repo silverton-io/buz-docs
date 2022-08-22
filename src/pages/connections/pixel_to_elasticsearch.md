@@ -1,7 +1,7 @@
 ---
 title: Pixel to Elasticsearch with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Elasticsearch.
-keywords: [{{intput}}, Elasticsearch, Buz]
+keywords: [Pixel, Elasticsearch, Buz]
 ---
 
 # Send Pixel data to Elasticsearch using Buz.

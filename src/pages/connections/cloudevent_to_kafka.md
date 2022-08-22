@@ -1,7 +1,7 @@
 ---
 title: Cloudevent to Kafka with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Kafka.
-keywords: [{{intput}}, Kafka, Buz]
+keywords: [Cloudevent, Kafka, Buz]
 ---
 
 # Send Cloudevent data to Kafka using Buz.

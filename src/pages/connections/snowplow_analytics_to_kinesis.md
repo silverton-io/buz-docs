@@ -1,7 +1,7 @@
 ---
 title: Snowplow Analytics to Kinesis with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Kinesis.
-keywords: [{{intput}}, Kinesis, Buz]
+keywords: [Snowplow Analytics, Kinesis, Buz]
 ---
 
 # Send Snowplow Analytics data to Kinesis using Buz.

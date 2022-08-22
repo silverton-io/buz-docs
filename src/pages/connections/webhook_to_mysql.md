@@ -1,7 +1,7 @@
 ---
 title: Webhook to MySQL with Buz
 description: Buz is an open source project that makes it easy to collect, validate, and load Webhook data to MySQL.
-keywords: [{{intput}}, MySQL, Buz]
+keywords: [Webhook, MySQL, Buz]
 ---
 
 # Send Webhook data to MySQL using Buz.
