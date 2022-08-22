@@ -12,7 +12,7 @@ Buz is designed to be **easily-configured**, **easily-deployed**, and **easily-m
 
 
 # When To Use Buz
-- **You want to collect data from a variety of places with a single system.**
+- **You want to collect data from a variety of places using a single, fully-OSS system.**
     - Event-tracking SDK's like Snowplow Analytics or Segment (coming soon)
     - Self-describing payloads
     - Webhooks
