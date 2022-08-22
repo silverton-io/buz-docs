@@ -1,13 +1,15 @@
 ---
-
+title: Pixel to Kinesis Firehose with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Kinesis Firehose.
+keywords: [Pixel, Kinesis Firehose, Buz]
 ---
 
-# Send Snowplow Analytics data to Indicative using Buz.
+# Send Pixel data to Kinesis Firehose using Buz.
 
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Snowplow Analytics data to Indicative.
+## Buz makes it easy to collect, validate, and load your Pixel data to Kinesis Firehose.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz

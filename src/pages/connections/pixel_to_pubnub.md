@@ -1,5 +1,7 @@
 ---
-
+title: Pixel to Pubnub with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Pixel data to Pubnub.
+keywords: [Pixel, Pubnub, Buz]
 ---
 
 # Send Pixel data to Pubnub using Buz.
@@ -7,7 +9,7 @@
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Pixel data to Pubnub.
+## Buz makes it easy to collect, validate, and load your Pixel data to Pubnub.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz

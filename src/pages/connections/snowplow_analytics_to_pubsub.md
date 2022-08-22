@@ -1,13 +1,15 @@
 ---
-
+title: Snowplow Analytics to Pub/Sub with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Pub/Sub.
+keywords: [Snowplow Analytics, Pub/Sub, Buz]
 ---
 
-# Send Snowplow Analytics data to Clickhouse using Buz.
+# Send Snowplow Analytics data to Pub/Sub using Buz.
 
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Snowplow Analytics data to Clickhouse.
+## Buz makes it easy to collect, validate, and load your Snowplow Analytics data to Pub/Sub.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz

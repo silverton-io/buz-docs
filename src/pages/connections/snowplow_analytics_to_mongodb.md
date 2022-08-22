@@ -1,13 +1,15 @@
 ---
-
+title: Snowplow Analytics to Mongodb with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Snowplow Analytics data to Mongodb.
+keywords: [Snowplow Analytics, Mongodb, Buz]
 ---
 
-# Send Snowplow Analytics data to Kinesis using Buz.
+# Send Snowplow Analytics data to Mongodb using Buz.
 
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Snowplow Analytics data to Kinesis.
+## Buz makes it easy to collect, validate, and load your Snowplow Analytics data to Mongodb.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz

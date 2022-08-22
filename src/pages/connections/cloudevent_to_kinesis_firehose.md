@@ -1,13 +1,15 @@
 ---
-
+title: Cloudevent to Kinesis Firehose with Buz
+description: Buz is an open source project that makes it easy to collect, validate, and load Cloudevent data to Kinesis Firehose.
+keywords: [Cloudevent, Kinesis Firehose, Buz]
 ---
 
-# Send Pixel data to Firebolt using Buz.
+# Send Cloudevent data to Kinesis Firehose using Buz.
 
 ![buzz](../../../static/img/buzz.png)
 
 
-## Buz makes it easy to collect and load your Pixel data to Firebolt.
+## Buz makes it easy to collect, validate, and load your Cloudevent data to Kinesis Firehose.
 
 
 ### What Buz Is:
@@ -31,4 +33,4 @@
 - ⭐ Buz on [Github](https://github.com/silverton-io/buz)
 - Browse Buz [Documentation](/)
 - [Quickstart](/examples/quickstart)
-- [Deploy] Buz(category/deploying-buz)
+- [Deploy](category/deploying-buz) Buz
