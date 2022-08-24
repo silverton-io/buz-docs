@@ -30,7 +30,7 @@ Resolving deltas: 100% (611/611), done.
 ~/code ❯❯❯ cd buz
 ```
 
-## 2. Bootstrap Buz, Redpanda, Kowl, and Materialize
+## 2. Bootstrap Buz, Redpanda, the Console, and Materialize
 
 **`docker-compose -f examples/quickstart/docker-compose.yml up -d`**
 
@@ -42,17 +42,14 @@ This step requires [docker-compose](https://docs.docker.com/compose/).
 ```
 ~/c/buz ❯❯❯ docker-compose -f examples/quickstart/docker-compose.yml up -d
 ...
-...
-...
- ⠿ Container mzcli          Started                                                                                                        4.3s
- ⠿ Container redpanda-1     Started                                                                                                        4.6s
- ⠿ Container materialized   Started                                                                                                        4.6s
- ⠿ Container redpanda-3     Started                                                                                                        4.4s
- ⠿ Container redpanda-2     Started                                                                                                        4.5s
- ⠿ Container redpanda-init  Started                                                                                                        6.3s
- ⠿ Container kowl           Started                                                                                                        6.4s
- ⠿ Container buz       Started                                                                                                        7.1s
-~/c/buz ❯❯❯
+Creating materialize ... done
+Creating redpanda-1  ... done
+Creating redpanda-3  ... done
+Creating redpanda-2  ... done
+Creating sample-ui   ... done
+Creating console     ... done
+Creating buz         ... done
+Creating mzcli       ... done
 ```
 
 
@@ -73,11 +70,11 @@ The following events are tracked on this page:
 using both the `GET` and batch `POST` capabilities of the Snowplow tracker.
 
 
-## 4. View Events in the Kowl UI
+## 4. View Events in the Redpanda Console
 
-The Quickstart runs Kowl at [localhost:8082](http://localhost:8082).
+The Quickstart runs Redpanda's Console at [localhost:8082](http://localhost:8082).
 
-Incoming events can be viewed in Kowl using the [Topic Viewer](http://localhost:8082/topics/hpt-invalid?o=-1&p=-1&q&s=50#messages).
+Incoming events can be viewed in the console using the [Topic Viewer](http://localhost:8082/topics/hpt-invalid?o=-1&p=-1&q&s=50#messages).
 
 
 ## 5. Query Real-Time Events using a Streaming Materialized View
@@ -110,47 +107,3 @@ We have a lot planned. Want to be a part of it?
 
 - Sign up for **[Insiders-Only Updates](/insiders-only)**
 - Check out the **[Buz Roadmap](/introduction/roadmap)**
-
-<!-- 
-
-# Component Overview
-
-## Buz
-
-Buz is a multi-protocol event collection, validation, and routing system.
-
-**Want to track Snowplow events?** Think Buz.
-
-**Want to track Cloudevents?** Think Buz.
-
-**Have a more custom, self-describing event implementation?** Think Buz.
-
-## Redpanda
-
-Redpanda is Kafka-compatible streaming platform, with 100% less Zookeeper and JVM. It is blazing fast, quick to set up, and incredibly operator-oriented.
-
-This example uses a three-node Redpanda cluster as the streaming interface between Buz and Materialize.
-
-Redpanda docs can be found here: [docs.redpanda.com](https://docs.redpanda.com/).
-
-
-![redpanda](../img/redpanda.svg)
-
-## Kowl
-
-Kowl is a very useful UI for Kafka cluster visibility, schema discovery, and other administrative tasks.
-
-Buz quickstart uses it to quickly visualize and verify data flowing through Redpanda (on its way to Materialize).
-
-More on Kowl can be found here: [cloudhut.dev](https://cloudhut.dev/)
-
-![kowl](../img/kowl.png)
-
-## Materialize
-
-[Materialize](https://materialize.com/docs/) is a streaming, SQL-based materialized view engine based on [Differential dataflow](https://github.com/frankmcsherry/differential-dataflow).
-
-This example uses Materialize to create real-time aggregates and activity funnels by streaming data from Buz, through Redpanda, into a Materialize Source, before aggregating in a materialized view.
-
-![materialize](../img/materialize.png)
- -->

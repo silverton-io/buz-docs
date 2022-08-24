@@ -58,5 +58,5 @@ A system for collecting, validating, and delivering schematized data to where it
 # Quickstart
 
 :::tip Quickstart
-To rapidly bootstrap a streaming stack using Buz, [Redpanda](https://github.com/redpanda-data/), [Kowl](https://github.com/cloudhut/kowl/), and [Materialize](https://github.com/MaterializeInc/materialize) please see the [Quickstart](/examples/quickstart).
+To rapidly bootstrap a streaming stack using Buz, [Redpanda](https://github.com/redpanda-data/), the [Redpanda Console](https://github.com/redpanda-data/console), and [Materialize](https://github.com/MaterializeInc/materialize) please see the [Quickstart](/examples/quickstart).
 :::
