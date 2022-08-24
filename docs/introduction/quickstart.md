@@ -5,7 +5,7 @@ slug: /examples/quickstart
 
 # Quickstart
 
-This quickstart will get you started with Buz, a multi-node Redpanda cluster, Kowl, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
+This quickstart will get you started with Buz, a multi-node Redpanda cluster, the Redpanda console, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
 
 
 :::danger Note
