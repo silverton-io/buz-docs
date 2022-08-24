@@ -107,7 +107,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       snowplow: {
-        collector: 'tele.silverton.io',
+        collector: 'docstream.buz.dev',
         appId: 'buz-docs',
         withCredentials: false
       },

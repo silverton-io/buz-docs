@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # GCP
 
-## Deploying to Cloud Run (in 4 steps)
+# Deploying to Cloud Run (in 4 steps)
 
 The easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)**.
 
@@ -21,31 +21,28 @@ It has some pretty nifty benefits including:
 * **[SLA's](https://cloud.google.com/run/sla) with financial credits from Google if they are broken.**
 
 
-### 1. Create [Pub/Sub](https://console.cloud.google.com/cloudpubsub/) topics.
+## 1. Create [Pub/Sub](https://console.cloud.google.com/cloudpubsub/) topics.
 
-You'll want two Pub/Sub topics - one for `valid` events and the other for `invalid` events.
-
-:::info Yo
-It is entirely possible to only use one output topic but if you want the upside of redirecting events that fail validation out of the "happy path", two topics are necessary.
-:::
-
-**Create the `buz-valid` and `buz-invalid` Pub/Sub topics:**
+**Create `buz-valid` and `buz-invalid` Pub/Sub topics:**
 
 ![create topic](img/gcp/create-topic.png)
 
-![configure topic](img/gcp/topic-config.png)
+![configure topic](img/gcp/configure-topic.png)
 
 
 **The result should look like:**
 
 
-![desired result](img/gcp/desired-result.png)
+![desired result](img/gcp/desired-topics.png)
 
+:::info Yo
+It is entirely possible to only use one output topic but if you want the upside of redirecting events that fail validation out of the "happy path", two topics are necessary.
+:::
 
 ***
 
 
-### 2. Upload config to [Secret Manager](https://console.cloud.google.com/security/secret-manager).
+## 2. Upload config to [Secret Manager](https://console.cloud.google.com/security/secret-manager).
 
 For the sake of keeping your secrets a.. secret.. uploading the entire Buz config yml to Secret Manager is the easiest way forward.
 
@@ -53,7 +50,7 @@ For the sake of keeping your secrets a.. secret.. uploading the entire Buz confi
 We've provided a working config sample that you can [copy/paste to Secret Manager here](https://github.com/silverton-io/buz-docs/blob/main/examples/deploy/gcp/config.yml).
 :::
 
-**Create Buz config as a Secret Manager secret:**
+### Create Buz config as a Secret Manager secret:
 
 ![create secret](img/gcp/create-secret.png)
 
@@ -63,7 +60,7 @@ We've provided a working config sample that you can [copy/paste to Secret Manage
 
 ![desired secret](img/gcp/desired-secret.png)
 
-**Grant the default compute service account [appropriate iam access](https://console.cloud.google.com/iam-admin/iam). It will need the `Secret Manager Secret Accessor` role:**
+### Grant the default compute service account [appropriate iam access](https://console.cloud.google.com/iam-admin/iam). It will need the `Secret Manager Secret Accessor` role:
 
 ![grant secret accessor](img/gcp/grant-secret-accessor.png)
 
@@ -77,10 +74,10 @@ We've provided a working config sample that you can [copy/paste to Secret Manage
 ***
 
 
-### 3. Push image to GCP [Artifact Registry](https://console.cloud.google.com/artifacts).
+## 3. Push image to GCP [Artifact Registry](https://console.cloud.google.com/artifacts).
 
 
-**[Create a Docker repository](https://console.cloud.google.com/artifacts/create-repo) in GCP Artifact Registry if you don't have one yet:**
+### [Create a Docker repository](https://console.cloud.google.com/artifacts/create-repo) in GCP Artifact Registry if you don't have one yet:
 
 ![create registry](img/gcp/create-registry.png)
 
@@ -93,27 +90,25 @@ Adding credentials for: us-east1-docker.pkg.dev
 Docker configuration file updated.
 ```
 
-**Pull the latest Buz image from the [Github container registry](https://github.com/silverton-io/buz/pkgs/container/buz)**:
+### Pull the latest Buz image from the [Github container registry](https://github.com/silverton-io/buz/pkgs/container/buz):
+
+
+`docker pull ghcr.io/silverton-io/buz:v0.11.11@sha256:130ed9421579125e4f38089e4c2d1e07038fb26591a15082010a52b95f3a5dda # amd64`
 
 :::warning AMD64
 - At the time of writing Google Cloud Run doesn't support ARM64-based images so you'll need to grab the AMD64 image.
 :::
 
-```
-docker pull ghcr.io/silverton-io/buz:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 # amd64
+### Tag and push the latest Buz image to Artifact Registry:
 
-ghcr.io/silverton-io/buz@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205: Pulling from silverton-io/buz
-Digest: sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205
-Status: Image is up to date for ghcr.io/silverton-io/buz@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205
-ghcr.io/silverton-io/buz:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 # Note! Use applicable version here
 
-v0.11.10: Pulling from silverton-io/buz
-Digest: sha256:e70de1a6163e7756474c75fc96b6ebb07270bb6940372d348c1ba255f07a67a1
-Status: Image is up to date for ghcr.io/silverton-io/buz:v0.11.10
-ghcr.io/silverton-io/buz:v0.11.10
-```
+**Tag:**
 
-**Tag and push the latest Buz image to Artifact Registry:**
+`docker tag ghcr.io/silverton-io/buz:v0.11.11@sha256:130ed9421579125e4f38089e4c2d1e07038fb26591a15082010a52b95f3a5dda us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.11`
+
+**Push:**
+
+`docker push us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.11`
 
 :::warning Use your own Artifact Registry URL
 
@@ -122,26 +117,11 @@ This example uses the Silverton registry url - you'll need to use your own.
 It's structured as: `$ARTIFACT_REGISTRY_URL/$GCP_PROJECT/$REGISTRY_NAME/buz:$VERSION`
 :::
 
-```
-docker tag ghcr.io/silverton-io/buz:v0.11.10@sha256:26cb7d4ee81c29b26dcb4341c34805fe8edc5cdeb616d819be25688dc115f205 us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.10
-
-docker push us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.10
-The push refers to repository [us-east1-docker.pkg.dev/silverton-docs/registry/buz]
-3782d1c64659: Pushed
-df4afbed8e0e: Pushed
-2ddb525329ee: Pushed
-e06c18587270: Pushed
-45369456adf2: Pushed
-840d11aaaa44: Pushed
-20a9c1d833b9: Pushed
-v0.11.10: digest: sha256:28d8fda0fb75956a13b33c3cd03e00ab728d65690adfd803d73cc418ef0db1dc size: 1780
-```
-
 ***
 
-### 4. Run Buz as a [Cloud Run](https://console.cloud.google.com/run) service.
+## 4. Run Buz as a [Cloud Run](https://console.cloud.google.com/run) service.
 
-**Create a new `Buz` service:**
+### Create a new `Buz` service:
 
 ![create service](img/gcp/create-service.png)
 
@@ -151,13 +131,13 @@ v0.11.10: digest: sha256:28d8fda0fb75956a13b33c3cd03e00ab728d65690adfd803d73cc41
 
 ![configure service 3](img/gcp/configure-service-3.png)
 
-**Verify service is running (using out-of-the-box metrics and logs):**
+### Verify service is running (using out-of-the-box metrics and logs):
 
 ![verify service](img/gcp/desired-service.png)
 
-![service metrics](img/gcp/service-metrics.png)
+![service metrics](img/gcp/desired-metrics.png)
 
-![service logs](img/gcp/service-logs.png)
+![service logs](img/gcp/desired-logs.png)
 
 :::caution Yo
 - **Log verbosity is cranked in the example configuration.** You'll probably want less.
