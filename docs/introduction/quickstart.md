@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 slug: /examples/quickstart
+hide_table_of_contents: true
 ---
 
 # Quickstart
@@ -8,9 +9,11 @@ slug: /examples/quickstart
 This quickstart will get you started with Buz, a multi-node Redpanda cluster, the Redpanda console, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
 
 
-:::danger Note
-If you don't have `docker` and `docker-compose` you will need to install those first.
-:::
+![quickstart-diag](./img/quickstart-diag.png)
+
+
+
+**If you don't have `docker` and `docker-compose` you will need to install those first.**
 
 
 ## 1. Clone the Buz repo

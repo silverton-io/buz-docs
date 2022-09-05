@@ -9,6 +9,8 @@ description: Deploy Buz, the open-source serverless event tracking system, to pr
 
 **Estimated time: 20 minutes**
 
+![gcp-deploy-diag](../img/gcp/gcp-deploy-diag.png)
+
 ## Overview
 
 The easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)**.
