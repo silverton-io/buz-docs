@@ -9,6 +9,8 @@ description: Deploy Buz, the open-source serverless event tracking system, to pr
 
 **Estimated time: 3 minutes**
 
+![gcp-deploy-diag](../img/gcp/gcp-deploy-diag.png)
+
 ## Overview
 
 The (absolute) easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)** and Terraform.
@@ -31,6 +33,7 @@ You will need the following to deploy Buz using Terraform:
 - [gcloud](https://cloud.google.com/sdk/gcloud) cli
 - [docker](https://www.docker.com/)
 :::
+
 
 ## Deploy
 
