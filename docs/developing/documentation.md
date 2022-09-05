@@ -43,6 +43,6 @@ The docs site is auto-deployed using [Github Actions](https://github.com/silvert
 ## Where to go next
 
 - Pick up an issue from [github](https://github.com/silverton-io/buz/issues) and cut your first PR.
-- [Deploy Buz](/production-deployment/gcp) to a production environment.
+- [Deploy Buz](/production-deployment/gcp/console) to a production environment.
 - Play around with the [Buz documentation](/developing/documentation-site).
 - Read about the [general philosophy](/introduction/philosophy) of Buz.
