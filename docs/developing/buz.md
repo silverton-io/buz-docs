@@ -49,7 +49,7 @@ And these (at minimum) will make your life better:
 ...
 [GIN-debug] GET    /sqwk/sp                  --> github.com/silverton-io/buz/pkg/handler.SquawkboxHandler.func1 (4 handlers)
 ...
-{"message":"🍯🍯🍯 buz is running! 🍯🍯🍯"}
+{"message":"🐝🐝🐝 buz is running! 🐝🐝🐝"}
 ```
 
 
@@ -92,6 +92,8 @@ Usage:
   bootstrap-destinations  Bootstrap various containerized database/stream systems
   build-docker     Build local buz image
   buildx-deploy    Build multi-platform buz image and push it to edge repo
+  lint             Lint go code
+  test             Run tests against pkg
   test-cover-pkg   Run tests against pkg, output test profile, and open profile in browser
   help             Display makefile help
 ```
@@ -99,6 +101,6 @@ Usage:
 ## Where to go next
 
 - Pick up an issue from [github](https://github.com/silverton-io/buz/issues) and cut your first PR.
-- [Deploy Buz](/production-deployment/gcp) to a production environment.
+- [Deploy Buz](/production-deployment/gcp/console) to a production environment.
 - Play around with the [Buz documentation](/developing/documentation-site).
 - Read about the [general philosophy](/introduction/philosophy) of Buz.

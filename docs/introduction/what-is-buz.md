@@ -2,6 +2,7 @@
 sidebar_position: 1
 slug: /
 title: What is Buz?
+
 ---
 
 ![buzz](../../static/img/buzz.png)
