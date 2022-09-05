@@ -2,12 +2,14 @@
 sidebar_position: 1
 slug: /
 title: What is Buz?
-
+hide_table_of_contents: true
 ---
 
-![buzz](../../static/img/buzz.png)
 
-A system for collecting, validating, and delivering schematized data to where it needs to bee.
+
+**A system for collecting, validating, and delivering schematized data to where it needs to bee.**
+
+![flow](../../static/img/buzflow.png)
 
 ***
 
