@@ -15,12 +15,15 @@ The (absolute) easiest way to deploy Buz on GCP is via **[Google Cloud Run](http
 
 The terraform deployment consists of the following GCP resources:
 
-* **2 Pub/Sub topics for valid and invalid events**
-* **1 Secret Manager secret for Buz configuration**
 * **1 Cloud Run service for running Buz serverlessly**
-* **1 GCS bucket for schemas**
+* **1 Secret Manager secret for Buz configuration**
 * **1 Domain mapping for running Buz behind a pretty name**
+* **1 GCS bucket for schemas**
+* **2 Pub/Sub topics for valid and invalid events**
 * **1 Artifact Registry Repository for hosting Buz artifacts**
+* **1 BigQuery dataset**
+* **2 BigQuery tables for valid/invalid events**
+* **2 Pub/Sub -> BigQuery subscriptions for pushing data to BigQuery automatically**
 
 It also provisions the appropriate IAM configuration, enables GCP services if they have not already been enabled, etc.
 
@@ -62,6 +65,7 @@ env = "prd"
 buz_domain = "buz.YOUR_DOMAIN.com"
 buz_version = "v0.11.11"
 schema_bucket_name = "schemas"
+bigquery_dataset_name = "buz"
 ```
 
 
