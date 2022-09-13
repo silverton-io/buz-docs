@@ -6,10 +6,9 @@ hide_table_of_contents: true
 ---
 
 
-
-**A system for collecting, validating, and delivering schematized data to where it needs to bee.**
-
 ![flow](../../static/img/buzflow.png)
+
+### Buz collects, validates, and delivers schematized data to where it needs to bee.
 
 ***
 
@@ -23,7 +22,7 @@ hide_table_of_contents: true
 ***
 
 # When To Use Buz
-- **You want to collect data from multiple sources using a single, fully-OSS system.**
+- **You want to collect data from multiple sources or protocols using a single, fully-OSS system.**
     - Event-tracking SDK's like Snowplow Analytics (Segment and others coming soon)
     - Self-describing payloads
     - Webhooks
@@ -36,7 +35,7 @@ hide_table_of_contents: true
 
 - **You want cost efficiencies and burstable scale.**
     - Buz is a fast and efficient static binary.
-    - Buz is easily deployed using GCP [Cloud Run](https://cloud.google.com/run) or [Knative](https://knative.dev/docs/). Which means it can effectively scale from `0` to `∞`. Perhaps beyond?
+    - Buz is easily deployed using Google [Cloud Run](https://cloud.google.com/run) or [Knative](https://knative.dev/docs/). Which means it can effectively scale from `0` to `∞`. Perhaps beyond?
     - Buz ❤️'s cloud [provider](https://cloud.google.com/free/docs/gcp-free-tier/#cloud-run) [free](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all) tiers.
 
 - **You are sick of paying to re-process the same data using [INSERT MDS ELT TOOL HERE] when webhooks will do.**
@@ -45,7 +44,7 @@ hide_table_of_contents: true
 
 - **You need a system that will gracefully evolve as your needs change.**
     - Want to collect data but don't want streaming overhead yet? Sink it to a database like Postgresql or MySQL to get started.
-    - Migrating cloud providers? Simultaneously sink data to both AWS Kinesis and GCP Pub/Sub with Buz.
+    - Migrating cloud providers? Simultaneously sink data to both AWS Kinesis and Google Pub/Sub with Buz.
     - Want development environments that look and feel like production, but with reduced infrastructure overhead? Buz.
 
 - **You want to self-manage a data collection system with as few moving pieces as possible.**
