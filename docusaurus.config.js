@@ -78,24 +78,69 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: "Sources",
+            items: [
+              {
+                label: "Snowplow Analytics",
+                to: "/sources/snowplow-analytics"
+              },
+              {
+                label: "Webhooks",
+                to: "/sources/webhook"
+              },
+              {
+                label: "Self-Describing JSON",
+                to: "/sources/self-describing-json"
+              },
+              {
+                label: "Pixel",
+                to: "/sources/pixel"
+              },
+              {
+                label: "CloudEvents",
+                to: "/sources/cloudevents"
+              },
+            ]
+          },
+          {
+            title: "Integrations",
+            items: [
+              {
+                label: "Google Pub/Sub",
+                to: "/integrations/google-pub-sub"
+              },
+              {
+                label: "AWS Kinesis Firehose",
+                to: "/integrations/aws-kinesis-firehose"
+              },
+              {
+                label: "Kafka",
+                to: "/integrations/kafka"
+              },
+              {
+                label: "Redpanda",
+                to: "/integrations/redpanda"
+              },
+              {
+                label: "Postgres",
+                to: "/integrations/postgres"
+              },
+            ]
+          },
+          {
+            title: 'Buz',
             items: [
               {
                 label: 'Docs',
-                to: '/',
+                to: "/"
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
+              {
+                label: 'On GitHub',
+                href: 'https://github.com/silverton-io/buz/',
+              },
               {
                 label: 'Blog',
                 to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/silverton-io/buz/',
               },
             ],
           },
