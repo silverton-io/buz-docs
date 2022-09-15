@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, Timescale, webhook to Timescale, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to Timescale using Buz for $0.
+# Send webhook data to Timescale for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

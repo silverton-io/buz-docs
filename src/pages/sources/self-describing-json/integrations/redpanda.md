@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, Redpanda, self describing JSON to Redpanda, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to Redpanda using Buz for $0.
+# Send self describing JSON data to Redpanda for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

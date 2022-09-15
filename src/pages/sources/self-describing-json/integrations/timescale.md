@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, Timescale, self describing JSON to Timescale, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to Timescale using Buz for $0.
+# Send self describing JSON data to Timescale for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [Snowplow Analytics, event tracking, free, open-source, Buz]
 ---
 
-# Collect Snowplow Analytics data with Buz for $0
+# Collect Snowplow Analytics data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

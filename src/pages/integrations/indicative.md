@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to In
 keywords: [Indicative, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Indicative with Buz for $0
+# Send data to Indicative for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

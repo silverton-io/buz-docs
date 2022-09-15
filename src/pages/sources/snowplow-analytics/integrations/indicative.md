@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, Indicative, Snowplow Analytics to Indicative, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to Indicative using Buz for $0.
+# Send Snowplow Analytics data to Indicative for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

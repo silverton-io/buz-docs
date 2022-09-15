@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, Vitess, webhook to Vitess, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to Vitess using Buz for $0.
+# Send webhook data to Vitess for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Cloudevents, Materialize, Cloudevents to Materialize, event tracking, free, open-source, Buz]
 ---
 
-# Send Cloudevents data to Materialize using Buz for $0.
+# Send Cloudevents data to Materialize for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

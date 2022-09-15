@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, Planetscale, Snowplow Analytics to Planetscale, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to Planetscale using Buz for $0.
+# Send Snowplow Analytics data to Planetscale for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

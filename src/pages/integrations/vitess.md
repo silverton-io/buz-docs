@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Vi
 keywords: [Vitess, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Vitess with Buz for $0
+# Send data to Vitess for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, AWS Kinesis Firehose, self describing JSON to AWS Kinesis Firehose, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to AWS Kinesis Firehose using Buz for $0.
+# Send self describing JSON data to AWS Kinesis Firehose for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

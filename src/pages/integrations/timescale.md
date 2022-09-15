@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Ti
 keywords: [Timescale, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Timescale with Buz for $0
+# Send data to Timescale for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

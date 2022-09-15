@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [Cloudevents, event tracking, free, open-source, Buz]
 ---
 
-# Collect Cloudevents data with Buz for $0
+# Collect Cloudevents data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

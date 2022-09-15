@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Cloudevents, Amplitude, Cloudevents to Amplitude, event tracking, free, open-source, Buz]
 ---
 
-# Send Cloudevents data to Amplitude using Buz for $0.
+# Send Cloudevents data to Amplitude for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

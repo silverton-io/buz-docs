@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, Google Pub/Sub, Snowplow Analytics to Google Pub/Sub, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to Google Pub/Sub using Buz for $0.
+# Send Snowplow Analytics data to Google Pub/Sub for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

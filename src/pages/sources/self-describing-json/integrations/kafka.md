@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, Kafka, self describing JSON to Kafka, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to Kafka using Buz for $0.
+# Send self describing JSON data to Kafka for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

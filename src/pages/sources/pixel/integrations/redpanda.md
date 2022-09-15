@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [pixel, Redpanda, pixel to Redpanda, event tracking, free, open-source, Buz]
 ---
 
-# Send pixel data to Redpanda using Buz for $0.
+# Send pixel data to Redpanda for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

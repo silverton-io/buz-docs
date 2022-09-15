@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to My
 keywords: [MySQL, event tracking, free, open-source, Buz]
 ---
 
-# Send data to MySQL with Buz for $0
+# Send data to MySQL for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

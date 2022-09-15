@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Ma
 keywords: [Materialize, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Materialize with Buz for $0
+# Send data to Materialize for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

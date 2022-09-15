@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Cloudevents, Google Pub/Sub, Cloudevents to Google Pub/Sub, event tracking, free, open-source, Buz]
 ---
 
-# Send Cloudevents data to Google Pub/Sub using Buz for $0.
+# Send Cloudevents data to Google Pub/Sub for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

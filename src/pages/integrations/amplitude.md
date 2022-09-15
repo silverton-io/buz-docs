@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Am
 keywords: [Amplitude, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Amplitude with Buz for $0
+# Send data to Amplitude for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

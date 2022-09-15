@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, Mongodb, webhook to Mongodb, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to Mongodb using Buz for $0.
+# Send webhook data to Mongodb for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, AWS MSK, webhook to AWS MSK, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to AWS MSK using Buz for $0.
+# Send webhook data to AWS MSK for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 
