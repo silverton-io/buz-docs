@@ -5,7 +5,7 @@ slug: /exploration-with-serverless-snowplow-analytics
 tags: [Snowplow Analytics, Event Tracking, Serverless, Google Cloud Run, Pub/Sub, BigQuery]
 ---
 
-[Snowplow Analytics](https://snowplow.io/) is a highly-scalable system that powers data creation for [millions of sites](https://trends.builtwith.com/analytics/Snowplow) on the internet. Snowplow is baked directly into [dbt](https://github.com/dbt-labs/dbt-core/blob/main/core/dbt/tracking.py#L33-L47), and is heavily used on [dbt cloud](https://cloud.getdbt.com/), Snowflake's [docs](https://docs.snowflake.com/en/user-guide-getting-started.html), [Trello](https://trello.com/), [Gitlab](https://gitlab.com/), [Citi bank](https://www.citi.com/), [Backcountry.com](https://www.backcountry.com/), etc.
+[Snowplow Analytics](https://snowplow.io/) is a highly-scalable system that powers data creation for [millions of sites](https://trends.builtwith.com/analytics/Snowplow) on the internet. Snowplow is baked directly into [dbt](https://github.com/dbt-labs/dbt-core/blob/main/core/dbt/tracking.py#L33-L47), [dbt cloud](https://cloud.getdbt.com/), Snowflake's [docs](https://docs.snowflake.com/en/user-guide-getting-started.html), [Trello](https://trello.com/), [Gitlab](https://gitlab.com/), [Citi bank](https://www.citi.com/), [Backcountry.com](https://www.backcountry.com/), etc.
 
 After setting up, advancing, and maintaining Snowplow stacks of [various scale](https://bostata.com/268-billion-events-with-snowplow-snowflake-at-cargurus) and [scope](https://bostata.com/client-side-instrumentation-for-under-one-dollar) for half a decade I've found myself simultaneously wanting **less** and **more**.
 
@@ -14,7 +14,7 @@ I've often wished for **fewer streams**, **fewer machines/ containers to manage*
 I've also hoped for **more deployment flexibility**, **more options for storing schemas**, **more cost efficiencies**, **more mechanisms for seamlessly migrating between Kinesis <-> Kafka <-> Pub/Sub**, **more inputs**, **more outputs**, and **more utility from the data in transit** without duplicating it.
 
 
-Which is how the idea of [buz.dev](https://buz.dev) was born.
+Which is how [buz.dev](https://buz.dev) was born.
 
 
 ## Inspirations and iterations
@@ -30,7 +30,7 @@ After I rolled Snowplow out for a [NYC-based commercial real estate company](htt
 I've experienced the benefits of serverless event collection more recently at [6 River Systems](https://6river.com/data-driven-robotics-leveraging-google-cloud-platform-and-big-data-to-improve-robot-behaviors/) (now part of Shopify Logistics) when processing mission-critical data from robots all over the world. Like at CarGurus, data volumes from fulfillment systems are highly variable. One warehouse or distribution center will have a very different traffic pattern than another, and volume at most spikes [through the roof during Peak months](https://supplychaingamechanger.com/strategies-to-survive-the-peak-season-fulfillment-surge/). The cost of static infrastructure within an industry where margins are already tight is a non-starter.
 
 
-Serverless is a perfect fit for event tracking, and I've become increasingly convinced it is the way.
+**Serverless is a perfect fit for event tracking and I've become convinced it is the way.**
 
 
 ## Engineering challenges
@@ -48,7 +48,9 @@ So I jotted down initial requirements for Serverless Thing™.
 
 ### Minimal human involvement to keep running
 
-Systems are great when you don't need to think about them. In Julia Evans' words I wanted to [spend approximately 0 time on operations](https://jvns.ca/blog/2022/07/09/monitoring-small-web-services/).
+Systems are great when you don't need to think about them. In Julia Evans' spending [approximately 0 time on operations](https://jvns.ca/blog/2022/07/09/monitoring-small-web-services/) was the goal.
+
+I didn't want to think about Serverless Thing™.
 
 ### Entirely self-contained and capable of running horizontally with no issues
 
@@ -64,7 +66,7 @@ Snowplow's [RDB](https://docs.snowplow.io/docs/pipeline-components-and-applicati
 
 My experience has been Snowflake's [Snowpipe](https://docs.snowflake.com/en/user-guide/data-load-snowpipe-intro.html) functionality works pretty well, as do BigQuery [streaming inserts](https://cloud.google.com/bigquery/docs/samples/bigquery-table-insert-rows) or [BigQuery Pub/Sub subscriptions](https://cloud.google.com/pubsub/docs/bigquery). And the responsibility of keeping Snowpipe or BQ streaming inserts running is not mine :).
 
-I decided to use Go so x-os, x-arch binaries could be built.
+Serverless Thing™ uses Go so x-os, x-arch binaries can be shipped.
 
 ### Fast to start up and shut down
 
@@ -84,3 +86,12 @@ The operator has to make a choice between `not reading from the stream` or `re-f
 ### Easy to configure
 
 YML + Jsonschema validation is [pretty standard](https://www.schemastore.org/json/) so I went with that instead of HOCON. It turned out to be a pretty good decision since auto-completing, auto-validating config is handy.
+
+
+### Make event streaming accessible
+
+[dbt](https://www.getdbt.com/) has been so inspirational because it makes good data engineering practices accessible to all. Tricks that data engineers have used for a long time have become dbt packages that users can simply import.
+
+Like data engineering not that long ago, streaming systems are **intimidating**. But they don't need to be. Streaming systems are also often **overkill**. Throwing data into several streams only to load it into a Postgres database means the streaming infrastructure is probably unnecessary.
+
+Ideally Serverless Thing™ could make streaming accessible while empowering orgs to evolve from the current stack to a desired future state.
