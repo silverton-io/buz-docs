@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to AW
 keywords: [AWS Kinesis, event tracking, free, open-source, Buz]
 ---
 
-# Send data to AWS Kinesis with Buz for $0
+# Send data to AWS Kinesis for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

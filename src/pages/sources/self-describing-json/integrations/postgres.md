@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, Postgres, self describing JSON to Postgres, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to Postgres using Buz for $0.
+# Send self describing JSON data to Postgres for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

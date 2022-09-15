@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to El
 keywords: [Elasticsearch, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Elasticsearch with Buz for $0
+# Send data to Elasticsearch for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

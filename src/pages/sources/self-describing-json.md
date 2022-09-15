@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [self describing JSON, event tracking, free, open-source, Buz]
 ---
 
-# Collect self describing JSON data with Buz for $0
+# Collect self describing JSON data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

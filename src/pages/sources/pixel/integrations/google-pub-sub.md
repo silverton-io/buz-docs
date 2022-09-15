@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [pixel, Google Pub/Sub, pixel to Google Pub/Sub, event tracking, free, open-source, Buz]
 ---
 
-# Send pixel data to Google Pub/Sub using Buz for $0.
+# Send pixel data to Google Pub/Sub for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

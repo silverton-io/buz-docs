@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, Indicative, self describing JSON to Indicative, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to Indicative using Buz for $0.
+# Send self describing JSON data to Indicative for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

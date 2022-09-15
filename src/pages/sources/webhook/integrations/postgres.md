@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, Postgres, webhook to Postgres, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to Postgres using Buz for $0.
+# Send webhook data to Postgres for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

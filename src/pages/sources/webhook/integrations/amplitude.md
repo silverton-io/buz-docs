@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, Amplitude, webhook to Amplitude, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to Amplitude using Buz for $0.
+# Send webhook data to Amplitude for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

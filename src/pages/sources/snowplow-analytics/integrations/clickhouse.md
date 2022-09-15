@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, Clickhouse, Snowplow Analytics to Clickhouse, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to Clickhouse using Buz for $0.
+# Send Snowplow Analytics data to Clickhouse for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Go
 keywords: [Google Pub/Sub, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Google Pub/Sub with Buz for $0
+# Send data to Google Pub/Sub for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

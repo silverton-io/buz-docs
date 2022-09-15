@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Re
 keywords: [Redpanda, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Redpanda with Buz for $0
+# Send data to Redpanda for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, AWS MSK, Snowplow Analytics to AWS MSK, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to AWS MSK using Buz for $0.
+# Send Snowplow Analytics data to AWS MSK for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

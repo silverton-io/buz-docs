@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, Materialize, Snowplow Analytics to Materialize, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to Materialize using Buz for $0.
+# Send Snowplow Analytics data to Materialize for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

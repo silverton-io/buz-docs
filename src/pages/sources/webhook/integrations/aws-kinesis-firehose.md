@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, AWS Kinesis Firehose, webhook to AWS Kinesis Firehose, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to AWS Kinesis Firehose using Buz for $0.
+# Send webhook data to AWS Kinesis Firehose for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

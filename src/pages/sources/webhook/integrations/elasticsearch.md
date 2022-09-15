@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, Elasticsearch, webhook to Elasticsearch, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to Elasticsearch using Buz for $0.
+# Send webhook data to Elasticsearch for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 

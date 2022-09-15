@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [webhook, NATS, webhook to NATS, event tracking, free, open-source, Buz]
 ---
 
-# Send webhook data to NATS using Buz for $0.
+# Send webhook data to NATS for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 
