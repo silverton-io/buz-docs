@@ -1,5 +1,5 @@
 ---
-title: Serverless Event Tracking with Snowplow Analytics
+title: Exploring Serverless Event Tracking with Snowplow
 authors: [jake]
 slug: /exploration-with-serverless-snowplow-analytics
 tags: [Snowplow Analytics, Event Tracking, Serverless, Google Cloud Run, Pub/Sub, BigQuery]
