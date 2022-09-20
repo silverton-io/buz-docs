@@ -41,6 +41,9 @@ Buz sends webhook data to a number of different integrations including:
 - [Pubnub](/sources/webhook/integrations/pubnub)
 - [Amplitude](/sources/webhook/integrations/amplitude)
 - [Indicative](/sources/webhook/integrations/indicative)
+- [AWS S3](/sources/webhook/integrations/aws-s3)
+- [Google Cloud Storage](/sources/webhook/integrations/google-cloud-storage)
+- [Minio](/sources/webhook/integrations/minio)
 
 
 # Want to get started?

@@ -41,6 +41,9 @@ Buz sends pixel data to a number of different integrations including:
 - [Pubnub](/sources/pixel/integrations/pubnub)
 - [Amplitude](/sources/pixel/integrations/amplitude)
 - [Indicative](/sources/pixel/integrations/indicative)
+- [AWS S3](/sources/pixel/integrations/aws-s3)
+- [Google Cloud Storage](/sources/pixel/integrations/google-cloud-storage)
+- [Minio](/sources/pixel/integrations/minio)
 
 
 # Want to get started?

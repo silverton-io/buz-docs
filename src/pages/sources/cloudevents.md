@@ -41,6 +41,9 @@ Buz sends Cloudevents data to a number of different integrations including:
 - [Pubnub](/sources/cloudevents/integrations/pubnub)
 - [Amplitude](/sources/cloudevents/integrations/amplitude)
 - [Indicative](/sources/cloudevents/integrations/indicative)
+- [AWS S3](/sources/cloudevents/integrations/aws-s3)
+- [Google Cloud Storage](/sources/cloudevents/integrations/google-cloud-storage)
+- [Minio](/sources/cloudevents/integrations/minio)
 
 
 # Want to get started?

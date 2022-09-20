@@ -41,6 +41,9 @@ Buz sends self describing JSON data to a number of different integrations includ
 - [Pubnub](/sources/self-describing-json/integrations/pubnub)
 - [Amplitude](/sources/self-describing-json/integrations/amplitude)
 - [Indicative](/sources/self-describing-json/integrations/indicative)
+- [AWS S3](/sources/self-describing-json/integrations/aws-s3)
+- [Google Cloud Storage](/sources/self-describing-json/integrations/google-cloud-storage)
+- [Minio](/sources/self-describing-json/integrations/minio)
 
 
 # Want to get started?

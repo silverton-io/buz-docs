@@ -41,6 +41,9 @@ Buz sends Snowplow Analytics data to a number of different integrations includin
 - [Pubnub](/sources/snowplow-analytics/integrations/pubnub)
 - [Amplitude](/sources/snowplow-analytics/integrations/amplitude)
 - [Indicative](/sources/snowplow-analytics/integrations/indicative)
+- [AWS S3](/sources/snowplow-analytics/integrations/aws-s3)
+- [Google Cloud Storage](/sources/snowplow-analytics/integrations/google-cloud-storage)
+- [Minio](/sources/snowplow-analytics/integrations/minio)
 
 
 # Want to get started?
