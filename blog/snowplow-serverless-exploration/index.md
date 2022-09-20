@@ -1,5 +1,5 @@
 ---
-title: Exploring Serverless Event Tracking, Four Years Later
+title: Serverless Event Tracking, Four Years Later
 authors: [jake]
 slug: /exploration-serverless-event-tracking-four-years-later
 tags: [Snowplow Analytics, Event Tracking, Serverless, Google Cloud Run, Pub/Sub, BigQuery]
@@ -30,7 +30,7 @@ I saw serverless event collection work at scale during my time at [CarGurus](htt
 
 After I set up Snowplow for a [NYC-based commercial real estate company](https://www.bisnow.com/), the VP of Technology (who is now @ Disney Streaming) pushed it further with a simple Lambda. Instead of being limited to Snowplow tracker protocol payloads, the Lambda function collected arbitrary payloads, reformatted them to be consistent with Snowplow [Self-Describing Events](https://docs.snowplow.io/docs/understanding-tracking-design/out-of-the-box-vs-custom-events-and-entities/#self-describing-events), and fired them into the Snowplow collector. It was efficient and effectively hands-off. And has come to mind ever since.
 
-I've more recently experienced the benefits of serverless event collection while at [6 River Systems](https://6river.com/data-driven-robotics-leveraging-google-cloud-platform-and-big-data-to-improve-robot-behaviors/) (now Shopify Logistics) when processing mission-critical data from robots all over the world. Data volumes from fulfillment systems are highly variable. One warehouse or distribution center will have a very different traffic pattern than another, and volume at spikes [through the roof during the Peak months](https://supplychaingamechanger.com/strategies-to-survive-the-peak-season-fulfillment-surge/). Over-provisioned static infrastructure in an industry where margins are already tight is a complete non-starter.
+I've more recently experienced the benefits of serverless event collection while at [6 River Systems](https://6river.com/data-driven-robotics-leveraging-google-cloud-platform-and-big-data-to-improve-robot-behaviors/) (Shopify Logistics) when processing mission-critical data from robots all over the world. Data volumes from fulfillment systems are highly variable. One warehouse or distribution center will have a very different traffic pattern than another, but all of them spike [through the roof during the Peak months](https://supplychaingamechanger.com/strategies-to-survive-the-peak-season-fulfillment-surge/). Over-provisioned static infrastructure in an industry where margins are already tight is a complete non-starter.
 
 
 **Serverless is a perfect fit for data collection and I'm convinced it is the way.**
@@ -180,6 +180,10 @@ Over the past few years data privacy has come to the spotlight, and rightfully s
 **AWS**
 
 **Fly.io**
+
+### Load testing
+
+
 
 # Trade-offs
 
