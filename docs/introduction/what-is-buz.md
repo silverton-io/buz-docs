@@ -2,6 +2,7 @@
 sidebar_position: 1
 slug: /
 title: What is Buz?
+description: Buz collects, validates, and delivers schematized data to wherever it needs to bee.
 hide_table_of_contents: true
 ---
 
