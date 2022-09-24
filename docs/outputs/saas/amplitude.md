@@ -9,7 +9,7 @@ sidebar_position: 2
 This sink writes formatted envelopes to Amplitude for easy visualization and analysis.
 
 :::tip Note!
-All nested payload properties are flatted and dot-separated, so this:
+All nested payload properties are flattened and dot-separated, so this:
 ```
 {
     "topLevel": {
