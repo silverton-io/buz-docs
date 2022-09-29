@@ -1,8 +1,0 @@
-{
-    "label": "Buz Backends",
-    "position": 1,
-    "link": {
-        "type": "generated-index",
-        "description": "Buz Cache Backends"
-    }
-}

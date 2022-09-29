@@ -26,11 +26,10 @@ Config responses look like the following. **Again, this should be disabled in pr
 {
   "app": {
     "version": "x.x.dev",
-    "name": "buz",
+    "name": "buz-bootstrap",
     "env": "development",
-    "mode": "debug",
     "port": "8080",
-    "trackerDomain": "localhost",
+    "trackerDomain": "bootstrap.silverton.io",
     "enableConfigRoute": true
   },
   "middleware": {
@@ -42,7 +41,7 @@ Config responses look like the following. **Again, this should be disabled in pr
         "name": "nuid",
         "secure": true,
         "ttlDays": 365,
-        "domain": "devel.silverton.io",
+        "domain": "",
         "path": "/",
         "sameSite": "Lax"
       },
@@ -51,11 +50,11 @@ Config responses look like the following. **Again, this should be disabled in pr
     "cors": {
       "enabled": true,
       "allowOrigin": ["*"],
-      "allowCredentials": false,
+      "allowCredentials": true,
       "allowMethods": ["POST", "OPTIONS", "GET"],
       "maxAge": 86400
     },
-    "requestLogger": { "enabled": false },
+    "requestLogger": { "enabled": true },
     "yeet": { "enabled": false }
   },
   "inputs": {
@@ -67,10 +66,10 @@ Config responses look like the following. **Again, this should be disabled in pr
       "postPath": "/plw/p",
       "redirectPath": "/plw/r"
     },
-    "cloudevents": { "enabled": true, "path": "/cloudevent" },
-    "generic": {
+    "cloudevents": { "enabled": true, "path": "/cloudevents" },
+    "selfDescribing": {
       "enabled": true,
-      "path": "/generic",
+      "path": "/self-describing",
       "contexts": { "rootKey": "contexts" },
       "payload": {
         "rootKey": "payload",
@@ -78,33 +77,21 @@ Config responses look like the following. **Again, this should be disabled in pr
         "dataKey": "data"
       }
     },
-    "webhook": { "enabled": true, "path": "/hook" },
-    "pixel": { "enabled": true, "path": "/pxl" }
+    "webhook": { "enabled": true, "path": "/webhook" },
+    "pixel": { "enabled": true, "path": "/pixel" }
   },
-  "schemaCache": {
-    "backend": { "type": "fs", "path": "schemas/", "registryTable": "" },
+  "registry": {
+    "backend": { "type": "fs", "path": "./schemas/" },
     "ttlSeconds": 300,
     "maxSizeBytes": 104857600,
     "purge": { "enabled": true, "path": "/c/purge" },
-    "schemaDirectory": { "enabled": true }
+    "http": { "enabled": true }
   },
   "manifold": {},
   "sinks": [
-    { "name": "console", "type": "stdout", "deliveryRequired": true },
-    {
-      "name": "file",
-      "type": "file",
-      "deliveryRequired": true,
-      "validFile": "buz-valid.json",
-      "invalidFile": "buz-invalid.json"
-    }
+    { "name": "easyfeedback", "type": "stdout", "deliveryRequired": true }
   ],
-  "squawkBox": {
-    "enabled": true,
-    "cloudeventsPath": "/sqwk/ce",
-    "snowplowPath": "/sqwk/sp",
-    "genericPath": "/sqwk/gen"
-  },
+  "squawkBox": { "enabled": true },
   "privacy": {
     "anonymize": {
       "device": { "ip": false, "useragent": false },
@@ -113,6 +100,5 @@ Config responses look like the following. **Again, this should be disabled in pr
   },
   "tele": { "enabled": true }
 }
-
 ```
 :::

@@ -55,7 +55,7 @@ hide_table_of_contents: true
 - **You want to incrementally implement structure and contracts within your data.**
     - Buz validates, annotates, and envelopes each payload before sinking it to the configured sink(s).
     - JSON Schema is default. JSON Typedef is on the way.
-    - No, we do not hate protocol buffers. So that might be incoming too.
+    - No, we do not hate protocol buffers and avro. So those might be incoming too.
 
 
 # Quickstart
