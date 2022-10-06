@@ -182,7 +182,7 @@ It takes a minute to map a domain/subdomain to a GCP Cloud Run service. Here's h
 
 :::info Yo
 - While this step is optional, you'll need to do it when using custom schemas.
-- Buz supports a number of [schema cache backends](/category/schema-cache-backends), so you can just as easily use a different backend.
+- Buz includes an [onboard schema registry](/under-the-hood/registry/overview) that supports many cache backends, so you can just as easily use a different backend.
 :::
 
 
