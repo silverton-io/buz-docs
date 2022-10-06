@@ -17,9 +17,9 @@ Schemas have played a critical role in this process; this post outlines **the wh
 ### Instrumentation and Integration
 This one pretty much goes without saying. If data is not being emitted from source systems, you won't have any data to play with.
 
-If you don't have any data, the rest of this post will not provide value. You also won't be able to complain about price of Snowflake and might feel left out. 
+If you don't have or want any data the rest of this post will not provide value. You also won't be able to complain about price of Snowflake and might feel left out. 
 
-Instrumentation is pretty important. It's also a pretty huge PITA to wrangle, which is why (often retroactive) [tracking](https://segment.com/academy/collecting-data/how-to-create-a-tracking-plan/) [plans](https://amplitude.com/blog/create-tracking-plan) [became](https://www.avo.app/blog/what-is-a-tracking-plan-and-why-do-you-need-one) [a](https://www.indicative.com/resource/data-tracking-plan/) [thing](https://www.trackingplan.com/).
+Instrumentation is pretty important. It's also a pretty huge PITA to wrangle, which is why [tracking](https://segment.com/academy/collecting-data/how-to-create-a-tracking-plan/) [plans](https://amplitude.com/blog/create-tracking-plan) [became](https://www.avo.app/blog/what-is-a-tracking-plan-and-why-do-you-need-one) [a](https://www.indicative.com/resource/data-tracking-plan/) [thing](https://www.trackingplan.com/).
 
 ### The pipeline
 
@@ -53,7 +53,7 @@ Data discoverability is super important when organizations are fragmented, or wh
 
 ### Observability, Monitoring, and Alerting
 
-Last, definitely not least, and scarily-rare... tools that tell the operator if things are broken.
+Last, definitely not least, and unfortunately-rare... tools that tell the operator if things are broken.
 
 These could be devops-y tools like Prometheus/Alertmanager/Grafana, pay-to-play tools like data quality/reliability platforms, or something dead-simple like load metadata tables and freshness checks.
 
@@ -163,17 +163,17 @@ Language-specific data structures can be generated from schemas. Which means int
 
 Nobody likes being the person who causes the release train to halt. Or being the person who caused the rollback because a prop was missing. **Especially when it's "just for analytics".**
 
-Merging to `main` only after instrumentation is 👍👍 is the ideal workflow. It saves rollbacks, it avoids the friction of going to the data team... *again*, to have them explain their mandated "contract", and it's just good engineering.
+Merging to `main` only after instrumentation is 👍👍 is the ideal workflow. It saves rollbacks. It avoids the human friction of going to the data team... *again*, to have them explain their mandated "contract". And it's just good engineering.
 
 
 ### Schemas improve code quality
 This might be a stretch. Or maybe not.
 
-Have you tried mandating an engineer who loves Typescript to use `Any`, but also mandated payloads have `propA`, `propB`, and `propC`. And `propC` must be a `bool`?
+Have you tried forcing an engineer who loves Typescript to use `Any`, while simultaneously mandating payloads have `propA`, `propB`, and `propC`. And `propC` must be a `bool`?
 
 Or tried forcing a golang-oriented engineer to use a `map[string]interface{}`, but told them the payload must have specific keys?
 
-Both are pretty silly. And a couple quick Google searches highlight [Don't Use Any](https://medium.com/@warkiringoda/typescript-best-practices-2021-a58aee199661). [Use `map[string]interface{}` sparingly](https://bitfieldconsulting.com/golang/commandments). Linting will probably tell you to pound sand.
+I have. And it was pretty silly. And a couple quick Google searches highlight [Don't Use Any](https://medium.com/@warkiringoda/typescript-best-practices-2021-a58aee199661). [Use `map[string]interface{}` sparingly](https://bitfieldconsulting.com/golang/commandments). Lint rules will tell you, not-so-nicely, to pound sand.
 
 Schemas are centralized verbiage from which to generate language-specific data structures. Tools like [Quicktype](https://github.com/quicktype/quicktype), [Typebox](https://github.com/sinclairzx81/typebox), and [jsonschema-to-typescript](https://www.npmjs.com/package/json-schema-to-typescript) make this a reality. The same can be said about [JTD](https://www.rfc-editor.org/rfc/rfc8927) and [Protocol Buffers](https://developers.google.com/protocol-buffers).
 
@@ -206,7 +206,7 @@ Self-service, low-cognitive-load systems minimize friction and maximize efficien
 
 ### Schemas power compliance-oriented requirements
 
-Adhering to data privacy-oriented regulation requires a rethink of pretty much all data processing systems. The place to tokenize, redact, or hash personal information is not at the end of the data pipeline. It is at the start of the pipeline. Otherwise you'll have sensitive data lying all over S3 in cleartext, and zero clue how to actually find or mitigate it.
+(Actually) adhering to data privacy-oriented regulation requires a rethink of pretty much all data processing systems. The place to tokenize, redact, or hash personal information is not at the end of the data pipeline. It is at the start of the pipeline. Otherwise you'll have sensitive data lying all over S3 in cleartext or flying through Kafka with no auth, and zero clue how to actually find or mitigate it.
 
 
 ### Schemas are the foundation of higher-order data models
@@ -230,9 +230,9 @@ Schemas at the center is a pattern engineers are already comfortable with. OpenA
 This is the workflow I've settled on after years of flipping levers and seeing what works (and what doesn't). Again, mandates don't work. Making the analytics teams happy at the expense of poor application code going into production doesn't work. Knowing instrumentation is bad only after it is deployed works-ish, but just barely. Would not recommend.
 
 ### Draft, iterate on, and deploy a schema.
-The neat thing about schema-first workflows is **even product people can write the first draft**. You don't have to be an engineer to get the process going, though engineering counterparts will need to be involved at some point.
+The neat thing about schema-first workflows is **even product people can write the first draft**. You don't have to be an engineer to get the process going, though engineering counterparts will need to be involved eventually.
 
-The more work that can be front-loaded to non-engineers the better. Everyone's time is valuable and schemas allow everyone to contribute to the process. It sucks when contributions are discarded because they are "not in a usable format" (cough, Gdocs). Schemas are usable formats.
+The more work that can be front-loaded to non-engineers the better. Everyone's time is valuable and schemas allow everyone to proactively contribute to the process. It sucks when useful contributions are discarded because they are "not in a usable format" (cough, Gdocs). Schemas are usable formats.
 
 ### Bring tracking libraries and systems up to parity.
 The second a new schema or updated version has been published, automation kicks in and (at minimum):
@@ -245,27 +245,27 @@ The second a new schema or updated version has been published, automation kicks 
 
 ### Implement tracking.
 
-Once systems are ready to accept the new instrumentation, engineers start implementing it into the codebase. It doesn't matter if this codebase is frontend code, backend code, command-line interfaces, etc - the process is the same.
+Once systems are ready to accept the new instrumentation, engineers start implementing it into the codebase. It doesn't matter if this codebase is frontend code, backend code, cli's, infrastructure tooling, etc - the process is the same.
 
 Getting dependencies squared away takes a matter of seconds. By the time engineers are ready to implement the new tracking, the entire system is ready to go.
 
-One of the questions I've heard over and over from engineers is "how do I know these payloads are making it to where they need to be?" This question is best answered with "go check Datadog/Graylog/Whatever". And followed up with, "or you could also go check Snowflake for a table of the same name".
+A question I've heard over and over from engineers is "how do I know these payloads are making it to where they need to be?" This question is best answered with "go check Datadog/Graylog/Whatever". And followed up with, "or you could also go check Snowflake for a table of the same name".
 
 The faster engineers have feedback the better.
 
 ### Deploy.
 
 
-And lastly - making tracking part of the codebase. A huge pain point of analytics-oriented instrumentation is the fact it's often identified as "bad" after being pushing to prod. This is not awesome, and it greatly contributes to upstream "we'll just throw arbitrary json down the line" concensus. Everyone knows this is not ideal, but it's definitely better than rolling back every-other deploy due to analytics bugs.
+And lastly - making tracking part of the codebase. A huge pain point of analytics-oriented instrumentation is the fact it's often identified as "bad" after being pushing to prod. This is not awesome, and it greatly contributes to the upstream "we'll just throw arbitrary json down the line" concensus. Everyone knows this is not ideal, but it's definitely better than rolling back every-other deploy due to analytics bugs.
 
 With contract-powered workflows the following prereqs are taken care of *before* instrumentation rolls out, not after:
 
 - Implementers and stakeholders talk to each other using shared verbiage.
-- Language-specific, versioned data structures are generated.
-- Metadata is pushed to discovery tools
-- The pipeline is primed to accept incoming payloads, and mark them as "good" or "bad"
+- Versioned, language-specific data structures are generated like all other code dependencies.
+- Metadata is pushed to discovery tools.
+- The pipeline is primed to accept incoming payloads, and mark them as "good" or "bad".
 - Observability tools are ready to go for instantaneous feedback in development and production.
-- Downstream analytics/modeling entrypoints (like dbt sources) are in place and can be immediately used
+- Downstream analytics/modeling entrypoints (like dbt sources) are in place and can be immediately used.
 
 ## The Schema-Powered Future
 
@@ -273,7 +273,7 @@ If it's not obvious by now, schemas are **awesome**.
 
 These workflows have significantly improved my work life, I know they've improved my colleages', and it's probably just a matter of time before they improve yours too.
 
-The fun part is the numerous other implications (such as ML/AI) that schematized data platforms can empower - it still feels like this ecosystem is just getting started. It's not a new or original concept by any means. But as data management capabililities at Non-Goog's progress, it will be a consistent solution for consistent pain.
+The fun part is it feels like this ecosystem is just getting started, and there are **so** many additional implications for the better. It's not a new or original concept by any means. But as data management capabililities at Non-Google companies progress, it will be a consistent solution for consistent pain.
 
 **Some other reading, if you want to dive in:**
 
@@ -285,6 +285,4 @@ The fun part is the numerous other implications (such as ML/AI) that schematized
 - [Data Mesh at Netflix](https://netflixtechblog.com/data-mesh-a-data-movement-and-processing-platform-netflix-1288bcab2873)
 - [Building a Real-time Buyer Signal Data Pipeline for Shopify Inbox](https://shopify.engineering/real-time-buyer-signal-data-pipeline-shopify-inbox)
 
-And some context from a Shopify perspective - 9800+ schemas and 1800+ contributors (many of whom are not engineers) is a pretty big feat. The model works.
-
-Here's to the schema-powered future 🥂.
+And some context from a Shopify perspective - 9800+ schemas and 1800+ contributors (many of whom are not engineers) is a pretty big feat. The model works. Here's to the schema-powered future 🥂.
