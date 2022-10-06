@@ -108,7 +108,7 @@ Which brings us back to schematizing stuff.
 
 I'm going to go out on a limb and just say it -> schemas are the nucleus of sustainable data platforms.
 
-Schematizing data before it's generated is often initially discarded and seen as [unnecessary overhead](https://twitter.com/Mike_Kaminsky/status/1573430588958445569) or a productivity drain. And the idea is often nixed in favor of the eventual chaos arbitrary json creates. But who cares about our hypothetical future selves - it's our current selves that matter. Let's dig in for the sake of science.
+Schematizing data upfront is often initially discarded and seen as [unnecessary overhead](https://twitter.com/Mike_Kaminsky/status/1573430588958445569) or a productivity drain. The idea is nixed in favor of the eventual chaos arbitrary json creates. But who cares about our hypothetical future selves - it's our current selves that matter. Let's dig in for the sake of science.
 
 
 ### Schemas empower the "producer" <-> "consumer" relationship
@@ -125,7 +125,7 @@ But when the mystery data thing is removed, the `engineer` <-> `analyst` dynamic
 ![engineers and analysts](img/engs_and_analysts.png)
 
 
-This working dynamic is pretty terrible for productivity. The two parties communicate. Sometimes. There's a ton of friction and neither party is to blame. Data engineers and managers are asked to join the conversation, and implicit "contracts" are established in a Google doc that everyone will lose track of.
+This working dynamic is pretty terrible for productivity. The two parties communicate, sometimes. There's a ton of friction and neither party is to blame. Data engineers and managers are asked to join the conversation, and implicit "contracts" are established in a Google doc that everyone will lose track of.
 
 (Human-readable) schemas turn this dynamic into something that looks more like the following:
 
@@ -140,7 +140,7 @@ Today's data workflows look **very similar** to how software engineering looked 
 
 In LinkedIn's [popular metadata architectures explained](https://engineering.linkedin.com/blog/2020/datahub-popular-metadata-architectures-explained), pull-based metadata extraction is outlined as "an ok start". Push-based metadata is "ideal".
 
-Schematizing data upfront means data discovery and documentation writes itself.  Metadata is discoverable as soon as schemas are deployed, which is often before the data actually starts flowing.
+Schematizing data upfront means data discovery and documentation writes itself. Data assets are discoverable as soon as schemas are deployed - before the data actually starts flowing.
 
 Schematization mechanisms like JSON Schema also get [pretty meta](https://json-schema.org/specification.html#meta-schemas), so it's easy to add schema-level metadata:
 
@@ -159,7 +159,7 @@ Comparing a payload to "what it was supposed to be" and annotating it with a sim
 
 Another +1 (for engineers) is the fact schemas help bad tracking from getting deployed in the first place.
 
-Language-specific data structures can be generated from schemas. Which means VSCode intellisense complains during development if required props are missing, or if one is a `string` and should be a `bool`. And then the code blows up at compile time if the bug is still there.
+Language-specific data structures can be generated from schemas. Which means intellisense or the compiler complains during development if required props are missing, or if one is a `string` and should be a `bool`. And then the code blows up again at compile time if the bug is still there.
 
 Nobody likes being the person who causes the release train to halt. Or being the person who caused the rollback because a prop was missing. **Especially when it's "just for analytics".**
 
@@ -206,7 +206,7 @@ Self-service, low-cognitive-load systems minimize friction and maximize efficien
 
 ### Schemas power compliance-oriented requirements
 
-Adhering to data privacy-oriented regulation requires a rethink of pretty much all data processing systems. The place to tokenize, redact, or hash personal information is not at the end of the data pipeline. It is at the start of the pipeline. Otherwise you'll have sensitive data lying all over S3 in cleartext, and no clue how to actually find or mitigate it.
+Adhering to data privacy-oriented regulation requires a rethink of pretty much all data processing systems. The place to tokenize, redact, or hash personal information is not at the end of the data pipeline. It is at the start of the pipeline. Otherwise you'll have sensitive data lying all over S3 in cleartext, and zero clue how to actually find or mitigate it.
 
 
 ### Schemas are the foundation of higher-order data models
@@ -220,29 +220,71 @@ If the foundation is not strong the analytics engineering team will spend all th
 
 Similar to data modeling benefits, schemas allow data products to be built on a solid foundation. But there's more that can be done on top of that foundation!
 
-Automatically generating endpoints, GraphQL queries, and API docs? Can do. Tools like [Quicktype](https://quicktype.io/), [Transform](https://transform.tools/), and [Apollo](https://www.apollographql.com/) immediately come to mind. As does a blog post from the folks at [Wunderground](https://wundergraph.com/blog/build_json_apis_with_json_schema_by_writing_graphql_operations_against_any_datasource_like_graphql_rest_apollo_federation_postgresql_mysql) friends.
+Automatically-generated endpoints, GraphQL queries, and API docs? Can do. Tools like [Quicktype](https://quicktype.io/), [Transform](https://transform.tools/), and [Apollo](https://www.apollographql.com/) immediately come to mind. As does a blog post from the folks at [Wunderground](https://wundergraph.com/blog/build_json_apis_with_json_schema_by_writing_graphql_operations_against_any_datasource_like_graphql_rest_apollo_federation_postgresql_mysql).
 
-Schemas at the center is also a pattern engineers are already comfortable with. OpenAPI is simply a declarative schema between API's<->frontends after all.
+Schemas at the center is a pattern engineers are already comfortable with. OpenAPI is simply a declarative schema between API's<->frontends after all.
 
 
-## A Contract-Powered Way of Working
+## The Contract-Powered Workflow
 
-The following is the workflow I've settled on after years of flipping levers and seeing what works (and what doesn't). Again, mandates don't work. Making the analytics teams happy at the expense of poor application code going into production doesn't work.
+This is the workflow I've settled on after years of flipping levers and seeing what works (and what doesn't). Again, mandates don't work. Making the analytics teams happy at the expense of poor application code going into production doesn't work. Knowing instrumentation is bad only after it is deployed works-ish, but just barely. Would not recommend.
 
 ### Draft, iterate on, and deploy a schema.
 The neat thing about schema-first workflows is **even product people can write the first draft**. You don't have to be an engineer to get the process going, though engineering counterparts will need to be involved at some point.
 
-The more work that can be front-loaded to non-engineers the better. Everyone's time is valuable and schemas allow everyone to contribute to the process. Without anyone's contributions being discarded because it's "not in a usable format" (cough, Gdocs).
+The more work that can be front-loaded to non-engineers the better. Everyone's time is valuable and schemas allow everyone to contribute to the process. It sucks when contributions are discarded because they are "not in a usable format" (cough, Gdocs). Schemas are usable formats.
 
 ### Bring tracking libraries and systems up to parity.
-The second a new schema or updated version has been published, automation kicks in and:
+The second a new schema or updated version has been published, automation kicks in and (at minimum):
 
-- Builds the new tracking SDK for the engineering teams
-- Pushes schema metadata to data discovery tools
+- Builds and deploys new tracking SDK's for engineering teams
+- Pushes schema metadata ∆ to data discovery tools
 - Ensures infrastructure dependencies (Kafka topics, database tables, etc)
 - Pushes the schema to the appropriate place for pipeline-level validation
 - Creates dbt sources for the analytics engineers
 
 ### Implement tracking.
 
-### Deploy
+Once systems are ready to accept the new instrumentation, engineers start implementing it into the codebase. It doesn't matter if this codebase is frontend code, backend code, command-line interfaces, etc - the process is the same.
+
+Getting dependencies squared away takes a matter of seconds. By the time engineers are ready to implement the new tracking, the entire system is ready to go.
+
+One of the questions I've heard over and over from engineers is "how do I know these payloads are making it to where they need to be?" This question is best answered with "go check Datadog/Graylog/Whatever". And followed up with, "or you could also go check Snowflake for a table of the same name".
+
+The faster engineers have feedback the better.
+
+### Deploy.
+
+
+And lastly - making tracking part of the codebase. A huge pain point of analytics-oriented instrumentation is the fact it's often identified as "bad" after being pushing to prod. This is not awesome, and it greatly contributes to upstream "we'll just throw arbitrary json down the line" concensus. Everyone knows this is not ideal, but it's definitely better than rolling back every-other deploy due to analytics bugs.
+
+With contract-powered workflows the following prereqs are taken care of *before* instrumentation rolls out, not after:
+
+- Implementers and stakeholders talk to each other using shared verbiage.
+- Language-specific, versioned data structures are generated.
+- Metadata is pushed to discovery tools
+- The pipeline is primed to accept incoming payloads, and mark them as "good" or "bad"
+- Observability tools are ready to go for instantaneous feedback in development and production.
+- Downstream analytics/modeling entrypoints (like dbt sources) are in place and can be immediately used
+
+## The Schema-Powered Future
+
+If it's not obvious by now, schemas are **awesome**.
+
+These workflows have significantly improved my work life, I know they've improved my colleages', and it's probably just a matter of time before they improve yours too.
+
+The fun part is the numerous other implications (such as ML/AI) that schematized data platforms can empower - it still feels like this ecosystem is just getting started. It's not a new or original concept by any means. But as data management capabililities at Non-Goog's progress, it will be a consistent solution for consistent pain.
+
+**Some other reading, if you want to dive in:**
+
+- [Data Wrangling at Slack](https://slack.engineering/data-wrangling-at-slack/)
+- [Jitney at AirBnb](https://www.slideshare.net/alexismidon/jitney-kafka-at-airbnb)
+- [Pegasus at LinkedIn](https://engineering.linkedin.com/blog/2020/pegasus-data-language)
+- [Dragon at Uber](https://1fykyq3mdn5r21tpna3wkdyi-wpengine.netdna-ssl.com/wp-content/uploads/2020/03/Schema-Integration-at-Uber-Scale-US2TS-2020-1.pdf)
+- [Building Scalable Real Time Event Processing with Kafka and Flink](https://doordash.engineering/2022/08/02/building-scalable-real-time-event-processing-with-kafka-and-flink/) at Doordash
+- [Data Mesh at Netflix](https://netflixtechblog.com/data-mesh-a-data-movement-and-processing-platform-netflix-1288bcab2873)
+- [Building a Real-time Buyer Signal Data Pipeline for Shopify Inbox](https://shopify.engineering/real-time-buyer-signal-data-pipeline-shopify-inbox)
+
+And some context from a Shopify perspective - 9800+ schemas and 1800+ contributors (many of whom are not engineers) is a pretty big feat. The model works.
+
+Here's to the schema-powered future 🥂.
