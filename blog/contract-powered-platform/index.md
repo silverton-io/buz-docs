@@ -277,7 +277,7 @@ These workflows have significantly improved my work life, I know they've improve
 
 The fun part is it feels like this ecosystem is just getting started, and there are **so** many additional implications for the better. It's not a new or original concept by any means. But as data management capabililities at Non-Google companies progress, it will be a consistent solution for consistent pain.
 
-**Some other reading, if you want to dive in:**
+**Some other reading if you want to dive in:**
 
 - [Data Wrangling at Slack](https://slack.engineering/data-wrangling-at-slack/)
 - [Jitney at AirBnb](https://www.slideshare.net/alexismidon/jitney-kafka-at-airbnb)
@@ -291,4 +291,6 @@ The fun part is it feels like this ecosystem is just getting started, and there 
 - Tune in for [Getting jiggy with JSON Schema at dbt Coalesce](https://coalesce.getdbt.com/agenda/getting-jiggy-with-jsonschema-the-power-of-contracts-for-building-data-systems) or [join the conversation](https://twitter.com/emilyhawkins__) on [Twitter](https://twitter.com/aerialfly).
 - Say hi in [Locally Optimistic Slack](https://locallyoptimistic.slack.com/archives/C043RDEFMBL).
 
-As closing context from a Shopify perspective - 9800+ schemas and 1800+ contributors (many of whom are not engineers) is a pretty big feat. As is deploying hundreds of schema-generated instrumentation to thousands of robots around the world. The model works. Here's to the schema-powered future 🥂.
+As closing context from a Shopify perspective, 9800+ schemas and 1800+ contributors (many of whom are not engineers) is a huge feat. As is deploying hundreds of schema-generated instrumentation blocks to thousands of robots around the world. The model works.
+
+Here's to our schema-powered future 🥂.
