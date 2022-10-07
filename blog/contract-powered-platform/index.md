@@ -191,7 +191,7 @@ Schemas make data engineering quality of life significantly better. Destination 
 Calculating namespace-level statistics and splicing them into observability tools is the natural next step.
 
 Stakeholder FAQ's (long before actual analytics) commonly look like:
-- "I just implemeneted tracking. Is the data flowing?"
+- "I just implemented tracking. Is the data flowing?"
 - "When was some.event.v1 first deployed?"
 - "Is some.event.v1 still flowing?"
 - "Are we seeing any bad events after most recent deploy?"
