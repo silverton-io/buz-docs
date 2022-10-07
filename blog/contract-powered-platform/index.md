@@ -290,7 +290,7 @@ The fun part is it feels like this ecosystem is just getting started, and there 
 
 **You could also:**
 - Tune in for [Getting jiggy with JSON Schema at dbt Coalesce](https://coalesce.getdbt.com/agenda/getting-jiggy-with-jsonschema-the-power-of-contracts-for-building-data-systems) or [join the conversation](https://twitter.com/emilyhawkins__) on [Twitter](https://twitter.com/aerialfly).
-- Say hi in [Locally Optimistic Slack](https://locallyoptimistic.slack.com/archives/C043RDEFMBL).
+
 
 As closing context from a Shopify perspective, 9800+ schemas and 1800+ contributors (many of whom are not engineers) is a huge feat. As is deploying hundreds of schema-generated instrumentation blocks to thousands of robots around the world. The model works.
 
