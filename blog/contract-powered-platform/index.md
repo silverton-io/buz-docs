@@ -18,7 +18,7 @@ Schemas have played a critical role in the process; this post outlines **the why
 ### Instrumentation and Integration
 This one goes without saying. If data is not being emitted from source systems you won't have any data to play with.
 
-If you don't have any data the rest of this post will not provide value. You also won't be able to complain about price of Snowflake and might feel left out. 
+If you don't have any data the rest of this post will not provide value. You also won't be able to complain about the price of Snowflake and might feel left out. 
 
 Instrumentation is pretty important. It's also a pretty huge PITA to wrangle, which is why [tracking](https://segment.com/academy/collecting-data/how-to-create-a-tracking-plan/) [plans](https://amplitude.com/blog/create-tracking-plan) [became](https://www.avo.app/blog/what-is-a-tracking-plan-and-why-do-you-need-one) [a](https://www.indicative.com/resource/data-tracking-plan/) [thing](https://www.trackingplan.com/).
 
