@@ -1,6 +1,7 @@
 ---
 slug: the-contract-powered-data-platform
 title: The Contract-Powered Data Platform
+description: The contract-powered data platform is a step towards improving data quality, reducing organizational friction, and automating the toil data teams face. Here's what it looks like and how it works.
 authors: [jake]
 tags: [data platform, schemas, interfaces, data contracts or whatever]
 ---
