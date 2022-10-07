@@ -259,7 +259,7 @@ The faster engineers have feedback the better.
 ### Deploy.
 
 
-And lastly - making tracking part of the codebase. A huge pain point of analytics-oriented instrumentation is the fact it's often identified as "bad" after being pushing to prod. This is not awesome, and it greatly contributes to the upstream "we'll just throw arbitrary json down the line" concensus. Everyone knows this is not ideal, but it's definitely better than rolling back every-other deploy due to analytics bugs.
+And lastly - making tracking part of the codebase. A huge pain point of analytics-oriented instrumentation is the fact it's often identified as "bad" after being pushed into prod. This is not awesome, and it greatly contributes to the upstream "we'll just throw arbitrary json down the line" concensus. Everyone knows this is not ideal, but it's definitely better than rolling back every-other deploy due to analytics bugs.
 
 With contract-powered workflows the following prereqs are taken care of *before* instrumentation rolls out, not after:
 
