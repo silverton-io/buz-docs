@@ -1,121 +1,196 @@
 ---
-sidebar_position: 2
-title: Cloud Run
+sidebar_position: 1
+title: Cloud Runner
 description: Deploy Buz, the open-source serverless event tracking system, to Cloud Run in 3 minutes using Terraform.
 ---
 
-
-# Deploy Buz to Cloud Run using Terraform
-
-**Estimated time: 3 minutes**
-
-![gcp-deploy-diag](../img/gcp/gcp-deploy-diag.png)
+![deploy](../img/gcp/deploy-cloud-run.png)
 
 ## Overview
+[GCP Cloud Run](https://cloud.google.com/run/docs/overview/what-is-cloud-run) is an managed way to run containers. Here we are deploying the Buz image to GCP Artifact Registry. The schemas are maintained in GCP bucket and the Buz Configurations are maintained as a GCP Secret. Data processed by buz are sent to one of two Pub/Subs.
 
-The (absolute) easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)** and Terraform.
+## Primary Resources
+* Buz (Cloud Run)
+* Artifact Registry
+* Secret
+* Bucket
+* 2 Pub/Sub
 
-The terraform deployment consists of the following GCP resources:
+## Console Deploy
+Here are the steps to set up Buz via the GCP Console.
 
-* **1 Cloud Run service for running Buz serverlessly**
-* **1 Secret Manager secret for Buz configuration**
-* **1 Domain mapping for running Buz behind a pretty name**
-* **1 GCS bucket for schemas**
-* **2 Pub/Sub topics for valid and invalid events**
-* **1 Artifact Registry Repository for hosting Buz artifacts**
-* **1 BigQuery dataset**
-* **2 BigQuery tables for valid/invalid events**
-* **2 Pub/Sub -> BigQuery subscriptions for pushing data to BigQuery automatically**
+### 1. Create [Pub/Sub](https://console.cloud.google.com/cloudpubsub/) topics.
 
-It also provisions the appropriate IAM configuration, enables GCP services if they have not already been enabled, etc.
+**Create `buz-valid` and `buz-invalid` Pub/Sub topics:**
+
+![create topic](../img/gcp/create-topic.png)
+
+![configure topic](../img/gcp/configure-topic.png)
 
 
-:::warning Prerequisites
-You will need the following to deploy Buz using Terraform:
-- [Terraform](https://www.terraform.io/downloads)
-- [gcloud](https://cloud.google.com/sdk/gcloud) cli
-- [docker](https://www.docker.com/)
+**The result should look like:**
+
+
+![desired result](../img/gcp/desired-topics.png)
+
+:::info Yo
+It is entirely possible to only use one output topic but if you want the upside of redirecting events that fail validation out of the "happy path", two topics are necessary.
 :::
 
+### 2. Upload config to [Secret Manager](https://console.cloud.google.com/security/secret-manager).
 
-## Deploy
+For the sake of keeping your secrets a.. secret.. uploading the entire Buz config yml to Secret Manager is the easiest way forward.
 
-## 1. Clone the Buz repo and navigate to GCP deployment dir
+:::info YO
+We've provided a working config sample that you can [copy/paste to Secret Manager here](https://github.com/silverton-io/buz-docs/blob/main/examples/deploy/gcp/config.yml).
+:::
 
-```
-git clone git@github.com:silverton-io/buz.git && cd buz/deploy/terraform/gcp/
-```
+Create Buz config as a Secret Manager secret
 
-## 2. Auth gcloud
+![create secret](../img/gcp/create-secret.png)
 
-```
-gcloud auth application-default login
-```
+![configure secret](../img/gcp/configure-secret.png)
 
-## 3. Create and Populate tfvars file
+If all is well you'll see:
 
+![desired secret](../img/gcp/desired-secret.png)
 
-```
-touch terraform.tfvars
-```
+Grant the default compute service account [appropriate iam access](https://console.cloud.google.com/iam-admin/iam). It will need the `Secret Manager Secret Accessor` role:
 
-**Sample Contents:**
+![grant secret accessor](../img/gcp/grant-secret-accessor.png)
 
-```
-gcp_project = "YOUR_PROJECT"
-system = "buz"
-env = "prd"
-buz_domain = "buz.YOUR_DOMAIN.com"
-buz_version = "v0.11.11"
-schema_bucket_name = "schemas"
-bigquery_dataset_name = "buz"
-```
+![configure secret accessor](../img/gcp/configure-secret-accessor.png)
 
+:::caution Yo
+- While this example uses the `default compute service account` you'll probably want to create a dedicated service user.
+:::
 
-## 4. Apply
-```
-terraform apply
-```
+### 3. Push image to GCP [Artifact Registry](https://console.cloud.google.com/artifacts).
 
-**If all is well the terraform output should look something like the following:**
+[Create a Docker repository](https://console.cloud.google.com/artifacts/create-repo) in GCP Artifact Registry if you don't have one yet:
+
+![create registry](../img/gcp/create-registry.png)
+
+Auth to newly-created registry
 
 ```
-Outputs:
-
-buz_domain = "buz.YOURDOMAIN.com"
-buz_service_id = "locations/us-central1/namespaces/YOUR_PROJECT/services/buz"
-buz_service_status = tolist([
-  {
-    "conditions" = tolist([
-      {
-        "message" = ""
-        "reason" = ""
-        "status" = "True"
-        "type" = "Ready"
-      },
-      {
-        "message" = ""
-        "reason" = ""
-        "status" = "True"
-        "type" = "ConfigurationsReady"
-      },
-      {
-        "message" = ""
-        "reason" = ""
-        "status" = "True"
-        "type" = "RoutesReady"
-      },
-    ])
-    "latest_created_revision_name" = "buz-lnhtr"
-    "latest_ready_revision_name" = "buz-lnhtr"
-    "observed_generation" = 1
-    "url" = "https://buz-n3oujm40err-uc.a.run.app"
-  },
-])
-buz_version = "v0.11.11"
-gcp_project = "YOUR_PROJECT"
-gcp_region = "us-central1"
-invalid_topic = "buz-prd-invalid-events"
-schema_bucket = "buz-prd-schemas"
-valid_topic = "buz-prd-valid-events"
+gcloud auth configure-docker us-east1-docker.pkg.dev
+Adding credentials for: us-east1-docker.pkg.dev
+....
+Docker configuration file updated.
 ```
+
+Pull the latest Buz image from the [Github container registry](https://github.com/silverton-io/buz/pkgs/container/buz):
+
+`docker pull ghcr.io/silverton-io/buz:v0.11.11 --platform linux/amd64`
+
+:::warning AMD64
+- At the time of writing Google Cloud Run doesn't support ARM64-based images so you'll need to grab the AMD64 image.
+:::
+
+Tag and push the latest Buz image to Artifact Registry:
+
+
+**Tag:**
+
+`docker tag ghcr.io/silverton-io/buz:v0.11.11 us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.11`
+
+**Push:**
+
+`docker push us-east1-docker.pkg.dev/silverton-docs/registry/buz:v0.11.11`
+
+:::warning Use your own Artifact Registry URL
+
+This example uses the Silverton registry url - you'll need to use your own.
+
+It's structured as: `$ARTIFACT_REGISTRY_URL/$GCP_PROJECT/$REGISTRY_NAME/buz:$VERSION`
+:::
+
+***
+
+### 4. Run Buz as a [Cloud Run](https://console.cloud.google.com/run) service.
+
+Create a new `Buz` service:
+
+![create service](../img/gcp/create-service.png)
+
+![configure service 1](../img/gcp/configure-service-1.png)
+
+![configure service 2](../img/gcp/configure-service-2.png)
+
+![configure service 3](../img/gcp/configure-service-3.png)
+
+Verify service is running (using out-of-the-box metrics and logs):
+
+![verify service](../img/gcp/desired-service.png)
+
+![service metrics](../img/gcp/desired-metrics.png)
+
+![service logs](../img/gcp/desired-logs.png)
+
+:::caution Yo
+- **Log verbosity is cranked in the example configuration.** You'll probably want less.
+- **The stdout sink is included for feedback purposes.** You'll probably want to turn it off.
+- **The above screenshots are all GCP Cloud Run defaults.** You'll probably want to tune them.
+:::
+
+### Bonus
+
+#### Map a [custom domain](https://cloud.google.com/run/docs/mapping-custom-domains) to Buz
+
+:::warning Yo
+While this step is **technically optional**, some Buz functionality like server-side identity cookies ***will not work without it.***
+:::
+
+It takes a minute to map a domain/subdomain to a GCP Cloud Run service. Here's how to do it.
+
+Add mapping:
+
+![manage domains](../img/gcp/manage-custom-domains.png)
+
+![add mapping](../img/gcp/add-domain-mapping.png)
+
+Follow directions to update your dns records:
+
+![service mapping and dns](../img/gcp/service-mapping-and-dns.png)
+
+#### Set up a GCS schema registry backend
+
+:::info Yo
+- While this step is optional, you'll need to do it when using custom schemas.
+- Buz includes an [onboard schema registry](/under-the-hood/registry/overview) that supports many cache backends, so you can just as easily use a different backend.
+:::
+
+Create a GCS bucket for schemas:
+
+![create bucket](../img/gcp/create-bucket.png)
+
+![configure bucket](../img/gcp/configure-bucket.png)
+
+Copy schemas to the new schema bucket using [gsutil](https://cloud.google.com/storage/docs/gsutil):
+
+
+(From [buz](https://github.com/silverton-io/buz) root)
+```
+buz ❯❯❯ gsutil cp -r schemas/*  gs://$THE_BUCKET_YOU_JUST_CREATED
+```
+
+Reconfigure Buz with a new schema registry backend:
+
+```
+registry:
+  backend:
+    type: gcs
+    bucket: $THE_BUCKET_YOU_JUST_CREATED
+    path: /
+```
+
+***
+
+
+#### Push events to [BigQuery](https://cloud.google.com/bigquery) using a Pub/Sub Subscription
+
+With the announcment of **[BigQuery Subscriptions](https://cloud.google.com/pubsub/docs/bigquery)** pushing events straight to BigQuery is easier than ever.
+
+## Terraform
+[Github Terraform](https://github.com/silverton-io/buz/tree/main/deploy/terraform/gcp)
