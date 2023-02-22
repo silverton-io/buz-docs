@@ -129,7 +129,7 @@ The pain and complexity of streaming systems seems to resonate with ***many*** p
 
 ### Expanding to more inputs
 
-Early on in the exploration I had a eureka moment - if the serverless model works using [Snowplow's tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should work for other protocols. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
+I had a eureka moment early on - if the serverless model works using [Snowplow's tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should work for other protocols. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
 
 [Cloudevents](/inputs/cloudNative/cloudevents) with its (optional) [dataschema](https://cloudevents.github.io/sdk-javascript/interfaces/event_interfaces.CloudEventV1.html#dataschema) property was a low-effort addition. Fire payloads using the Cloudevents' `data` property, provide a schema reference in `dataschema`, and voila! Validated events without needing to [write the sdk](https://github.com/cloudevents?q=sdk-&type=all&language=&sort=), or quickly hooking into tracking already in existence.
 
