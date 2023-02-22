@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 [Snowplow Analytics](https://snowplow.io/) is a highly-scalable system that empowers [structured data creation](https://snowplow.io/blog/why-data-contracts-are-obviously-a-good-idea/) for [millions of sites](https://trends.builtwith.com/analytics/Snowplow) on the internet. Snowplow tracking is incorporated into [dbt](https://github.com/dbt-labs/dbt-core/blob/main/core/dbt/tracking.py#L33-L47), [dbt cloud](https://cloud.getdbt.com/), [Trello](https://trello.com/), [Gitlab](https://gitlab.com/), [Citi bank](https://www.citi.com/), [Backcountry.com](https://www.backcountry.com/), and the list goes on.
 
-After setting up event tracking systems [like Snowplow](https://bostata.com/268-billion-events-with-snowplow-snowflake-at-cargurus) for [years](https://bostata.com/client-side-instrumentation-for-under-one-dollar)  I've frequently found myself wishing for both **less** and **more**.
+After setting up data infrastructure [like Snowplow](https://bostata.com/268-billion-events-with-snowplow-snowflake-at-cargurus) for [years](https://bostata.com/client-side-instrumentation-for-under-one-dollar)  I've frequently found myself wishing for both **less** and **more**.
 
 **Fewer streams**, **fewer machines or containers to manage**, **fewer moving pieces to help prevent event duplication or loss**, **less configuration**, and **less in-house documentation to keep things running** would be a dream.
 
@@ -59,22 +59,22 @@ Snowplow tracking SDK's would be used for instrumentation. The serverless collec
 ## Buz Requirements and Design
 
 
-#### Minimal human involvement to keep running
+### Minimal human involvement to keep running
 
 Systems are great when you don't need to think about them. In [Julia Evans'](https://twitter.com/b0rk) words, spending **[approximately 0 time on operations](https://jvns.ca/blog/2022/07/09/monitoring-small-web-services/)** was the goal.
 
 
-#### Self-contained and capable of running horizontally with no issue
+### Self-contained and capable of running horizontally with no issue
 
-It feels like there's a movement of "small, mighty, and self-contained" afoot within data processing systems.
+There's a movement of "small, mighty, and self-contained" afoot within data processing systems.
 
 *It's because complexity is hard to keep running*.
 
 Systems like [Redpanda](https://redpanda.com/), which crams the Kafka api into a small self-contained binary, or [Benthos](https://www.benthos.dev/), which crams cool stream-processing functionality into a small self-contained binary, are highly inspirational.
 
-The Serverless Thing now called Buz needed to do the same.
+The Serverless Thing called Buz needed to do the same.
 
-#### No JVM, no Spark, no Beam
+### No JVM, no Spark, no Beam
 
 Snowplow's [collector](https://docs.snowplow.io/docs/pipeline-components-and-applications/stream-collector/), [enricher](https://docs.snowplow.io/docs/pipeline-components-and-applications/enrichment-components/enrich/#enrich-kinesis), [s3 sink](https://docs.snowplow.io/docs/pipeline-components-and-applications/loaders-storage-targets/s3-loader/), etc all run on the JVM.
 
@@ -85,19 +85,19 @@ But... Snowflake's [Snowpipe](https://docs.snowflake.com/en/user-guide/data-load
 
 Serverless Thing was to shed as many dependencies as possible.
 
-#### Fast startup and shutdown
+### Fast startup and shutdown
 
 Making containers fast to launch makes a big impact on cost as invocations ramp, so Serverless Thing had to be snappy. The faster infrastructure can follow the utilization curve, the more cost-effective it is. In an environment where costs are being scrutinized, **doing work fast** is just as important as **not running at all when there is no work to be done**.
 
 Being efficient also happens to be pretty damn good for the environment. Burning fewer polar bears seems to [resonate with others](https://medium.com/@intive/this-months-reason-technology-will-save-the-world-energy-savings-and-serverless-principles-375660c8ed81) like [DuckDB](https://youtu.be/Z-6SnP6yzgo?t=1826) and [451 Research](https://d39w7f4ix9f5s9.cloudfront.net/e3/79/42bf75c94c279c67d777f002051f/carbon-reduction-opportunity-of-moving-to-aws.pdf). 
 
-#### Payload validation, annotation, and bifurcation
+### Payload validation, annotation, and bifurcation
 
 A very valuable Snowplow feature lies at the `Enricher`, where each and every event is validated using the associated jsonschema.
 
-The only way to do this quickly is via an self-warming schema cache so it became another requirement.
+The only way to do this quickly is via a self-warming schema cache, so an onboard cache became another requirement.
 
-#### Just JSON
+### Just JSON
 
 Snowplow data is serialized using **[thrift](https://thrift.apache.org/)** between the collector and the enricher but becomes **tsv** downstream of the enricher. This makes it hard to point a system like [Materialize](https://materialize.com/) at the "enriched" stream without first `reading tsv records` -> `formatting as json` -> `writing to a separate stream`. Write amplification quickly becomes reality and the operator must make a choice between **not reading from the stream** or **re-formatting every payload to something that is easily pluggable with other stream processing systems**. At higher volumes this equates to $$$$$.
 
@@ -105,13 +105,13 @@ While JSON is not the smallest data format it is still more efficient to write J
 
 This decision is tbd. In the worst case it's easy to change to parquet depending on destination.
 
-#### Easy to configure
+### Easy to configure
 
 Yaml + Jsonschema validation is [becoming pretty standard](https://www.schemastore.org/json/). It turned out to be a pretty good decision since auto-completing, auto-validating config is handy.
 
 Serverless Thing had to be easy to configure. Bonus points for providing hints in an editor throughout the configuration process.
 
-#### Make event streaming accessible
+### Make event streaming accessible
 
 [dbt](https://www.getdbt.com/) has been so inspirational because it makes good data engineering practices accessible to all. Tricks that used to pay rent have become dbt packages anyone can import.
 
@@ -128,14 +128,14 @@ The pain and complexity of streaming systems seems to resonate with ***many*** p
 
 ### Expanding to more inputs
 
-Early on in the exploration I had a eureka moment - if the serverless model works using the [Snowplow tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should also work for others. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
+Early on in the exploration I had a eureka moment - if the serverless model works using [Snowplow's tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should work for other protocols. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
 
-[Cloudevents](/inputs/cloudNative/cloudevents) with its (optional) [dataschema](https://cloudevents.github.io/sdk-javascript/interfaces/event_interfaces.CloudEventV1.html#dataschema) property was a low-effort addition. Fire payloads using the Cloudevents' `data` property, provide a schema reference in `dataschema`, and voila! Validated events without needing to [write the sdk.](https://github.com/cloudevents?q=sdk-&type=all&language=&sort=) Or quickly hook into tracking that is already in existence 
+[Cloudevents](/inputs/cloudNative/cloudevents) with its (optional) [dataschema](https://cloudevents.github.io/sdk-javascript/interfaces/event_interfaces.CloudEventV1.html#dataschema) property was a low-effort addition. Fire payloads using the Cloudevents' `data` property, provide a schema reference in `dataschema`, and voila! Validated events without needing to [write the sdk](https://github.com/cloudevents?q=sdk-&type=all&language=&sort=), or quickly hooking into tracking already in existence.
 
 
 Data collection using pixels and webhooks was a fun addition, mostly because both of these sources are often painful due to the arbitrary nature of their payloads. But another thought came to mind - validate these too! Since it would be fab to namespace and validate these payloads, named [pixels](/inputs/buz/pixel#named-pixels) and [webhooks](/inputs/buz/webhook#named-webhooks) came to be.
 
-Accepting [self-describing](/inputs/buz/self-describing) payloads was a nice addition, and provides some additional flexibility like custom top-level payload property names. It also makes internal event-tracking SDK's a breeze to build.
+Accepting [self-describing](/inputs/buz/self-describing) payloads was a nice addition, and provides some additional flexibility like custom top-level payload property names. It also makes internal SDK's a breeze to build.
 
 In past work lives I've built lightweight sidecars to read [Mongodb change streams](https://www.mongodb.com/docs/manual/changeStreams/) or [Postgres logical replication](https://www.postgresql.org/docs/current/logical-replication.html) before writing data to systems like Kafka. Serverless Thing naturally lends itself to supporting change data capture, or at least the weird cousin of what CDC looks like today.
 
@@ -154,7 +154,7 @@ At CarGurus I learned the importance of making systems accessible to engineers, 
 
 At Shopify I learned the intricacies of building systems that can be deployed in single-tenant fashion as efficiently as multi-tenant.
 
-Having flexibility to write data to a variety of systems is a requirement for all of the above, so Buz expanded quickly to support:
+Having flexibility to write data to a variety of systems is a requirement for all of the above, so Buz quickly expanded to support:
 
 - **[Streaming destinations](/category/streaming-sinks)** which are best in production at scale.
 - **[Streaming hybrids like Kinesis Firehose](/outputs/stream/kinesis-firehose)**, because they are hands-off and incredibly powerful for building data lakes.
@@ -168,7 +168,7 @@ Having flexibility to write data to a variety of systems is a requirement for al
 
 Shopify has a streaming model where **events are written to both Datadog for observability and Kafka for distribution to the data lake.** A secondary model is **simultaneously writing product/marketing events to Amplitude for product analytics and Kafka for distribution to the data lake.** After seeing how simple yet operationally powerful these are, I had a hard time ignoring them.
 
-Migrating systems is a very common pain point as needs, volume, and organizations evolve. Changing from `Postgres` -> `Kafka` or `Kinesis` -> `Kafka` is a pretty common migration pattern, and dual writing before cutting over is the way. I've often wanted to simply add a configuration block instead of writing a new system that will be thrown away after migration.
+Migrating systems is a very common pain point as needs, volume, and organizations evolve. Migrating from `Postgres` to `Kafka` or `Kinesis` to `Kafka` are common patterns, and dual writing is the way to do this without blowing everything up. I've often wanted to simply add a configuration block instead of writing a new system that will be thrown away after migration.
 
 **So Buz supports writing to more than one destination. **
 
@@ -196,6 +196,6 @@ Thanks to serverless tech, we are in the early innings of complete data infrastr
 
 The serverless-first data processing idea seemed crazy for a very long time, **but it's definitely not crazy.** Companies like [Modal](https://modal.com/) and [Panther](https://www.snowflake.com/powered-by/panther-labs/) have been built from the ground-up to power data-oriented serverless workloads, [Fivetran](https://www.fivetran.com/blog/serverless-etl-with-cloud-functions) leverages serverless for [custom connectors](https://fivetran.com/docs/functions), DuckDB can be easily [tossed into a serverless function](https://twitter.com/mim_djo), database drivers are [being retooled](https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript) for [serverless workloads](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html), and the list goes on.
 
-Serverless enables highly-efficient, secure, and low-footprint data workloads. It drastically lowers the complexity bar, including for streaming systems, which everyone appreciates.
+Serverless enables highly-efficient, secure, and low-footprint data workloads. It drastically lowers the complexity bar of data processing systems, and enables teams to spend less time on the boring stuff.
 
-Buz will continue to all-in on serverless because it makes streaming accessible.
+Buz will continue to be all-in on serverless because it makes streaming accessible.
