@@ -8,27 +8,27 @@ hide_table_of_contents: true
 
 [Snowplow Analytics](https://snowplow.io/) is a highly-scalable system that empowers [structured data creation](https://snowplow.io/blog/why-data-contracts-are-obviously-a-good-idea/) for [millions of sites](https://trends.builtwith.com/analytics/Snowplow) on the internet. Snowplow tracking is incorporated into [dbt](https://github.com/dbt-labs/dbt-core/blob/main/core/dbt/tracking.py#L33-L47), [dbt cloud](https://cloud.getdbt.com/), [Trello](https://trello.com/), [Gitlab](https://gitlab.com/), [Citi bank](https://www.citi.com/), [Backcountry.com](https://www.backcountry.com/), and the list goes on.
 
-After setting up event tracking systems [like Snowplow](https://bostata.com/268-billion-events-with-snowplow-snowflake-at-cargurus) for [a while](https://bostata.com/client-side-instrumentation-for-under-one-dollar)  I've frequently found myself wishing for both **less** and **more**.
+After setting up event tracking systems [like Snowplow](https://bostata.com/268-billion-events-with-snowplow-snowflake-at-cargurus) for [years](https://bostata.com/client-side-instrumentation-for-under-one-dollar)  I've frequently found myself wishing for both **less** and **more**.
 
 **Fewer streams**, **fewer machines or containers to manage**, **fewer moving pieces to help prevent event duplication or loss**, **less configuration**, and **less in-house documentation to keep things running** would be a dream.
 
 **Deployment flexibility**, **flexible schema storage**, **cost efficiencies**, **seamless migration between transport systems**, **improved utility from the data in transit**, and **increased visibility** would also be very helpful.
 
 
-Meanwhile, serverless technologies have been coming into their own, and point the way toward a very bright data-processing future. Which is how **[buz.dev](https://buz.dev)** was born.
+Meanwhile, serverless technologies have come into their own and point the way toward a very bright data-processing future. Which is how **[buz.dev](https://buz.dev)** was born.
 
 <!-- truncate -->
 
 
 ## Inspirations and iterations
 
-My first iteration of "serverless Snowplow Analytics" was in 2018.  I stitched together a [Cloudfront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-working-with.html), a [Python-based Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html), S3, and the [Snowplow javascript tracker](https://www.jsdelivr.com/package/npm/@snowplow/javascript-tracker?path=dist) to stockpile event data. A series of [Athena external tables](https://docs.aws.amazon.com/athena/latest/ug/creating-tables.html) sat on top of the raw data and voila! Near-real-time analytics for practically free. It worked so well [a blog post was written](https://bostata.com/client-side-instrumentation-for-under-one-dollar/) and others were inspired to [build](https://discourse.snowplow.io/t/snowplow-serverless/1912/14) or [write about](https://www.ownyourbusinessdata.net/enrich-snowplow-data-with-aws-lambda-function/) the same. The system ran hands-off with very little effort on my part, thanks to **minimal moving pieces** and **AWS having the responsibility of keeping it up and running**. 
+My first iteration of "serverless Snowplow Analytics" was in 2018.  I stitched together a [Cloudfront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-working-with.html), a [Python-based Lambda function](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python.html), S3, and the [Snowplow javascript tracker](https://www.jsdelivr.com/package/npm/@snowplow/javascript-tracker?path=dist) to stockpile event data. A series of [Athena external tables](https://docs.aws.amazon.com/athena/latest/ug/creating-tables.html) sat on top of the raw data and voila! Near-real-time analytics for practically free. It worked so well [a blog post was written](https://bostata.com/client-side-instrumentation-for-under-one-dollar/) and other people were inspired to [build](https://discourse.snowplow.io/t/snowplow-serverless/1912/14) or [write about](https://www.ownyourbusinessdata.net/enrich-snowplow-data-with-aws-lambda-function/) the same. The system ran hands-off with very little effort on my part, thanks to **minimal moving pieces** and **AWS having the responsibility of keeping it up and running**. 
 
-I first saw serverless event collection work at scale during my time at [CarGurus](https://www.cargurus.com/). While we had a Snowplow Analytics implementation, a colleage wanted to see what AWS Lambda could handle. The marketing team sent enormous amounts of email using a combination of [Iterable](https://iterable.com/) and [Dyn](https://help.dyn.com/email-delivery-gsg/), and each blast would result in production systems being absolutely swamped with tracking callbacks. The analytics team wanted data for analytics or tracking opt-outs, but nobody wanted to provision (normally unused) static infrastructure. Lambda was a perfect fit. I watched the system continuously ramp from 0 to ~20k rps and back again. The AWS bill was laughably small and it required virtually zero maintenance.
+Serverless event collection worked very well at scale during my time at [CarGurus](https://www.cargurus.com/). While we had a Snowplow Analytics implementation, a colleage wanted to see what AWS Lambda could handle. The marketing team sent enormous amounts of email using a combination of [Iterable](https://iterable.com/) and [Dyn](https://help.dyn.com/email-delivery-gsg/), and each blast would result in production systems being absolutely swamped with tracking callbacks. The analytics team wanted data for analytics or tracking opt-outs, but nobody wanted to provision (normally unused) static infrastructure. Lambda was a perfect fit. The system continuously ramped from 0 to ~20k rps and back again, the AWS bill was laughably small, and it required virtually zero maintenance.
 
-After setting up Snowplow for a [NYC-based commercial real estate company](https://www.bisnow.com/), the VP of Technology (who is now @ Disney Streaming) pushed my implementation further with a simple Lambda. Instead of being limited to Snowplow protocol payloads, the Lambda function collected arbitrary json payloads, reformatted them as Snowplow [Self-Describing Events](https://docs.snowplow.io/docs/understanding-tracking-design/out-of-the-box-vs-custom-events-and-entities/#self-describing-events), and fired them into the Snowplow collector. It was efficient and effectively hands-off. I have thought about his work ever since.
+After setting up Snowplow for a [NYC-based commercial real estate company](https://www.bisnow.com/), the VP of Technology (who is now @ Disney Streaming) pushed my implementation further with a simple Lambda function. Instead of being limited to Snowplow protocol payloads, the Lambda function collected arbitrary json payloads, reformatted them as Snowplow [Self-Describing Events](https://docs.snowplow.io/docs/understanding-tracking-design/out-of-the-box-vs-custom-events-and-entities/#self-describing-events), and fired them into the Snowplow collector. It was efficient and effectively hands-off. I have thought about his work ever since.
 
-The rich benefits of serverless data processing for robotics and fulfillment were experienced while working at [6 River Systems](https://6river.com/data-driven-robotics-leveraging-google-cloud-platform-and-big-data-to-improve-robot-behaviors/) (Shopify Logistics). Data volumes from fulfillment systems are highly variable. One warehouse or distribution center will have a very different traffic pattern than another, but volume across all of them spikes to orders of magnitudes higher [during Peak months](https://supplychaingamechanger.com/strategies-to-survive-the-peak-season-fulfillment-surge/). Over-provisioned infrastructure in an industry where margins are already tight is a complete non-starter.
+The rich benefits of serverless data processing for robotics and fulfillment were experienced while working at [6 River Systems](https://6river.com/data-driven-robotics-leveraging-google-cloud-platform-and-big-data-to-improve-robot-behaviors/) (Shopify Logistics). Data volumes from fulfillment systems are highly variable. One warehouse or distribution center will have a very different traffic pattern than another, but volume across all of them spikes to orders of magnitudes higher [during Peak months](https://supplychaingamechanger.com/strategies-to-survive-the-peak-season-fulfillment-surge/). Over-provisioned infrastructure in an industry where margins are already tight is a complete non-starter. Serverless was the only option and did not disappoint.
 
 And finally, my time working alongside Okta's security team has thoroughly solidified the value of serverless technologies in a security-conscious setting. _Security teams absolutely love serverless tech._ Want proof? Go check out [Matano.dev](https://www.matano.dev/), ask [Panther](https://panther.com/) how their systems are built, or dig into [AWS marketing materials](https://aws.amazon.com/blogs/publicsector/how-public-sector-security-teams-can-use-serverless-technologies-improve-outcomes/).
 
@@ -46,12 +46,14 @@ A very common Snowplow architecture diagram looks like the following, excluding 
 ![snowplow](img/snowplow_arch.png)
 
 
-Opportunity costs matter to cost-conscious buinesses, and engineering resources dedicated to maintaining data pipelines are rarely the best use of said resources. **Engineers also prefer to spend their time *using* streaming data rather than *moving it around***.
+Opportunity costs matter to cost-conscious buinesses, and engineering resources dedicated to maintaining data pipelines are rarely the best use of said resources. ***Engineers also prefer to spend their time using streaming data rather than moving it around***.
 
 
-So my initial goal was to build a system that looked like the following
+So my initial goal was to build a system like the following:
 
-![serverless thing](img/serverless_thing.png)
+![serverless thing](img/initial_arch.png)
+
+Snowplow tracking SDK's would be used for instrumentation. The serverless collector thing called Buz would collect, validate, and route payloads to S3 via Kinesis Firehose. And Snowflake would provide the compute on top of S3.
 
 
 ## Buz Requirements and Design
@@ -122,13 +124,11 @@ Ideally Serverless Thing could make streaming accessible while empowering orgs t
 
 While Buz has much further to go, the journey of serverless event tracking has already been extremely worthwhile.
 
-The pain and complexity of streaming systems seems to resonate with ***many*** people. **Serverless data processing fixes this pain.**
+The pain and complexity of streaming systems seems to resonate with ***many*** people. **Serverless fixes this pain.**
 
 ### Expanding to more inputs
 
-Early on in the exploration I had a eureka moment - if the serverless model works using the [Snowplow tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should also work for others.
-
-Spoiler alert: it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one for each protocol.
+Early on in the exploration I had a eureka moment - if the serverless model works using the [Snowplow tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should also work for others. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
 
 [Cloudevents](/inputs/cloudNative/cloudevents) with its (optional) [dataschema](https://cloudevents.github.io/sdk-javascript/interfaces/event_interfaces.CloudEventV1.html#dataschema) property was a low-effort addition. Fire payloads using the Cloudevents' `data` property, provide a schema reference in `dataschema`, and voila! Validated events without needing to [write the sdk.](https://github.com/cloudevents?q=sdk-&type=all&language=&sort=) Or quickly hook into tracking that is already in existence 
 
@@ -137,7 +137,7 @@ Data collection using pixels and webhooks was a fun addition, mostly because bot
 
 Accepting [self-describing](/inputs/buz/self-describing) payloads was a nice addition, and provides some additional flexibility like custom top-level payload property names. It also makes internal event-tracking SDK's a breeze to build.
 
-In past work lives I've built lightweight sidecars to read [Mongodb change streams](https://www.mongodb.com/docs/manual/changeStreams/) or [Postgres logical replication](https://www.postgresql.org/docs/current/logical-replication.html) and write data to systems like Kafka. Serverless Thing naturally lends itself to supporting change data capture, or at least the weird cousin of what CDC looks like today.
+In past work lives I've built lightweight sidecars to read [Mongodb change streams](https://www.mongodb.com/docs/manual/changeStreams/) or [Postgres logical replication](https://www.postgresql.org/docs/current/logical-replication.html) before writing data to systems like Kafka. Serverless Thing naturally lends itself to supporting change data capture, or at least the weird cousin of what CDC looks like today.
 
 A lovely example of what could (and/or should) be ubiquitous is [Devoted Health's Avalanche](https://tech.devoted.com/avalanche-streaming-postgres-to-snowflake-130e8c477f07?gi=db8239b2a6ad) project. 
 
@@ -192,10 +192,10 @@ These unlocks are incredibly exciting.
 
 # Where do we go from here?
 
-Thanks to serverless tech, we are in the early innings of a complete data infrastructure transformation.
+Thanks to serverless tech, we are in the early innings of complete data infrastructure transformation.
 
 The serverless-first data processing idea seemed crazy for a very long time, **but it's definitely not crazy.** Companies like [Modal](https://modal.com/) and [Panther](https://www.snowflake.com/powered-by/panther-labs/) have been built from the ground-up to power data-oriented serverless workloads, [Fivetran](https://www.fivetran.com/blog/serverless-etl-with-cloud-functions) leverages serverless for [custom connectors](https://fivetran.com/docs/functions), DuckDB can be easily [tossed into a serverless function](https://twitter.com/mim_djo), database drivers are [being retooled](https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript) for [serverless workloads](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html), and the list goes on.
 
 Serverless enables highly-efficient, secure, and low-footprint data workloads. It drastically lowers the complexity bar, including for streaming systems, which everyone appreciates.
 
-Buz will continue to be serverless-or-bust.
+Buz will continue to all-in on serverless because it makes streaming accessible.
