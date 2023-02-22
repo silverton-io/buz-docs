@@ -167,7 +167,7 @@ Having flexibility to write data to a variety of systems is a requirement for al
 
 ### Writing events to multiple destinations
 
-Shopify has a streaming model where **events are written to Kafka for distribution to Datadog for observability and to the data lake.** A secondary model is **simultaneously writing product/marketing events to Amplitude for product analytics and the data lake.** After seeing how simple yet operationally powerful these are, I had a hard time ignoring them.
+Shopify has a streaming model where **events are written to Kafka for distribution to Datadog for observability and to the data lake.** A secondary model is **simultaneously writing product/marketing events to Amplitude for product analytics and to the data lake.** After seeing how simple yet operationally powerful these are, I had a hard time ignoring them.
 
 Migrating systems is a very common pain point as needs, volume, and organizations evolve. Migrating from `Postgres` to `Kafka` or `Kinesis` to `Kafka` are common patterns, and dual writing is the way to do this without blowing everything up. I've often wanted to simply add a configuration block instead of writing a new system that will be thrown away after migration.
 
