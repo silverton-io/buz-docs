@@ -179,11 +179,11 @@ There are tradeoffs here that must not be ignored, as the risk of one destinatio
 
 I've often questioned why data processing systems rarely use the backend they ship data to for serving configuration, schemas, and other runtime resources. Many web apps do this - why don't data systems?
 
-In the spirit of minimizing moving pieces, and because it's fun, Buz supports a variety of [schema registry backends](/category/schema-cache-backends).
+In the spirit of minimizing moving pieces, and because it's fun, Buz supports a variety of schema registry backends.
 
 Interesting use cases this functionality unlocks include:
 
-- **Streaming analytics with no streams.** Using [Materialize](/outputs/database/materialize) as the destination as well as the [schema registry](/under-the-hood/cache-backends/database/materialize) means streaming insights don't rely on much infrastructure.
+- **Streaming analytics with no streams.** Using [Materialize](/outputs/database/materialize) as the destination as well as the [schema registry](under-the-hood/registry/backends/database/materialize) means streaming insights don't rely on much infrastructure.
 - **Using Postgres as the application database, the event database, and the schema cache.** Introducing event tracking to existing systems has literally never been easier.
 - **Analytics without a database at all.** Using GCS or S3 for the schema cache and the data lake means a database is not required to get database-like results.
 - **Seamless tie-in to existing streaming workflows.** If a Kafka or Redpanda schema is already in place, perfect! Yet-another-piece-of-infrastructure™ should not be necessary.

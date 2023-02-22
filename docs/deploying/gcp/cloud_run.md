@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Cloud Runner
+title: Cloud Run
 description: Deploy Buz, the open-source serverless event tracking system, to Cloud Run in 3 minutes using Terraform.
 ---
 
