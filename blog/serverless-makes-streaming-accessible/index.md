@@ -129,18 +129,16 @@ The pain and complexity of streaming systems seems to resonate with ***many*** p
 
 ### Expanding to more inputs
 
-Early on in the exploration I had a eureka moment - if the serverless model works using [Snowplow's tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should work for other protocols. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
+I had a eureka moment early on - if the serverless model works using [Snowplow's tracker protocol](https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/snowplow-tracker-protocol/) it should work for other protocols. As it turns out, it does! While also minimizing the hassle of running multiple event tracking pipelines - such as one pipeline for each protocol.
 
 [Cloudevents](/inputs/cloudNative/cloudevents) with its (optional) [dataschema](https://cloudevents.github.io/sdk-javascript/interfaces/event_interfaces.CloudEventV1.html#dataschema) property was a low-effort addition. Fire payloads using the Cloudevents' `data` property, provide a schema reference in `dataschema`, and voila! Validated events without needing to [write the sdk](https://github.com/cloudevents?q=sdk-&type=all&language=&sort=), or quickly hooking into tracking already in existence.
 
 
-Data collection using pixels and webhooks was a fun addition, mostly because both of these sources are often painful due to the arbitrary nature of their payloads. But another thought came to mind - validate these too! Since it would be fab to namespace and validate these payloads, named [pixels](/inputs/buz/pixel#named-pixels) and [webhooks](/inputs/buz/webhook#named-webhooks) came to be.
+Pixels and webhooks were fun additions, mostly because these are often painful due to the arbitrary nature of their payloads. But another thought came to mind - validate these too! Since it would be fab to namespace and validate these payloads, named [pixels](/inputs/buz/pixel#named-pixels) and [webhooks](/inputs/buz/webhook#named-webhooks) came to be.
 
-Accepting [self-describing](/inputs/buz/self-describing) payloads was a nice addition, and provides some additional flexibility like custom top-level payload property names. It also makes internal SDK's a breeze to build.
+Accepting [self-describing](/inputs/buz/self-describing) json payloads was a nice addition, and provides some additional flexibility like custom top-level payload property names. It also makes internal SDK's a breeze to build.
 
-In past work lives I've built lightweight sidecars to read [Mongodb change streams](https://www.mongodb.com/docs/manual/changeStreams/) or [Postgres logical replication](https://www.postgresql.org/docs/current/logical-replication.html) before writing data to systems like Kafka. Serverless Thing naturally lends itself to supporting change data capture, or at least the weird cousin of what CDC looks like today.
-
-A lovely example of what could (and/or should) be ubiquitous is [Devoted Health's Avalanche](https://tech.devoted.com/avalanche-streaming-postgres-to-snowflake-130e8c477f07?gi=db8239b2a6ad) project. 
+In past work lives I've built lightweight sidecars to read [Mongodb change streams](https://www.mongodb.com/docs/manual/changeStreams/) or [Postgres logical replication](https://www.postgresql.org/docs/current/logical-replication.html) before writing data to systems like Kafka. Serverless Thing naturally lends itself to supporting change data capture, or at least the weird cousin of what CDC looks like today. A lovely example of what could (and/or should) be ubiquitous is [Devoted Health's Avalanche](https://tech.devoted.com/avalanche-streaming-postgres-to-snowflake-130e8c477f07?gi=db8239b2a6ad) project. 
 
 ### Writing events to a variety of destinations
 
