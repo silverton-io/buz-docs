@@ -3,6 +3,7 @@ slug: make-it-easy
 title: Make It Easy
 authors: [jake]
 tags: []
+date: 2022-08-17T00:00
 ---
 
 
