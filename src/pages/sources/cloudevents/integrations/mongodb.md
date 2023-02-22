@@ -32,7 +32,7 @@ Want to get started quickly? The [Buz Quickstart](/examples/quickstart) bootstra
 The production-ready GCP stack includes Buz, Google Pub/Sub, Pub/Sub subscriptions, and BigQuery. It can be set up in minutes:
 
 - [Using Terraform](/deploying/gcp/cloud_run)
-- [Using the Google Cloud Console](/deploying/gcp/console)
+- [Using the Google Cloud Console](/deploying/gcp/cloud_run)
 
 
 ![buzz](../../../../../static/img/buzz.png)
