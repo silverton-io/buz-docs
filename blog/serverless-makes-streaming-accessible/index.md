@@ -165,7 +165,7 @@ Having flexibility to write data to a variety of systems is a requirement for al
 - **[Saas products](/category/saas-sinks)**, because product and engineering teams everywhere use them.
 - **[Message brokers](/category/message-broker-sinks)**, because they are well-loved and very useful.
 
-### Writing events to >1 destination at the same time
+### Writing events to multiple destinations
 
 Shopify has a streaming model where **events are written to both Datadog for observability and Kafka for distribution to the data lake.** A secondary model is **simultaneously writing product/marketing events to Amplitude for product analytics and Kafka for distribution to the data lake.** After seeing how simple yet operationally powerful these are, I had a hard time ignoring them.
 
