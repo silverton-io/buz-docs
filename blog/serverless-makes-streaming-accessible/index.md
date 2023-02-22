@@ -3,7 +3,8 @@ title: Serverless Makes Streaming Accessible
 authors: [jake]
 slug: /serverless-makes-streaming-accessible
 tags: [Serverless Snowplow Analytics, Serverless Event Tracking, Google Cloud Run, Pub/Sub, BigQuery, Snowflake, Postgres]
-hide_table_of_contents: true
+date: 2023-02-22T00:00
+hide_table_of_contents: false
 ---
 
 [Snowplow Analytics](https://snowplow.io/) is a highly-scalable system that empowers [structured data creation](https://snowplow.io/blog/why-data-contracts-are-obviously-a-good-idea/) for [millions of sites](https://trends.builtwith.com/analytics/Snowplow) on the internet. Snowplow tracking is incorporated into [dbt](https://github.com/dbt-labs/dbt-core/blob/main/core/dbt/tracking.py#L33-L47), [dbt cloud](https://cloud.getdbt.com/), [Trello](https://trello.com/), [Gitlab](https://gitlab.com/), [Citi bank](https://www.citi.com/), [Backcountry.com](https://www.backcountry.com/), and the list goes on.
