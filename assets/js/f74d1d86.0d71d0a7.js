@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8101],{4199:e=>{e.exports=JSON.parse('{"label":"Serverless Event Tracking","permalink":"/blog/tags/serverless-event-tracking","allTagsPath":"/blog/tags","count":1}')}}]);
