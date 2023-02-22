@@ -2,23 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buz.dev/blog</id>
     <title>Buz Blog</title>
-    <updated>2023-02-22T19:17:09.000Z</updated>
+    <updated>2023-02-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buz.dev/blog"/>
     <subtitle>Buz Blog</subtitle>
     <icon>https://buz.dev/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[Make It Easy]]></title>
-        <id>make-it-easy</id>
-        <link href="https://buz.dev/blog/make-it-easy"/>
-        <updated>2023-02-22T19:17:09.000Z</updated>
-        <summary type="html"><![CDATA[Defining, implementing, and evolving events is hard.]]></summary>
-        <content type="html"><![CDATA[<p>Defining, implementing, and evolving events is hard.</p><p>Running event collection systems is also hard.</p><p>Buz aims to make it easy.</p><p><strong><a href="/">What is Buz?</a></strong></p>]]></content>
-        <author>
-            <name>Jake</name>
-            <uri>https://github.com/jakthom</uri>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Serverless Makes Streaming Accessible]]></title>
         <id>/serverless-makes-streaming-accessible</id>
@@ -53,5 +41,17 @@
         <category label="schemas" term="schemas"/>
         <category label="interfaces" term="interfaces"/>
         <category label="data contracts or whatever" term="data contracts or whatever"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Make It Easy]]></title>
+        <id>make-it-easy</id>
+        <link href="https://buz.dev/blog/make-it-easy"/>
+        <updated>2022-08-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Defining, implementing, and evolving events is hard.]]></summary>
+        <content type="html"><![CDATA[<p>Defining, implementing, and evolving events is hard.</p><p>Running event collection systems is also hard.</p><p>Buz aims to make it easy.</p><p><strong><a href="/">What is Buz?</a></strong></p>]]></content>
+        <author>
+            <name>Jake</name>
+            <uri>https://github.com/jakthom</uri>
+        </author>
     </entry>
 </feed>
