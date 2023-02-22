@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [self describing JSON, event tracking, free, open-source, Buz]
 ---
 
-# Collect self describing JSON data with Buz for $0
+# Collect self describing JSON data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 
@@ -41,6 +41,9 @@ Buz sends self describing JSON data to a number of different integrations includ
 - [Pubnub](/sources/self-describing-json/integrations/pubnub)
 - [Amplitude](/sources/self-describing-json/integrations/amplitude)
 - [Indicative](/sources/self-describing-json/integrations/indicative)
+- [AWS S3](/sources/self-describing-json/integrations/aws-s3)
+- [Google Cloud Storage](/sources/self-describing-json/integrations/google-cloud-storage)
+- [Minio](/sources/self-describing-json/integrations/minio)
 
 
 # Want to get started?

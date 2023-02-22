@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [pixel, event tracking, free, open-source, Buz]
 ---
 
-# Collect pixel data with Buz for $0
+# Collect pixel data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 
@@ -41,6 +41,9 @@ Buz sends pixel data to a number of different integrations including:
 - [Pubnub](/sources/pixel/integrations/pubnub)
 - [Amplitude](/sources/pixel/integrations/amplitude)
 - [Indicative](/sources/pixel/integrations/indicative)
+- [AWS S3](/sources/pixel/integrations/aws-s3)
+- [Google Cloud Storage](/sources/pixel/integrations/google-cloud-storage)
+- [Minio](/sources/pixel/integrations/minio)
 
 
 # Want to get started?

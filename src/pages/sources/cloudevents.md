@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [Cloudevents, event tracking, free, open-source, Buz]
 ---
 
-# Collect Cloudevents data with Buz for $0
+# Collect Cloudevents data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 
@@ -41,6 +41,9 @@ Buz sends Cloudevents data to a number of different integrations including:
 - [Pubnub](/sources/cloudevents/integrations/pubnub)
 - [Amplitude](/sources/cloudevents/integrations/amplitude)
 - [Indicative](/sources/cloudevents/integrations/indicative)
+- [AWS S3](/sources/cloudevents/integrations/aws-s3)
+- [Google Cloud Storage](/sources/cloudevents/integrations/google-cloud-storage)
+- [Minio](/sources/cloudevents/integrations/minio)
 
 
 # Want to get started?

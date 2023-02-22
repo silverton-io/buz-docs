@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [Snowplow Analytics, Materialize, Snowplow Analytics to Materialize, event tracking, free, open-source, Buz]
 ---
 
-# Send Snowplow Analytics data to Materialize using Buz for $0.
+# Send Snowplow Analytics data to Materialize for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 
@@ -31,8 +31,8 @@ Want to get started quickly? The [Buz Quickstart](/examples/quickstart) bootstra
 
 The production-ready GCP stack includes Buz, Google Pub/Sub, Pub/Sub subscriptions, and BigQuery. It can be set up in minutes:
 
-- [Using Terraform](/production-deployment/gcp/terraform)
-- [Using the Google Cloud Console](/production-deployment/gcp/console)
+- [Using Terraform](/deploying/gcp/cloud_run)
+- [Using the Google Cloud Console](/deploying/gcp/console)
 
 
 ![buzz](../../../../../static/img/buzz.png)

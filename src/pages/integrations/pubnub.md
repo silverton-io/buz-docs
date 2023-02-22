@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Pu
 keywords: [Pubnub, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Pubnub with Buz for $0
+# Send data to Pubnub for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 

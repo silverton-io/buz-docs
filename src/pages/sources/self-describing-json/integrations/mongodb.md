@@ -4,7 +4,7 @@ description: Buz is a free and open-source project that makes it easy to collect
 keywords: [self describing JSON, Mongodb, self describing JSON to Mongodb, event tracking, free, open-source, Buz]
 ---
 
-# Send self describing JSON data to Mongodb using Buz for $0.
+# Send self describing JSON data to Mongodb for free with Buz.
 
 ![buzflow](../../../../../static/img/buzflow.png)
 
@@ -31,8 +31,8 @@ Want to get started quickly? The [Buz Quickstart](/examples/quickstart) bootstra
 
 The production-ready GCP stack includes Buz, Google Pub/Sub, Pub/Sub subscriptions, and BigQuery. It can be set up in minutes:
 
-- [Using Terraform](/production-deployment/gcp/terraform)
-- [Using the Google Cloud Console](/production-deployment/gcp/console)
+- [Using Terraform](/deploying/gcp/cloud_run)
+- [Using the Google Cloud Console](/deploying/gcp/console)
 
 
 ![buzz](../../../../../static/img/buzz.png)

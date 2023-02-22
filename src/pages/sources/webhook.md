@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to collect data fr
 keywords: [webhook, event tracking, free, open-source, Buz]
 ---
 
-# Collect webhook data with Buz for $0
+# Collect webhook data for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 
@@ -41,6 +41,9 @@ Buz sends webhook data to a number of different integrations including:
 - [Pubnub](/sources/webhook/integrations/pubnub)
 - [Amplitude](/sources/webhook/integrations/amplitude)
 - [Indicative](/sources/webhook/integrations/indicative)
+- [AWS S3](/sources/webhook/integrations/aws-s3)
+- [Google Cloud Storage](/sources/webhook/integrations/google-cloud-storage)
+- [Minio](/sources/webhook/integrations/minio)
 
 
 # Want to get started?

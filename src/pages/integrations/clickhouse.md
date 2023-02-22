@@ -3,7 +3,7 @@ description: Buz is an open-source project that makes it easy to send data to Cl
 keywords: [Clickhouse, event tracking, free, open-source, Buz]
 ---
 
-# Send data to Clickhouse with Buz for $0
+# Send data to Clickhouse for free with Buz.
 
 ![buzz](../../../static/img/buzflow.png)
 
