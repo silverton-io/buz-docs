@@ -4,6 +4,7 @@ title: The Contract-Powered Data Platform
 description: The contract-powered data platform is a step towards improving data quality, reducing organizational friction, and automating the toil data teams face. Here's what it looks like and how it works.
 authors: [jake]
 tags: [data platform, schemas, interfaces, data contracts or whatever]
+date: 2022-10-06T00:00
 ---
 
 Between [6 River Systems](https://6river.com/?utm_source=buz.dev&utm_content=hiitsme) and [CarGurus](https://www.cargurus.com/), a very significant amount of my time over the past five years has been dedicated to data platform automation, reducing cross-team friction, and improving data quality.
