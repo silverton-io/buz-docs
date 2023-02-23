@@ -1,6 +1,6 @@
 ---
 title: Serverless Makes Streaming Accessible
-description: Streaming systems have long been inaccessible to many companies, simply due to complexity. Serverless technologies make streaming accessible, and will completely change data processing as we know it.
+description: Streaming systems have long been inaccessible to many companies, simply due to complexity. Serverless technologies make streaming accessible and will completely change data processing as we know it.
 authors: [jake]
 slug: /serverless-makes-streaming-accessible
 tags: [serverless event tracking, serverless snowplow analytics, google cloud run, pub/sub, bigquery, postgres]
