@@ -116,9 +116,9 @@ Serverless Thing had to be easy to configure. Bonus points for providing hints i
 
 [dbt](https://www.getdbt.com/) has been so inspirational because it makes good data engineering practices accessible to all. Tricks that used to pay rent have become dbt packages anyone can import.
 
-Like the data engineering of not-that-long-ago, today's streaming systems are **intimidating**. But they don't need to be. Streaming systems are also often **overkill**. Throwing data into several streams only to batch-insert it into a Postgres database means the streaming infrastructure is probably unnecessary.
+Like the data engineering of not-that-long-ago, today's streaming systems are **intimidating**. But they don't need to be. These systems are also often **overkill**. Transporting data via several streams only to batch-insert it into a Postgres database means the streaming infrastructure is unnecessary.
 
-Ideally Serverless Thing could make streaming accessible while empowering orgs to evolve from the current stack to some desired architecture. Event if that means shipping events to [Postgres](https://buz.dev/integrations/postgres) now and [Kafka](https://buz.dev/integrations/kafka) later.
+Serverless Thing should make streaming accessible, while making it easy to evolve from the current stack to some desired architecture. Even if that means shipping events to [Postgres](https://buz.dev/integrations/postgres) now and [Kafka](https://buz.dev/integrations/kafka) later.
 
 
 # Progress thus far
