@@ -105,7 +105,7 @@ Snowplow data is serialized using **[thrift](https://thrift.apache.org/)** betwe
 
 While JSON is not the smallest data format it is still more efficient to write JSON once than having many copies of smaller formats. I chose to have **fewer** copies but a **larger per-record format**.
 
-This decision is tbd. In the worst case it's easy to change to parquet depending on destination.
+This decision is tbd. Either way it's easy to change certain destinations to parquet.
 
 ### Easy to configure
 
