@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3799],{2553:s=>{s.exports=JSON.parse('{"label":"serverless snowplow analytics","permalink":"/blog/tags/serverless-snowplow-analytics","allTagsPath":"/blog/tags","count":1}')}}]);
