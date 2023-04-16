@@ -28,13 +28,13 @@ When popular event tracking systems like [Snowplow Analytics](https://github.com
 Kafka was an infant. And had not yet created the things that Redpanda solves.
 
 
-Streaming databases built on the Postgres API were years into the future.
+Specialty databases built on the Postgres wire protocol were years into the future.
 
 
-And a data warehouse that would eat the world with its developer-focus yet massively-scalable architecture was yet to be named.
+And Iceberg was just the cause of a maritime disaster.
 
 
-***These are realities, and we are building on them with a keen eye to the future.***
+***These are all present-day realities and we are building on them with a keen eye to the future.***
 
 ## Scale to zero, but also "infinity"
 
