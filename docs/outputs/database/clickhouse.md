@@ -17,11 +17,12 @@ sinks:
   - name: houseofclicks
     type: clickhouse
     deliveryRequired: true
-    clickhouseHost: 127.0.0.1
-    clickhousePort: 9000
-    clickhouseDbName: buz
-    clickhouseUser: buz
-    clickhousePass: buz
-    validTable: buz_valid
-    invalidTable: buz_invalid
+    hosts:
+      - 127.0.0.1
+    port: 9000
+    database: buz
+    user: buz
+    password: buz
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

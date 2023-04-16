@@ -12,9 +12,9 @@ The Kinesis Firehose sink writes `valid` and `invalid` events to the configured 
 
 ```
 sinks:
-  - name: straightshots3
+  - name: firehose
     type: kinesis-firehose
     deliveryRequired: true
-    validStream: buz-valid
-    invalidStream: buz-invalid
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

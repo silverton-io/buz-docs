@@ -14,16 +14,15 @@ Collections are ensured via the nature of Mongodb, so manual creation is not req
 
 ```
 sinks:
-  - name: docsfordays
+  - name: mongo
     type: mongodb
     deliveryRequired: true
-    mongoHosts:
-      - mongodb1
-      - mongodb2
-    mongoPort: 27017
-    mongoDbName: buz
-    mongoUser: hpt
-    mongoPass: hpt
-    validCollection: buzValid
-    invalidCollection: buzInvalid
+    hosts:
+      - 127.0.0.1
+    port: 27017
+    database: buz
+    user: buz
+    password: buz
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

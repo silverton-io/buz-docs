@@ -17,6 +17,6 @@ sinks:
     deliveryRequired: true
     pubnubPubKey: YOUR-PUB-KEY
     pubnubSubKey: YOUR-SUB-KEY
-    validChannel: buz-valid
-    invalidChannel: buz-invalid
+    defaultOutput: buz-valid
+    deadletterOutput: buz-invalid
 ```

@@ -15,12 +15,13 @@ It is especially useful if you already have NATS running and want to quickly get
 
 ```
 sinks:
-  - name: streamjet
+  - name: broker
     type: nats
     deliveryRequired: true
-    natsHost: nats
-    natsUser: someuser
-    natsPass: somepass
-    validSubject: buz.valid
-    invalidSubject: buz.invalid
+    hosts:
+      - 127.0.0.1
+    user: buz
+    password: buz
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

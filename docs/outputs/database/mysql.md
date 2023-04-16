@@ -17,15 +17,15 @@ Tables are ensured upon Buz startup, so manual creation is not required.
 
 ```
 sinks:
-  - name: whoa-nelly
-    type: mysql
-    deliveryRequired: true
-    mysqlHost: localhost
-    mysqlDbName: buz
-    mysqlPort: 3306
-    mysqlUser: buz
-    mysqlPass: buz
-    validTable: buz_valid
-    invalidTable: buz_invalid
+   - name: msql1
+     type: mysql
+     deliveryRequired: true
+     hosts:
+       - 127.0.0.1
+     port: 3306
+     database: buz
+     user: buz
+     password: buz
+     defaultOutput: buz_events
+     deadletterOutput: buz_invalid_events
 ```
-

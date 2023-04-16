@@ -20,11 +20,12 @@ sinks:
   - name: 🚀🚀🚀
     type: materialize
     deliveryRequired: true
-    mzHost: 127.0.0.1
-    mzPort: 6875
-    mzDbName: materialize
-    mzUser: materialize
-    mzPass: ""
-    validTable: buz_valid
-    invalidTable: buz_invalid
+    hosts:
+      - 127.0.0.1
+    port: 5432
+    database: buz
+    user: buz
+    password: buz
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

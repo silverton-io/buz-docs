@@ -2,7 +2,7 @@
 
 **🟢 Supported**
 
-The `minio` cache backend uses schemas stored within [minio](https://min.io/) to back the in-memory cache.
+The `minio` cache backend uses schemas stored within [minio](https://min.io/) to back onboard schema registry.
 
 
 ## Sample Minio Cache Backend Configuration

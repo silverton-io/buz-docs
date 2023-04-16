@@ -9,7 +9,7 @@ Buz supports **multiple simultaneous sinks** for
 ## Outputs
 
 | Sink | Type | Supported? | Payload Sharding? | Payload Filtering? | Maintainer | More Details |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | Blackhole | Buz | Yes ✅ | No ❌ | No ❌ | 🐝 | **[Docs](/outputs/buz/blackhole)** |
 | Stdout | Buz | Yes ✅ | No ❌ | No ❌ | 🐝 | **[Docs](/outputs/buz/stdout)** |
 | Http | Buz | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/buz/http)** |
@@ -27,11 +27,11 @@ Buz supports **multiple simultaneous sinks** for
 | Kinesis | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kinesis)** |
 | Kinesis Firehose | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kinesis-firehose)** |
 | NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/nats)** |
-| RabbitMq | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/rabbitmq)** |
 | TimescaleDb | Timeseries | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/timeseries/timescaledb)** |
 | Materialize | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/materialize)** |
 | Planetscale | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/planetscale)** |
 | --- | --- | --- | --- | --- | --- |
+| RabbitMq | Message Bus | Not yet ⚠️| Not yet ⚠️ | - | This could be you. |
 | Pulsar | Stream | Not yet ⚠️  | Not yet ⚠️ | -| This could be you. |
 | NATS Jetstream | Stream | Not yet ⚠️  | Not yet ⚠️ | -| This could be you. |
 | Mezmo | Saas | Not yet ⚠️  | Not yet ⚠️ | -| This could be you. |

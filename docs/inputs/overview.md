@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Overview
 
+Buz supports reading data from multiple input protocols, which are outlined below.
+
 ## Inputs
 
 | Source | Type | Supported? | Validated payloads? | Maintainer | More Details |
