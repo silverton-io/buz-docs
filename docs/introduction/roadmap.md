@@ -6,11 +6,11 @@ sidebar_position: 4
 
 ## We have five goals for 2023.
 
-  1. Stability and transparency - robust tests, unchanging internals, and proactive comms.
-  2. Increased production use cases - SIEM, infra migration, data lake management, and more.
-  3. Improved developer tooling - config management, schema management, etc.
-  4. Deeper integrations with the next generation of data tooling.
-  5. Save more companies a significant amount of money and time.
+  1. **Stability and transparency** - robust tests, unchanging internals, and proactive comms.
+  2. **Increase diversity of production use cases** - SIEM, infra migration, data lake management, and more.
+  3. **Improved developer tooling** - config management, schema management, etc.
+  4. **Deeper integrations** with the next generation of data tooling.
+  5. **Save more companies a significant amount of money and time.**
 
 
 ## 2022 Year in Review
@@ -27,7 +27,7 @@ We quickly recognized the value in a lightweight event collector doesn't only li
 * **A lightweight onboard schema registry**. (Yet-another piece of consolidated infrastructure™)
 * **Serverless, hybrid-cloud deployments**. Which are [terraformed](https://github.com/silverton-io/buz/tree/main/deploy/terraform/aws/lambda) for anyone [to use](https://github.com/silverton-io/buz/tree/main/deploy/terraform/gcp).
 * **Piles of operator-friendly mechanisms** including middleware, onboard statistics, dedicated sinks, **incremental schematization** and more.
-* **A friendly envelope that gets out of the way but powers utility downstream.** The first one sucked - we fixed it.
+* **A friendly envelope that gets out of the way but is key to downstream utility.** The first one sucked - we fixed it.
 
 (with more on the way)
 
