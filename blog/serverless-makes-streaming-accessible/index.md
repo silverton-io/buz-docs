@@ -159,7 +159,7 @@ Having flexibility to write data to a variety of systems is a requirement for al
 - **[Streaming destinations](/category/streaming-sinks)** which are best in production at scale.
 - **[Streaming hybrids like Kinesis Firehose](/outputs/stream/kinesis-firehose)**, because they are hands-off and incredibly powerful for building data lakes.
 - **[Traditional databases](/category/database-sinks)**, because most every company has one already.
-- **[Streaming databases](/outputs/database/materialize)**, because they are the future.
+- **[Streaming databases](/outputs/saas/materialize)**, because they are the future.
 - **[Timeseries databases](/category/timeseries-sinks)**, because they unlock some very interesting use cases.
 - **[Saas products](/category/saas-sinks)**, because product and engineering teams everywhere use them.
 - **[Message brokers](/category/message-broker-sinks)**, because they are well-loved and very useful.
@@ -182,7 +182,7 @@ In the spirit of minimizing moving pieces, and because it's fun, Buz supports a 
 
 Interesting use cases this functionality unlocks include:
 
-- **Streaming analytics with no streams.** Using [Materialize](/outputs/database/materialize) as the destination as well as the [schema registry](under-the-hood/registry/backends/database/materialize) means streaming insights don't rely on much infrastructure.
+- **Streaming analytics with no streams.** Using [Materialize](/outputs/saas/materialize) as the destination as well as the [schema registry](schema-registry/backends/database/materialize) means streaming insights don't rely on much infrastructure.
 - **Using Postgres as the application database, the event database, and the schema cache.** Introducing event tracking to existing systems has literally never been easier.
 - **Analytics without a database at all.** Using GCS or S3 for the schema cache and the data lake means a database is not required to get database-like results.
 - **Seamless tie-in to existing streaming workflows.** If a Kafka or Redpanda schema is already in place, perfect! Yet-another-piece-of-infrastructure™ should not be necessary.
