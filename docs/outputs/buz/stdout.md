@@ -15,7 +15,9 @@ The stdout sink writes colorized events to.... stdout! It is especially useful w
 
 ```
 sinks:
-  - name: console
+  - name: easyfeedback
     type: stdout
     deliveryRequired: true
+    defaultOutput: console
+    deadletterOutput: console
 ```

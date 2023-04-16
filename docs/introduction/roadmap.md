@@ -22,10 +22,10 @@ We quickly recognized the value in a lightweight event collector doesn't only li
 ### Buz has grown to support:
 
 * **Five event protocols** with **misc payload validation capabilities**.
-* **Nineteen event sinks** ranging from RDBMS's like Postgres, to streaming tech like Redpanda, to message brokers like NATS.
+* **Twenty event sinks** ranging from RDBMS's like Postgres, to streaming tech like Redpanda, to message brokers like NATS.
 * **Ten schema registry backends** ranging from cloud object storage, to RDBMS's, to document stores.
 * **A lightweight onboard schema registry**. (Yet-another piece of consolidated infrastructure™)
-* **Serverless, hybrid-cloud deployments**. And they're [terraformed](https://github.com/silverton-io/buz/tree/main/deploy/terraform/aws/lambda) for anyone [to use](https://github.com/silverton-io/buz/tree/main/deploy/terraform/gcp).
+* **Serverless, hybrid-cloud deployments**. Which are [terraformed](https://github.com/silverton-io/buz/tree/main/deploy/terraform/aws/lambda) for anyone [to use](https://github.com/silverton-io/buz/tree/main/deploy/terraform/gcp).
 * **Piles of operator-friendly mechanisms** including middleware, onboard statistics, dedicated sinks, **incremental schematization** and more.
 * **A friendly envelope that gets out of the way but retains utility downstream.** The first one sucked - we fixed it.
 

@@ -13,9 +13,9 @@ The http/s sink writes events via batched `POST` requests to the configured `val
 
 ```
 sinks:
-  - name: somewheres
-    type: https
-    deliveryRequired: true
-    validUrl: https://your-endpoint.net/valid-events-here
-    invalidUrl: https://your-endpoint.net/invalid-events-here
+  # - name: web
+  #   type: https
+  #   deliveryRequired: true
+  #   defaultOutput: https://somewheres.net/buz
+  #   deadletterOutput: https://somewheres.net/buz
 ```

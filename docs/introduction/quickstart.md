@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 slug: /examples/quickstart
 hide_table_of_contents: true
 ---
