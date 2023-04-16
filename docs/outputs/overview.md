@@ -17,7 +17,7 @@ Buz supports **multiple simultaneous sinks** for
 | Postgres | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/postgres)** |
 | Mysql | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/mysql)** |
 | Vitess | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/vitess)** |
-| MongoDB | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/mongo)** |
+| MongoDB | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/mongodb)** |
 | Clickhouse | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/clickhouse)** |
 | Elasticsearch | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/elasticsearch)** |
 | Splunk | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/splunk)** |
@@ -26,7 +26,7 @@ Buz supports **multiple simultaneous sinks** for
 | Pub/Sub | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/pubsub)** |
 | Kinesis | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kinesis)** |
 | Kinesis Firehose | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kinesis-firehose)** |
-| NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/nats)** |
+| NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBroker/nats)** |
 | TimescaleDb | Timeseries | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/timeseries/timescaledb)** |
 | Materialize | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/materialize)** |
 | Planetscale | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/planetscale)** |

@@ -7,4 +7,4 @@ sidebar_position: 9
 
 **🟢 Supported**
 
-See also [mysql](mysql) output.
+See also [mysql](/outputs/database/mysql) output.
