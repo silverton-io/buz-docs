@@ -16,15 +16,15 @@ hide_table_of_contents: true
 ## Features
 
 1. **Low infrastructure** means the system is **easily configured, deployed, and maintained**.
-2. **Flexible.** Collect and send event, webhook, and pixel payloads to number of destinations.
+2. **Flexibility** to collect and send event, webhook, and pixel payloads to number of destinations.
 3. **Schema-based data validation and annotation** helps enforce convention around how data is defined and evolved.
 4. **Lightweight schema registry** supports ten different schema backends. Schemas are cached for consistently-high performance.
 5. **Privacy handlers** anonymize or redact sensitive data at point of collection, not after it has proliferated throughout your cloud infrastructure.
-6. **Empowerment not opinion.** Send data to streaming databases like [Materialize](https://materialize.com/), message brokers like [NATS](https://nats.io/), streaming infra like [Redpanda](https://redpanda.com/), regular-old-databases like [Postgres](https://www.postgresql.org/), or interesting cloud things like [Kinesis Firehose](https://aws.amazon.com/kinesis/data-firehose/).
+6. **Empowerment not opinion.** Send data to streaming databases like [Materialize](https://materialize.com/), message brokers like [NATS](https://nats.io/), streaming infra like [Redpanda](https://redpanda.com/), regular-old-databases like [Postgres](https://www.postgresql.org/), or interesting cloud things like [Kinesis Firehose](https://aws.amazon.com/kinesis/data-firehose/). **Because you know what systems you prefer or have already built upon, not us.**
 
 
-**Because you know what systems you prefer or have already built upon, not us.**
 ***
+
 
 # When To Use Buz
 ### You want to collect data [from multiple sources and protocols](inputs/overview) using a single, fully-OSS system.
@@ -71,6 +71,9 @@ Buz natively supports:
 - Want to collect data but don't want the overhead of streaming? Sink it to a database like Postgresql or MySQL at first.
 - Migrating cloud providers? Simultaneously sink data to both AWS Kinesis and Google Pub/Sub.
 - Want development environments that look and feel like production, but with reduced infrastructure overhead? Buz.
+
+
+***
 
 
 # Next Steps
