@@ -9,7 +9,7 @@ sidebar_position: 4
   1. Stability and transparency - robust tests, unchanging internals, and proactive comms.
   2. Increased production use cases - SIEM, infra migration, data lake management, and more.
   3. Improved developer tooling - config management, schema management, etc.
-  4. Deeper integrations within the next generation of data tooling.
+  4. Deeper integrations with the next generation of data tooling.
   5. Save more companies a significant amount of money and time.
 
 
@@ -21,7 +21,7 @@ We quickly recognized the value in a lightweight event collector doesn't only li
 
 ### Buz has grown to support:
 
-* **Five event protocols** with **misc payload validation capabilities**.
+* **Five event protocols**, all of which have **payload validation and annotation capabilities**.
 * **Twenty event sinks** ranging from RDBMS's like Postgres, to streaming tech like Redpanda, to message brokers like NATS.
 * **Ten schema registry backends** ranging from cloud object storage, to RDBMS's, to document stores.
 * **A lightweight onboard schema registry**. (Yet-another piece of consolidated infrastructure™)
