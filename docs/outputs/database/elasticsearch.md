@@ -14,13 +14,13 @@ Indices are ensured via the nature of elasticsearch, so manual creation is not r
 
 ```
 sinks:
-  - name: loggin
+  - name: elastic
     type: elasticsearch
     deliveryRequired: true
-    elasticsearchHosts: 
-      - http://es1:9200
-    elasticsearchUsername: elastic
-    elasticsearchPassword: elastic
-    validIndex: buz-valid
-    invalidIndex: buz-invalid
+    hosts:
+      - "http://127.0.0.1:9200"
+    user: elastic
+    password: elastic
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

@@ -15,12 +15,11 @@ The easiest and most cost-effective way to deploy Buz on AWS is via **[Lambda](h
 
 The following is a guide to doing so with Terraform. It sets up the following resources:
 
-* **1 Lambda function for running serverless Buz**
-* **1 Cloudfront distribution for mapping lambda to a pretty DNS name**
-* **1 S3 bucket for schemas**
-* **1 S3 bucket for valid and invalid events**
-* **1 ECR repository for hosting Buz artifacts**
-* **2 Kinesis Firehose delivery streams for sending [dynamically-partitioned events](https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html) to S3**
+* **Lambda function for running serverless Buz**
+* **Cloudfront distribution for mapping lambda to a pretty DNS name**
+* **S3 buckets for schemas and events**
+* **ECR repository for hosting Buz artifacts**
+* **Kinesis Firehose delivery streams for [dynamically-partitioning events](https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html) to S3**
 
 The deployment also sets up the appropriate IAM config.
 
@@ -71,10 +70,10 @@ schema_bucket_name = "schemas"
 certificate_arn = "arn:aws:acm:your_certificate_arn"
 ```
 
-## 4. Apply
+## 4. Initialize and Apply
 
 ```
-terraform apply
+terraform init && terraform apply
 ```
 
 **If all goes well the terraform output will be something like the following:**

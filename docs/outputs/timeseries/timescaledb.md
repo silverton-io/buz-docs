@@ -16,14 +16,15 @@ Tables are ensured upon Buz startup, so manual creation is not required.
 
 ```
 sinks:
-  - name: ol-trusty
+  - name: ts1
     type: timescale
     deliveryRequired: true
-    timescaleHost: localhost
-    timescalePort: 5432
-    timescaleDbName: buz
-    timescaleUser: buz
-    timescalePass: buz
-    validTable: buz_valid
-    invalidTable: buz_invalid
+    hosts:
+      - 127.0.0.1
+    port: 5432
+    database: buz
+    user: buz
+    password: buz
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

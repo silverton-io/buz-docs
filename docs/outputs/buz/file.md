@@ -14,9 +14,9 @@ Destination files are ensured on startup, so manual creation is not required.
 
 ```
 sinks:
-  - name: notgoingfar
+  - name: local
     type: file
     deliveryRequired: true
-    validFile: buz-valid.json
-    invalidFile: buz-invalid.json
+    defaultOutput: buz_events.json
+    deadletterOutput: buz_invalid_events.json
 ```

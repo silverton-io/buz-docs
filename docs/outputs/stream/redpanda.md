@@ -2,19 +2,19 @@
 sidebar_position: 1
 ---
 
-# Kafka
+# Redpanda
 
 **🟢 Supported**
 
-The Kafka sink writes `valid` and `invalid` events to the respective topics.
+The Redpanda sink writes `valid` and `invalid` events to the respective topics.
 
 
-## Sample Kafka Configuration
+## Sample Redpanda Configuration
 
 ```
 sinks:
   - name: 大熊猫
-    type: kafka
+    type: redpanda
     deliveryRequired: true
     brokers:
       - 127.0.0.1:9092

@@ -2,9 +2,9 @@
 
 **🟢 Supported**
 
-The `http` and `https` cache backends use jsonschemas stored at remote HTTP paths to back the in-memory schema cache.
+The `http` and `https` cache backends use jsonschemas stored at remote HTTP paths to back the onboard schema registry.
 
-## Sample Filesystem Cache Backend Configuration
+## Sample HTTP/S Cache Backend Configuration
 
 ```
 registry:

@@ -13,9 +13,9 @@ The Kinesis sink writes `valid` and `invalid` events to the configured streams.
 
 ```
 sinks:
-  - name: zoom
+  - name: kinesis
     type: kinesis
     deliveryRequired: true
-    validStream: buz-valid
-    invalidStream: buz-invalid
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```

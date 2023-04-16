@@ -2,7 +2,7 @@
 
 **🟢 Supported**
 
-The `fs` registry backend uses jsonschemas stored on the local filesystem to back the in-memory schema registry cache.
+The `fs` registry backend uses jsonschemas stored on the local filesystem to back the onboard schema registry.
 
 ## Sample Filesystem Registry Backend Configuration
 

@@ -15,8 +15,9 @@ It is primarily useful as a development tool or when collecting events in non-pr
 ## Sample Blackhole Sink Configuration
 
 ```
-sinks:
   - name: supermassive
     type: blackhole
     deliveryRequired: true
+    defaultOutput: nowheres
+    deadletterOutput: nowheres
 ```

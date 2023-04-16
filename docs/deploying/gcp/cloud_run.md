@@ -9,29 +9,27 @@ description: Deploy Buz, the open-source serverless event tracking system, to Cl
 
 **Estimated time: 3 minutes**
 
-![gcp-deploy-diag](../img/gcp/gcp-deploy-diag.png)
-
 ## Overview
 
 The (absolute) easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)** and Terraform.
 
-The terraform deployment consists of the following GCP resources:
+The terraform deployment provisions the following GCP resources:
 
-* **1 Cloud Run service for running serverless Buz**
-* **1 Secret Manager secret for Buz configuration**
-* **1 Domain mapping for running Buz behind a pretty name**
-* **1 GCS bucket for schemas**
-* **2 Pub/Sub topics for valid and invalid events**
-* **1 Artifact Registry Repository for hosting Buz artifacts**
-* **1 BigQuery dataset**
-* **2 BigQuery tables for valid/invalid events**
-* **2 Pub/Sub -> BigQuery subscriptions for pushing data to BigQuery automatically**
+* **Cloud Run service for running serverless Buz**
+* **Secret Manager secret for Buz configuration**
+* **Domain mapping for running Buz behind a pretty name**
+* **GCS bucket for schemas**
+* **Pub/Sub topics for valid and invalid events**
+* **Artifact Registry Repository for hosting Buz artifacts**
+* **BigQuery dataset**
+* **BigQuery tables for valid/invalid events**
+* **Pub/Sub subscriptions for pushing data to BigQuery automatically**
 
-It also provisions the appropriate IAM configuration, enables GCP services if they have not already been enabled, etc.
+It also adds appropriate IAM configuration and enables GCP services if they have not already been enabled.
 
 
 :::warning Local Prerequisites
-You will need the following locally to terraform Buz:
+You will need the following to run this example:
 - [Terraform](https://www.terraform.io/downloads)
 - [gcloud](https://cloud.google.com/sdk/gcloud) cli
 - [docker](https://www.docker.com/)
@@ -72,9 +70,9 @@ bigquery_dataset_name = "buz"
 ```
 
 
-## 4. Apply
+## 4. Initialize and Apply
 ```
-terraform apply
+terraform init && terraform apply
 ```
 
 **If all is well the terraform output will be something like the following:**

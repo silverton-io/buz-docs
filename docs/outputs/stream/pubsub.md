@@ -14,10 +14,10 @@ The Google Pub/Sub sink writes `valid` and `invalid` events to the configured to
 
 ```
 sinks:
-  - name: googd
+  - name: pubsub
     type: pubsub
     deliveryRequired: true
-    project: silverton
-    validTopic: buz-valid
-    invalidTopic: buz-invalid
+    project: YOURPROJECT
+    defaultOutput: buz_events
+    deadletterOutput: buz_invalid_events
 ```
