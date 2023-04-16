@@ -13,7 +13,6 @@ Schemas have played a critical role in the process; this post outlines **the why
 
 
 
-
 ## Components of a Good Data Platform
 
 ### Instrumentation and Integration
