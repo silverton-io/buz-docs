@@ -28,13 +28,13 @@ When popular event tracking systems like [Snowplow Analytics](https://github.com
 Kafka was an infant. And had not yet created the things that Redpanda solves.
 
 
-Streaming databases built on the Postgres API were years into the future.
+Specialty databases built on the Postgres wire protocol were years into the future.
 
 
-And a data warehouse that would eat the world with its developer-focus yet massively-scalable architecture was yet to be named.
+And Iceberg was just the cause of a maritime disaster.
 
 
-***These are all present-day realities and we want to build upon them with an eye to the future.***
+***These are all present-day realities and we are building on them with a keen eye to the future.***
 
 ## Scale to zero, but also "infinity"
 
@@ -44,7 +44,7 @@ Serverless scales to zero, and then back up again...
 
 Snowflake scales to zero, and then back up again...
 
-***Event collection systems should too.***
+**Event collection systems should too.**
 
 
 ## Validate and redirect on the edge
@@ -59,4 +59,4 @@ And last but certainly not least, engineers should be able to maintain and advan
 
 # Would you like to know more?
 
-If you would like to know more or follow the project, **[check out the roadmap](/introduction/roadmap)** or sign up for **[Insiders-Only Updates](/insiders-only)**.
+If you would like to know more **[check out the roadmap](/introduction/roadmap)**, join the **[Discord](https://discord.gg/rvCUNzJr)**, or sign up for **[Insiders-Only Updates](/insiders-only)**.

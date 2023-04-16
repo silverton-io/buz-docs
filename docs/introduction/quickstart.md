@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 # Quickstart
 
-This quickstart will get you started with Buz, a multi-node Redpanda cluster, the Redpanda console, and Materialize for rapidly bootstrapping streaming analytics. It is an end-to-end real-time event collection, pipelining, and aggregation system.
+This quickstart will get you started with Buz, a multi-node Redpanda cluster, and the Redpanda console for rapidly bootstrapping a lightweight streaming stack.
 
 
 ![quickstart-diag](./img/quickstart-diag.png)
@@ -33,7 +33,7 @@ Resolving deltas: 100% (611/611), done.
 ~/code ❯❯❯ cd buz
 ```
 
-## 2. Bootstrap Buz, Redpanda, the Console, and Materialize
+## 2. Bootstrap Buz, Redpanda, and the Redpanda Console
 
 **`docker-compose -f examples/quickstart/docker-compose.yml up -d`**
 
@@ -45,68 +45,44 @@ This step requires [docker-compose](https://docs.docker.com/compose/).
 ```
 ~/c/buz ❯❯❯ docker-compose -f examples/quickstart/docker-compose.yml up -d
 ...
-Creating materialize ... done
-Creating redpanda-1  ... done
-Creating redpanda-3  ... done
-Creating redpanda-2  ... done
-Creating sample-ui   ... done
-Creating console     ... done
-Creating buz         ... done
-Creating mzcli       ... done
+[+] Running 7/7
+ ⠿ Container redpanda-3            Healthy                                                                                                                                                                                                      1.6s
+ ⠿ Container buz-quickstart-ui     Started                                                                                                                                                                                                      0.3s
+ ⠿ Container redpanda-1            Healthy                                                                                                                                                                                                      2.1s
+ ⠿ Container redpanda-2            Healthy                                                                                                                                                                                                      1.6s
+ ⠿ Container console               Started                                                                                                                                                                                                      2.3s
+ ⠿ Container buz                   Healthy                                                                                                                                                                                                      3.9s
+ ⠿ Container buz-quickstart-proxy  Started
 ```
 
 
 ## 3. Send Events to Buz
 
-The Buz quickstart serves a page that you can use to quickly start firing Snowplow events using the [Snowplow Browser Tracker](https://docs.snowplowanalytics.com/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/javascript-tracker-v3/) here: [localhost:8081](http://localhost:8081/)
+The Buz quickstart serves an instrumented page to quickly start firing [Snowplow Browser Tracker events](https://docs.snowplowanalytics.com/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/javascript-tracker-v3/) located here: [localhost:8081](http://localhost:8081/)
 
-The following events are tracked on this page:
+**The following events are tracked (using both the `GET` and batch `POST` capabilities of the Snowplow tracker):**
 
   - Page views
-  - Page ping (time on page)
-  - Forms
-  - Redirects
-  - Transactions and transaction items
+  - Page pings (time on page)
+  - Transaction events and transaction item events
   - Struct events
   - Snowplow self-describing events
 
-using both the `GET` and batch `POST` capabilities of the Snowplow tracker.
 
 
 ## 4. View Events in the Redpanda Console
 
-The Quickstart runs Redpanda's Console at [localhost:8082](http://localhost:8082).
+The Buz Quickstart runs a Redpanda Console at [localhost:8082](http://localhost:8082).
 
-Incoming events can be viewed in the console using the [Topic Viewer](http://localhost:8082/topics/hpt-invalid?o=-1&p=-1&q&s=50#messages).
+Incoming events can be viewed in the console using the [Topic Viewer](http://localhost:8082/topics/buz_events?p=-1&s=50&o=-1#messages):
 
+![quickstart topic viewer](./img/quickstart-topic-viewer.png)
 
-## 5. Query Real-Time Events using a Streaming Materialized View
-
-Connect to Materialize using `psql`:
-
-**`psql -h 127.0.0.1 -p 6875 -U materialize`**
-
-
-And select real-time data from the `valid_events` and `invalid_events` materialized views:
-
-```
-~/c/buz ❯❯❯ psql -h 127.0.0.1 -p 6875 -U materialize
-
-psql (14.1, server 9.5.0)
-Type "help" for help.
-
-materialize=> \x
-Expanded display is on.
-materialize=> select event -> 'payload' as payload, event -> 'contexts' as contexts, event -> 'eventMeta' as meta from valid_events limit 1;
--[ RECORD 1 ]--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-payload  | {"data":{},"schema":"io.silverton/snowplow/page_view/v1.0.json"}
-contexts | {"iglu:com.snowplowanalytics.snowplow/web_page/jsonschema/1-0-0":{"id":"56aaa54a-bd7a-4898-a056-f1e4a5cc8874"},"iglu:org.w3/PerformanceTiming/jsonschema/1-0-0":{"connectEnd":1653319584968,"connectStart":1653319584967,"domComplete":1653319585324,"domContentLoadedEventEnd":1653319585302,"domContentLoadedEventStart":1653319585301,"domInteractive":1653319585293,"domLoading":1653319585038,"domainLookupEnd":1653319584967,"domainLookupStart":1653319584967,"fetchStart":1653319584967,"loadEventEnd":1653319585325,"loadEventStart":1653319585324,"navigationStart":1653319584980,"redirectEnd":0,"redirectStart":0,"requestStart":1653319584994,"responseEnd":1653319585029,"responseStart":1653319585028,"secureConnectionStart":0,"unloadEventEnd":0,"unloadEventStart":0}}
-meta     | {"namespace":"snowplow.pageView","path":"io.silverton/snowplow/page_view/v1.0.json","protocol":"snowplow","uuid":"23edc1db-0ef0-4ee6-88ab-abc3c022eef9","vendor":"io.silverton","version":"1.0"}
-```
 
 # Next Steps
 
-We have a lot planned. Want to be a part of it?
+We are having fun building Buz. Want to know more?
 
 - Sign up for **[Insiders-Only Updates](/insiders-only)**
-- Check out the **[Buz Roadmap](/introduction/roadmap)**
+- Come chat on **[Discord](https://discord.gg/JFKVnVdF2m)**
+- Check out the **[Roadmap](/introduction/roadmap)**

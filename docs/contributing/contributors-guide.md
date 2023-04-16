@@ -14,9 +14,9 @@ We will be formalizing the contribution process soon. In the meantime please ref
 ## General Feedback
 
 Feel free to:
+- [Join the Discord](https://discord.gg/rvCUNzJr)
 - [Tweet](https://twitter.com/aerialfly)
 - [Email](mailto:jake@silverton.io)
-- Stalk on one of the two-dozen data slack workspaces
 - Find one of us on LinkedIn
 
 ## Contributing Documentation
