@@ -61,5 +61,5 @@ hide_table_of_contents: true
 # Quickstart
 
 :::tip Quickstart
-To rapidly bootstrap a streaming stack using Buz, [Redpanda](https://github.com/redpanda-data/), the [Redpanda Console](https://github.com/redpanda-data/console), and [Materialize](https://github.com/MaterializeInc/materialize) please see the [Quickstart](/examples/quickstart).
+To rapidly bootstrap a streaming stack using Buz, [Redpanda](https://github.com/redpanda-data/) and the [Redpanda Console](https://github.com/redpanda-data/console) please see the [Quickstart](/examples/quickstart).
 :::
