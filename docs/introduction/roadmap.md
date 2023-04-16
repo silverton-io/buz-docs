@@ -4,12 +4,13 @@ sidebar_position: 4
 
 # Roadmap 2023 🎯
 
-## We have four goals for 2023.
+## We have five goals for 2023.
 
-  1. Stability and transparency. Robust tests, unchanging internals, and proactive comms.
+  1. Stability and transparency - robust tests, unchanging internals, and proactive comms.
   2. Increased production use cases - SIEM, infra migration, data lake management, and more.
   3. Improved developer tooling - config management, schema management, etc.
-  4. Improved integrations within the data ecosystem.
+  4. Deeper integrations within the next generation of data tooling.
+  5. Save more companies a significant amount of money and time.
 
 
 ## 2022 Year in Review
@@ -28,13 +29,15 @@ We quickly recognized the value in a lightweight event collector doesn't only li
 * **Piles of operator-friendly mechanisms** including middleware, onboard statistics, dedicated sinks, **incremental schematization** and more.
 * **A friendly envelope that gets out of the way but retains utility downstream.** The first one sucked - we fixed it.
 
-### Buz misc:
+(with more on the way)
+
+### Buz 2022 misc:
 
 - **>100k LOC written (or removed)**
 - **>250 issues closed**
 - **>90 releases**
 - **Double-digit microsecond payload validation**
-- **Spikes from 0 to >30k rps in the AWS Lambda free tier.**
+- **0 to >30k rps in the AWS Lambda free tier**
 - **Powers numerous (diverse) production systems.**
 
 ### Want to stay in the know?
