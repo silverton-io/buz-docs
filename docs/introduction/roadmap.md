@@ -9,7 +9,7 @@ sidebar_position: 4
   1. Stability and transparency - robust tests, unchanging internals, and proactive comms.
   2. Increased production use cases - SIEM, infra migration, data lake management, and more.
   3. Improved developer tooling - config management, schema management, etc.
-  4. Deeper integrations within the next generation of data tooling.
+  4. Deeper integrations with the next generation of data tooling.
   5. Save more companies a significant amount of money and time.
 
 

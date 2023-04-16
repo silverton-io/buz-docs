@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-Buz supports **multiple simultaneous sinks** for 
+Buz supports **multiple simultaneous sinks** for getting data to where it should bee. Status of these sinks is outlined below.
 
 ## Outputs
 
