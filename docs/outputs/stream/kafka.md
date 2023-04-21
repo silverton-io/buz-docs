@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **🟢 Supported**
 
-The Kafka sink writes `valid` and `invalid` events to the respective topics.
+The Kafka sink writes events to the respective topics.
 
 
 ## Sample Kafka Configuration

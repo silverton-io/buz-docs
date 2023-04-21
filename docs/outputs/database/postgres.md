@@ -6,7 +6,7 @@ sidebar_position: 2
 
 **🟢 Supported**
 
-The Postgres sink writes `valid` and `invalid` events to the configured Postgres tables.
+The Postgres sink writes events to the configured Postgres tables.
 
 It is especially useful if you already have Postgres running and want to quickly get started with Buz-based event tracking.
 

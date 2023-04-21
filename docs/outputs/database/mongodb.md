@@ -6,7 +6,7 @@ sidebar_position: 4
 
 **🟢 Supported**
 
-The Mongodb sink writes `valid` and `invalid` events to the configured collections.
+The Mongodb sink writes events to the configured collections.
 
 Collections are ensured via the nature of Mongodb, so manual creation is not required.
 

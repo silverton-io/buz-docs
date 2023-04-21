@@ -6,7 +6,7 @@ sidebar_position: 16
 
 **🟢 Supported**
 
-The Timescale sink writes `valid` and `invalid` events to the configured tables.
+The Timescale sink writes events to the configured tables.
 
 It is especially useful if you already have Timescale running and want to quickly get started with Buz-based event tracking.
 

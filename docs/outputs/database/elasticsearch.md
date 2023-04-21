@@ -6,7 +6,7 @@ sidebar_position: 5
 
 **🟢 Supported**
 
-The Elasticsearch sink loads `valid` and `invalid` events into the configured indices.
+The Elasticsearch sink writes events into the configured indices.
 
 Indices are ensured via the nature of elasticsearch, so manual creation is not required.
 

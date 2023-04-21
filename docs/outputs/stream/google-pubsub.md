@@ -7,7 +7,7 @@ sidebar_position: 2
 **🟢 Supported**
 
 
-The Google Pub/Sub sink writes `valid` and `invalid` events to the configured topics.
+The Google Pub/Sub sink writes events to the configured topics.
 
 
 ## Sample Google Pub/Sub Sink Configuration

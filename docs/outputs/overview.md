@@ -23,10 +23,11 @@ Buz supports **multiple simultaneous sinks** for getting data to where it should
 | Splunk | Database | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/database/splunk)** |
 | Redpanda | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/redpanda)** |
 | Kafka | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kafka)** |
-| Pub/Sub | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/pubsub)** |
-| Kinesis | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kinesis)** |
-| Kinesis Firehose | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kinesis-firehose)** |
-| NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBroker/nats)** |
+| Google Pub/Sub | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/google-pubsub)** |
+| AWS Kinesis | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/aws-kinesis)** |
+| AWS Kinesis Firehose | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/aws-kinesis-firehose)** |
+| NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBus/nats)** |
+| AWS Eventbridge | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBus/aws-eventbridge)** |
 | TimescaleDb | Timeseries | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/timeseries/timescaledb)** |
 | Materialize | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/materialize)** |
 | Planetscale | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/planetscale)** |

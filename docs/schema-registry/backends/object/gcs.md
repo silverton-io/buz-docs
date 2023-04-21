@@ -2,7 +2,7 @@
 
 **🟢 Supported**
 
-The `gcs` cache backend uses schemas stored in gcs to back onboard schema registry.
+The `gcs` backend uses schemas stored in gcs to back onboard schema registry.
 
 ## Sample GCS Cache Backend Configuration
 

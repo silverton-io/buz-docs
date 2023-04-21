@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **🟢 Supported**
 
-The Redpanda sink writes `valid` and `invalid` events to the respective topics.
+The Redpanda sink writes events to the respective topics.
 
 
 ## Sample Redpanda Configuration
