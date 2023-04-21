@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **🟢 Supported**
 
-The MySQL sink writes `valid` and `invalid` events to the configured tables.
+The MySQL sink writes events to the configured tables.
 
 It is especially useful if you already have MySQL running and want to quickly get started with Buz-based event tracking.
 

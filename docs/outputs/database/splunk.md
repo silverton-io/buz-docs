@@ -6,7 +6,7 @@ sidebar_position: 6
 
 **🟢 Supported**
 
-The Splunk sink loads `valid` and `invalid` events into the configured indices.
+The Splunk sink writes events into the configured indices.
 
 
 ## Sample Splunk Sink Configuration

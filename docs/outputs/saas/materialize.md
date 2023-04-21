@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **🟢 Supported**
 
-The Materialize sink writes `valid` and `invalid` events to the configured tables.
+The Materialize sink writes events to the configured tables.
 
 This sink is especially useful when wanting to try out a streaming database without the overhead of another set of infrastructure.
 

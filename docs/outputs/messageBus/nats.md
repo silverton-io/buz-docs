@@ -6,7 +6,7 @@ sidebar_position: 17
 
 **🟢 Supported**
 
-The NATS sink writes `valid` and `invalid` events to the configured subjects.
+The NATS sink writes events to the configured subjects.
 
 It is especially useful if you already have NATS running and want to quickly get started with Buz-based event tracking.
 
@@ -15,7 +15,7 @@ It is especially useful if you already have NATS running and want to quickly get
 
 ```
 sinks:
-  - name: broker
+  - name: bus
     type: nats
     deliveryRequired: true
     hosts:

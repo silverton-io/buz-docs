@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **🟢 Supported**
 
-The PubNub sink writes incoming events to... [PubNub](https://www.pubnub.com/)!
+The PubNub sink writes events to... [PubNub](https://www.pubnub.com/)!
 
 
 ## Sample PubNub Sink Configuration

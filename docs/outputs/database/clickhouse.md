@@ -6,7 +6,7 @@ sidebar_position: 6
 
 **🟢 Supported**
 
-The Clickhouse sink loads `valid` and `invalid` events into the configured tables.
+The Clickhouse sink writes events into the configured tables.
 
 Table existence is ensured each time Buz starts up so manual creation is not required.
 

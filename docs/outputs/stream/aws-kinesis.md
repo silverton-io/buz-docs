@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **🟢 Supported**
 
-The Kinesis sink writes `valid` and `invalid` events to the configured streams.
+The Kinesis sink writes events to the configured streams.
 
 ## Sample AWS Kinesis Sink Configuration
 
