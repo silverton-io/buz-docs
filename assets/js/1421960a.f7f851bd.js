@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7329],{9584:e=>{e.exports=JSON.parse('{"label":"birds and bees","permalink":"/blog/tags/birds-and-bees","allTagsPath":"/blog/tags","count":1}')}}]);

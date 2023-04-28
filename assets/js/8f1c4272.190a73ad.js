@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3730],{2217:e=>{e.exports=JSON.parse('{"label":"duckdb","permalink":"/blog/tags/duckdb","allTagsPath":"/blog/tags","count":1}')}}]);
