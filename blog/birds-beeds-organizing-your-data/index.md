@@ -1,6 +1,6 @@
 ---
 title: Birds, Bees, and well-structured piles of JSON
-description: Building a well-structured data lake is hard.
+description: Building a well-structured data lake is hard. But it doesn't have to be! Using Bees to build and Birds to query means low-cost, low-footprint, high-quality data.
 authors: [jake]
 slug: /birds-bees-and-organizing-your-data-with-duckdb-and-buz
 tags: [duckdb, buz, birds and bees]
