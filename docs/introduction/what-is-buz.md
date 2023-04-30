@@ -20,7 +20,7 @@ hide_table_of_contents: true
 3. **Schema-based data validation and annotation** helps enforce convention around how data is defined and evolved.
 4. **Lightweight schema registry** supports ten different schema backends. Schemas are cached for consistently-high performance.
 5. **Privacy handlers** anonymize or redact sensitive data at point of collection, not after it has proliferated throughout your cloud infrastructure.
-6. **Empowerment not opinion.** Send data to streaming databases like [Materialize](https://materialize.com/), message brokers like [NATS](https://nats.io/), streaming infra like [Redpanda](https://redpanda.com/), regular-old-databases like [Postgres](https://www.postgresql.org/), or interesting cloud things like [Kinesis Firehose](https://aws.amazon.com/kinesis/data-firehose/). **Because you know what systems you prefer or have already built upon, not us.**
+6. **Empowerment not opinion.** Send data to streaming infra like [Redpanda](https://redpanda.com/), regular-old-databases like [Postgres](https://www.postgresql.org/), message brokers like [NATS](https://nats.io/),  or interesting cloud things like [Kinesis Firehose](https://aws.amazon.com/kinesis/data-firehose/). **Because you know what systems you prefer or have already built upon, not us.**
 
 
 ***
@@ -29,9 +29,9 @@ hide_table_of_contents: true
 # When To Use Buz
 ### You want to collect data [from multiple sources and protocols](inputs/overview) using a single, fully-OSS system.
 
-Buz collects data from:
+**Buz collects data from:**
 
-- Event-tracking SDK's like Snowplow Analytics (Segment and others coming soon)
+- Event-tracking SDK's like Snowplow Analytics (Segment and others in development)
 - Self-describing payloads
 - Webhooks
 - Pixels
@@ -39,9 +39,9 @@ Buz collects data from:
 
 ### You want to send data to [one or more of many destinations](outputs/overview).
 
-Migrating infrastructure? Need to support multiple destinations?
+Migrating infrastructure? Need to support multiple destinations? Want to write events to Splunk _and_ Snowflake?
 
-Buz natively supports:
+**Buz natively supports:**
 
 - Databases like Postgres, Mysql, or Clickhouse
 - Streaming tech like Pub/Sub, Kinesis, or Redpanda

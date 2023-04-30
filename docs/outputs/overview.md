@@ -25,7 +25,7 @@ Buz supports **multiple simultaneous sinks** for getting data to where it should
 | Kafka | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/kafka)** |
 | Google Pub/Sub | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/google-pubsub)** |
 | AWS Kinesis | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/aws-kinesis)** |
-| AWS Kinesis Firehose | Stream | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/aws-kinesis-firehose)** |
+| AWS Kinesis Firehose | Stream | Yes ✅ | Yes ✅ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/stream/aws-kinesis-firehose)** |
 | NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBus/nats)** |
 | AWS Eventbridge | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBus/aws-eventbridge)** |
 | TimescaleDb | Timeseries | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/timeseries/timescaledb)** |
