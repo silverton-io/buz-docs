@@ -13,17 +13,15 @@ description: Deploy Buz, the open-source serverless event tracking system, to Cl
 
 The (absolute) easiest way to deploy Buz on GCP is via **[Google Cloud Run](https://cloud.google.com/run)** and Terraform.
 
-The terraform deployment provisions the following GCP resources:
+This deployment writes events to BigQuery (via streaming inserts) and provisions the following GCP resources:
 
 * **Cloud Run service for running serverless Buz**
 * **Secret Manager secret for Buz configuration**
 * **Domain mapping for running Buz behind a pretty name**
 * **GCS bucket for schemas**
-* **Pub/Sub topics for valid and invalid events**
 * **Artifact Registry Repository for hosting Buz artifacts**
 * **BigQuery dataset**
 * **BigQuery tables for valid/invalid events**
-* **Pub/Sub subscriptions for pushing data to BigQuery automatically**
 
 It also adds appropriate IAM configuration and enables GCP services if they have not already been enabled.
 

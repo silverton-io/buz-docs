@@ -29,6 +29,7 @@ Buz supports **multiple simultaneous sinks** for getting data to where it should
 | NATS | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBus/nats)** |
 | AWS Eventbridge | Message Bus | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/messageBus/aws-eventbridge)** |
 | TimescaleDb | Timeseries | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/timeseries/timescaledb)** |
+| BigQuery | Data Warehouse | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/dataWarehouse/bigquery)** |
 | Materialize | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/materialize)** |
 | Planetscale | Saas | Yes ✅ | Not yet ⚠️ | Not yet ⚠️ | 🐝 | **[Docs](/outputs/saas/planetscale)** |
 | --- | --- | --- | --- | --- | --- |
