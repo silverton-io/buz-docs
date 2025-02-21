@@ -77,12 +77,3 @@ The Buz Quickstart runs a Redpanda Console at [localhost:8082](http://localhost:
 Incoming events can be viewed in the console using the [Topic Viewer](http://localhost:8082/topics/buz_events?p=-1&s=50&o=-1#messages):
 
 ![quickstart topic viewer](./img/quickstart-topic-viewer.png)
-
-
-# Next Steps
-
-We are having fun building Buz. Want to know more?
-
-- Sign up for **[Insiders-Only Updates](/insiders-only)**
-- Come chat on **[Discord](https://discord.gg/JFKVnVdF2m)**
-- Check out the **[Roadmap](/introduction/roadmap)**

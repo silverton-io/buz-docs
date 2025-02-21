@@ -55,8 +55,3 @@ Data should be validated and redirected as soon as it enters collection infrastr
 ## Keep operational complexity low
 
 And last but certainly not least, engineers should be able to maintain and advance event collection efforts without complexity or cost explosion.
-
-
-# Would you like to know more?
-
-If you would like to know more **[check out the roadmap](/introduction/roadmap)**, join the **[Discord](https://discord.gg/rvCUNzJr)**, or sign up for **[Insiders-Only Updates](/insiders-only)**.
