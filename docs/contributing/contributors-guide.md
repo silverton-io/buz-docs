@@ -14,7 +14,6 @@ We will be formalizing the contribution process soon. In the meantime please ref
 ## General Feedback
 
 Feel free to:
-- [Join the Discord](https://discord.gg/rvCUNzJr)
 - [Tweet](https://twitter.com/aerialfly)
 - [Email](mailto:jake@silverton.io)
 - Find one of us on LinkedIn
@@ -44,11 +43,6 @@ If you'd like to report a bug please create a [Github Issue](https://github.com/
 * Steps to reproduce
 * Screenshots/gifs of the issue
 * Stacktrace, if applicable
-
-
-## Other
-
-We have an [insider's signup form here](/insiders-only) if you'd like to stay in involved or in the know.
 
 
 ## Licensing

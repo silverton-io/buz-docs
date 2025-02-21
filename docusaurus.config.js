@@ -455,11 +455,6 @@ const config = {
                     },
                     { to: '/blog', label: 'Blog', position: 'right' },
                     {
-                        href: 'https://discord.gg/JFKVnVdF2m',
-                        label: 'Discord',
-                        position: 'right',
-                    },
-                    {
                         href: 'https://github.com/silverton-io/buz',
                         label: 'GitHub',
                         position: 'right',
